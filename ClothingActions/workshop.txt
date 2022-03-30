@@ -1,0 +1,49 @@
+version=1
+id=2786689104
+title=Clothing Actions - Radial Menu
+description=[h1]Supports B41+. Works in Multiplayer[/h1]
+description=[h3]A new save is not required[/h3]
+description=
+description=A QOL mod for Project Zomboid that displays a Radial Menu for all Extra Clothing Actions that can be performed on currently worn items.  Less fumbling through your Inventory!
+description=
+description=For example, gives quick access to turn your Hat, put up your Hoodie's Hood, and others!
+description=
+description=This mod also adds a timer when performing an Extra Clothing Action instead of it being instant.  The time is half of the standard equip time, and actually allows your character to show an equip animation.  To compensate for this (small) added time, you can now walk during these actions.
+description=
+description=Tested with (and highly recommend!):
+description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2335368829]Authentic Z[/url]
+description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2684285534]Spongie's Clothing[/url]
+description=
+description=Should work with any other mods that add ExtraClothingOptions to item definitions too.
+description=
+description=I'm not sure if this will work with controllers as this is not how I play Project Zomboid.  Also, not sure if this will work for other local players (shared screen co-op)
+description=
+description=[h2]Configuration[/h2]
+description=
+description=Default keybind is to the "Z" key.  Configurable in the "Keybinds" menu.
+description=
+description=[url=https://steamcommunity.com/workshop/filedetails/?id=2169435993]ModOptions[/url] is required for futher configuration, but the mod will function without.
+description=
+description=[table]
+description=[tr]
+description=[th]Name[/th]
+description=[th]Default[/th]
+description=[th]Description[/th]
+description=[/tr]
+description=[tr]
+description=[td]Disable Clothing Filter[/td]
+description=[td]Disabled[/td]
+description=[td]Disables the filter for clothes. Show Actions on Bags (ex: Fanny Packs) and Watches[/td]
+description=[/tr]
+description=[tr]
+description=[td]Show Radial Menu Immediately on Press[/td]
+description=[td]Disabled[/td]
+description=[td]Shows Radial Menu when key is pressed.  By default, a press and hold is required[/td]
+description=[/tr]
+description=[/table]
+description=
+description=[h2]Translations[/h2]
+description=
+description=This mod is currently only in English.  If you would like to contribute a translation, please submit a pull request on [url=https://github.com/hlfstr/pz-mods]GitHub![/url]  I will happily give credit!
+tags=Build 41;Interface;Realistic
+visibility=friendsOnly

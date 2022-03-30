@@ -1,0 +1,8 @@
+UI_EN = {
+    UI_Init_ClothingActionsRM = "Hello from Clothing Actions - Radial Menu!",
+    UI_optionscreen_binding_ClothingActionsRM = "Clothing Actions - Radial Menu",
+    UI_optionscreen_binding_CARM = "Show Clothing Actions Radial Menu",
+    UI_optionscreen_binding_CARMMK = "Show Clothing Actions Radial Menu",
+    UI_ModOptions_CARMfilter = "Disable Clothing Filter (Shows bags, watches, etc)",
+    UI_ModOptions_CARMdelay = "Show Radial Menu Immediately on Press"
+}
