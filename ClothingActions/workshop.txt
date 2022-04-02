@@ -16,8 +16,11 @@ description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=26842855
 description=
 description=Should work with any other mods that add ExtraClothingOptions to item definitions too.
 description=
-description=I'm not sure if this will work with controllers as this is not how I play Project Zomboid.  Also, not sure if this will work for other local players (shared screen co-op)
+description=UPDATE 04/02/2022: Added support for controllers
+description=This RadialMenu is now bound to the UP-DPad; this cannot be changed.  Select what you want with the right thumbstick and release to perform the action.
+description=Don't worry, when the player is near a car the Vehicle Menu will appear as expected.
 description=
+description=This mod is now compatible with local co-op as well.
 description=[h2]Configuration[/h2]
 description=
 description=Default keybind is to the "Z" key.  Configurable in the "Keybinds" menu.
@@ -38,12 +41,13 @@ description=[/tr]
 description=[tr]
 description=[td]Show Radial Menu Immediately on Press[/td]
 description=[td]Disabled[/td]
-description=[td]Shows Radial Menu when key is pressed.  By default, a press and hold is required[/td]
+description=[td]Shows Radial Menu when key is pressed.  By default, a press and hold is required.[/td]
 description=[/tr]
 description=[/table]
 description=
 description=[h2]Translations[/h2]
 description=
-description=This mod is currently only in English.  If you would like to contribute a translation, please submit a pull request on [url=https://github.com/hlfstr/pz-mods]GitHub![/url]  I will happily give credit!
+description=This mod is currently only in English, but Actions in the Radial Menu will be translated (modded actions must include their own translations).
+description=If you would like to contribute a translation, please submit a pull request on [url=https://github.com/hlfstr/pz-mods]GitHub![/url]  I will happily give credit!
 tags=Build 41;Interface;Realistic
-visibility=friendsOnly
+visibility=public

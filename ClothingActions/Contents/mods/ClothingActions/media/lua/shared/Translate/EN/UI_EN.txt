@@ -4,5 +4,5 @@ UI_EN = {
     UI_optionscreen_binding_CARM = "Show Clothing Actions Radial Menu",
     UI_optionscreen_binding_CARMMK = "Show Clothing Actions Radial Menu",
     UI_ModOptions_CARMfilter = "Disable Clothing Filter (Shows bags, watches, etc)",
-    UI_ModOptions_CARMdelay = "Show Radial Menu Immediately on Press"
+    UI_ModOptions_CARMdelay = "Show Radial Menu Immediately on Key Press"
 }

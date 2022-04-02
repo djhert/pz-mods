@@ -3,6 +3,7 @@
 ------------------------------------------
 
 CARadialMenu = ISBaseObject:derive("CARadialMenu")
+activeMenu = nil
 
 ------------------------------------------
 local CACommand = ISBaseObject:derive("CACommand")
@@ -87,12 +88,11 @@ function CARadialMenu:display()
     self:center()
     menu:addToUIManager()
     if JoypadState.players[self.playerNum+1] then
-        menu:setHideWhenButtonReleased(Joypad.RBumper)
+        menu:setHideWhenButtonReleased(Joypad.DPadUp)
         setJoypadFocus(self.playerNum, menu)
         self.player:setJoypadIgnoreAimUntilCentered(true)
     end
 end
-
 
 function CARadialMenu:new(player)
     local o = ISBaseObject.new(self)
@@ -132,6 +132,39 @@ function CARadialMenu.checkKey(key)
     return true
 end
 
+------------------------------------------
+--- For the DPad
+function CARadialMenu.showRadialMenu(player)
+    if UIManager.getSpeedControls() and (UIManager.getSpeedControls():getCurrentGameSpeed() == 0) then
+        return
+    end
+
+    if not player or player:isDead() then
+            return
+    end
+    local queue = ISTimedActionQueue.queues[player]
+    if queue and #queue.queue > 0 then
+            return false
+    end
+
+    local menu = CARadialMenu:new(player)
+    menu:fillMenu()
+    menu:display()
+    activeMenu = menu
+end
+
+---- Show the Radial Menu on the Up DPad when there's not a car around
+local _ISDPadWheels_onDisplayUp = ISDPadWheels.onDisplayUp
+function ISDPadWheels.onDisplayUp(joypadData)
+    local player = getSpecificPlayer(joypadData.player)
+    if not player:getVehicle() and not ISVehicleMenu.getVehicleToInteractWith(player) then
+        CARadialMenu.showRadialMenu(player)
+    else
+        _ISDPadWheels_onDisplayUp(joypadData)
+    end
+end
+------------------------------------------
+
 function CARadialMenu.onKeyPress(key)
     if not CARadialMenu.checkKey(key) then
         return
@@ -140,6 +173,8 @@ function CARadialMenu.onKeyPress(key)
     if radialMenu:isReallyVisible() and getCore():getOptionRadialMenuKeyToggle() then
         wasVisible = true
         radialMenu:removeFromUIManager()
+        setJoypadFocus(activeMenu.playerNum, nil)
+        activeMenu = nil
         return
     end
     ticks = getTimestampMs()
@@ -163,27 +198,12 @@ function CARadialMenu.onKeyHold(key)
         local menu = CARadialMenu:new(getSpecificPlayer(0))
         menu:fillMenu()
         menu:display()
+        activeMenu = menu
     end
 
 end
-
-function CARadialMenu.onKeyRelease(key)
-    if not CARadialMenu.checkKey(key) then
-            return
-    end
-
-    local radialMenu = getPlayerRadialMenu(0)
-    if (radialMenu:isReallyVisible() or wasVisible) then
-        if not getCore():getOptionRadialMenuKeyToggle() then
-            radialMenu:removeFromUIManager()
-        end
-        return
-    end
-end
-
 
 Events.OnGameStart.Add(function()
     Events.OnKeyStartPressed.Add(CARadialMenu.onKeyPress)
     Events.OnKeyKeepPressed.Add(CARadialMenu.onKeyHold)
-    Events.OnKeyPressed.Add(CARadialMenu.onKeyRelease)
 end)
