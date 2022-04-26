@@ -1,0 +1,10 @@
+name=SpiffUI - Inventory
+id=SpiffUI-Inv
+authors=dhert
+
+description=Change the hiding/showing behavior of the Inventory Windows
+
+pzversion=41
+tags=Interface
+
+poster=poster.png
