@@ -18,7 +18,7 @@ UI_ES = {
 
     UI_Name_SpiffUI_Inv = "SpiffUI - Inventory",
 
-    UI_ModOptions_SpiffUI_Inv_enable = "Activar Inventario de SpiffUI ",
+    UI_ModOptions_SpiffUI_Inv_enable = "Activar inventario de SpiffUI ",
     UI_ModOptions_SpiffUI_Inv_tooltip_enable = "Aviso: Se requiere reiniciar si esta en la partida!",
 
     UI_ModOptions_SpiffUI_Inv_hideInv = "Ocultar boton de inventario",
