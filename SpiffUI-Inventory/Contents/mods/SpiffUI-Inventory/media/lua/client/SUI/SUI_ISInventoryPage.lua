@@ -131,17 +131,17 @@ function ISInventoryPage:update()
             self.inventory:getParent():setHighlightColor(getCore():getObjectHighlitedColor());
             self.coloredInv = self.inventory;
         end
-
-        if not self.isCollapsed and self.inventoryPane.inventory:getType() == "floor" and self.inventoryPane.inventory:getItems():isEmpty() then
-            if self.autoHide and self.holdOpen and not self.prevMouse then
-                self:Collapse(true, "No Floor Items")
-            end
-        end
     end
 ------------------------------------------
     self.collapseCounter = 0
 
     self.wasVisible = not self.isCollapsed
+
+    if not self.onCharacter and not self.isCollapsed and self.inventoryPane.inventory:getType() == "floor" and self.inventoryPane.inventory:getItems():isEmpty() then
+        if self.autoHide and self.holdOpen and not self.prevMouse and not spiff.config.mouseHide then
+            self:Collapse(true, "No Floor Items")
+        end
+    end
 
     if not self.isCollapsed then
         -- When we stop dragging, set panel to close after next mouseout or click, or set to tie with our friend
@@ -173,7 +173,7 @@ function ISInventoryPage:update()
         --- prevmouse is to not have this happen immediately, we need a tick for other logic to kick in on state change
         --- holdOpen should prevent the window from closing if we click on an object
         --- We do this here so we can check the mouse location with our buffer
-        if not self.fVisible and self.autoHide and not self.prevMouse and not self.holdOpen and not self.fromDrag and not self.toDrag and not self.wasDrag and not self:isMouseInBuffer() then
+        if not self.fVisible and not spiff.config.mouseHide and self.autoHide and not self.prevMouse and not self.holdOpen and not self.fromDrag and not self.toDrag and not self.wasDrag and not self:isMouseInBuffer() then
             self:Collapse(true, "Autohide")
         end
 
@@ -463,6 +463,7 @@ function ISInventoryPage:InitSUI()
     self.wasDrag = false
 
     self.wasVisible = false
+    --self.mouseHide = spiff.config.mouseHide
 end
 
 function ISInventoryPage:SUIReset()

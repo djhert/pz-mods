@@ -7,7 +7,8 @@ SpiffUI = SpiffUI or {}
 local spiff = SpiffUI:Register("inventory")
 
 spiff.config = {
-    enabled = true
+    enabled = true,
+    mouseHide = false
 }
 
 local function SpiffUIBoot() 
@@ -16,6 +17,7 @@ local function SpiffUIBoot()
             local options = data.settings.options
             -- Set options
             spiff.config.enabled = options.enableInv
+            spiff.config.mouseHide = options.mouseHide
             SpiffUI.equippedItem["Inventory"] = not options.hideInv
         end
 
@@ -39,6 +41,12 @@ local function SpiffUIBoot()
                     default = true,
                     OnApplyMainMenu = apply,
                     OnApplyInGame = applyGame,
+                },
+                mouseHide = {
+                    name = "UI_ModOptions_SpiffUI_Inv_mouseHide",
+                    default = false,
+                    OnApplyMainMenu = apply,
+                    OnApplyInGame = apply,
                 },
             },
             mod_id = "SpiffUI - Inventory",

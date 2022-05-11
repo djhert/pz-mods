@@ -1,0 +1,122 @@
+UI_RU = {
+    -- Translation By: fourteensix
+    -- Перевод: fourteensix
+
+	-- SpiffUI Radial
+    UI_Hello_SpiffUI = "Hello SpiffUI!",
+    UI_Name_SpiffUI = "SpiffUI",
+    UI_optionscreen_binding_SpiffUI = "SpiffUI"
+
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Установите рекомендуемые сочетания клавиш SpiffUI",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Установить привязки клавиш SpiffUI <LINE><LINE><LEFT><SIZE:small> Устанавливает следующие сочетания клавиш: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1   для:  [%2] ",
+
+    UI_ModOptions_SpiffUI_runAllResets = "Запустить полный сброс SpiffUI",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "Работает только в игре!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> Сброс SpiffUI <LINE><LINE><LEFT><SIZE:small> Будет сброшено следующее: <LINE>",
+
+    -- SpiffUI -- Radials
+    UI_Hello_SpiffUI_Radials = "Hello SpiffUI - Radials",
+    
+    UI_Name_SpiffUI_Radials = "SpiffUI - Radials",
+
+    UI_ModOptions_SpiffUI_showTooltips = "Показать подсказки",
+    UI_ModOptions_SpiffUI_hideCraftButton = "Скрыть кнопку крафта",
+
+    UI_ModOptions_SpiffUI_smokeShowButts = "Показать окурки (мод Smoke)", 
+    UI_ModOptions_SpiffUI_smokeShowGum = "Показать жвачку (мод Smoke)",
+    UI_ModOptions_SpiffUI_smokeShowNow = "Показать радиальное меню при нажатии (мод Smoke)", 
+
+    UI_ModOptions_SpiffUI_pillsShowNow = "Показать радиальное меню при нажатии (Таблетки)",
+
+    UI_ModOptions_SpiffUI_eatAmount = "Количество еды (Еда)",
+    UI_ModOptions_SpiffUI_eatQuickAmount = "Количество еды для быстрого перекуса (Еда)",
+    UI_ModOptions_SpiffUI_eatShowNow = "Показать радиальное меню при нажатии (Еда)", 
+
+    UI_ModOptions_SpiffUI_drinkAmount = "Количество питья (Напитки)",
+    UI_ModOptions_SpiffUI_drinkQuickAmount = "Количество напитка для быстрого удаления жажды (Напитки)",
+    UI_ModOptions_SpiffUI_drinkShowNow = "Показать радиальное меню при нажатии (Напитки)",
+
+    UI_ModOptions_SpiffUI_smokeCraftShowDismantle = "Показать рецепты разборки (крафт мода Smoke)",
+    UI_ModOptions_SpiffUI_smokeCraftShowCigPacks = "Показать пачки сигарет (крафт мода Smoke)",
+    UI_ModOptions_SpiffUI_smokeCraftAmount = "Количество для создания (крафт мода Smoke)",
+
+    UI_ModOptions_SpiffUI_craftSwitch = "Показать радиальное меню при нажатии (Крафт)",
+    UI_ModOptions_SpiffUI_craftShowEquipped = "Показать рецепты на экипированных предметах (Крафт)",
+    UI_ModOptions_SpiffUI_craftShowSmokeables = "Показать рецепты для курения (Крафт)",
+    UI_ModOptions_SpiffUI_craftShowMedical = "Показать медицинские рецепты (Крафт)",
+    UI_ModOptions_SpiffUI_craftAmount = "Количество для крафта (Крафт)",
+    UI_ModOptions_SpiffUI_craftFilterUnique = "Фильтр повторяющихся рецептов (Крафт)",
+
+    UI_ModOptions_SpiffUI_equipShowDrop = "Показать действие дропа (Экипировка)",
+    UI_ModOptions_SpiffUI_equipShowAllRepairs = "Показать недоступные параметры ремонта (Экипировка)",
+    UI_ModOptions_SpiffUI_equipShowClothingActions = "Показать действия с дополнительной одеждой (Экипировка)",
+    UI_ModOptions_SpiffUI_equipShowRecipes = "Показать рецепты (Экипировка)",
+
+    UI_ModOptions_SpiffUI_repairShowEquipped = "Показать ремонт экипированных предметов (Ремонт)",
+    UI_ModOptions_SpiffUI_repairShowHotbar = "Показать ремонт предметов в хотбаре (Ремонт)",
+
+    UI_ModOptions_SpiffUI_firstAidCraftAmount = "Количество для крафта (Крафт медикаментов)",
+
+    UI_ModOptions_SpiffUI_tooltip_showTooltips = "Показывать всплывающие подсказки в радиальных меню для предметов, рецептов и ремонтов (Рекомендуется)",
+    
+    UI_ModOptions_SpiffUI_tooltip_pillsShowNow = "Примечание: отключает действие *Быстрые таблетки*",
+    
+    UI_ModOptions_SpiffUI_tooltip_drinkShowNow = "Примечание: отключает действие *Быстрое питьё воды*",
+
+    UI_ModOptions_SpiffUI_tooltip_eatShowNow = "Примечание: отключает действие *Быстро съесть еду*",
+    
+    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "Примечание: некоторые рецепты могут по-прежнему фильтроваться. Вместо этого рассмотрите возможность использования меню крафта первой помощи!",
+    UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "Примечание: рецепты на изношенные предметы можно сделать из меню снаряжения. Предметы в вашей руке по-прежнему будут показывать рецепты",
+    UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "Вместо этого рассмотрите возможность использования меню крафта мода Smoke!"
+
+    UI_ModOptions_SpiffUI_tooltip_smokeShowNow = "Примечание: отключает мод AutoSmoke для быстрого курения",
+
+    UI_ModOptions_SpiffUI_tooltip_CraftingWheelSwitch = "Нажмите, чтобы открыть радиальное меню, удерживайте, чтобы открыть окно крафта",
+
+    UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "Показать параметры ремонта, даже если требуемых предметов нет в вашем инвентаре",
+    
+    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "Ремонт снаряжения можно выполнить из меню снаряжения.",
+
+    UI_amount_SpiffUI_Ask = "Спросить",
+    UI_amount_SpiffUI_All = "Всё",
+    UI_amount_SpiffUI_Full = "Диетолог",
+    UI_amount_SpiffUI_One = "1",
+    UI_amount_SpiffUI_Half = "1/2",
+    UI_amount_SpiffUI_Quarter = "1/4",
+
+    UI_radial_SpiffUI_Accessories = "Аксессуары",
+    UI_radial_SpiffUI_Hotbar = "Хотбар",
+    UI_radial_SpiffUI_Transfer = "Переместить на ",
+
+    UI_optionscreen_binding_SpiffUIPillWheel = "Таблетки в меню",
+    UI_optionscreen_binding_SpiffUIDrinkWheel = "Напитки в меню",
+    UI_optionscreen_binding_SpiffUIEatWheel = "Еда в меню",
+    UI_optionscreen_binding_SpiffUISmokeWheel = "Курение в меню",
+    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Крафт мода Smoke в меню",
+    UI_optionscreen_binding_SpiffUICraftWheel = "Интерфейс крафта/радиальное меню",
+    UI_optionscreen_binding_SpiffUIEquipmentWheel = "Переключатель инвентаря/Радиальное меню",
+    UI_optionscreen_binding_SpiffUIRepairWheel = "Ремонт в радиальном меню",
+    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "Крафт для первой помощи",
+    UI_optionscreen_binding_SpiffUIOneWheel = "SpiffUI Радиальное меню",
+
+    UI_character_SpiffUI_noLighter = "Мне нужна зажигалка.",
+    UI_character_SpiffUI_noSmokes = "Нечего курить.",
+
+    UI_character_SpiffUI_noCraft = "Крафтить нечего.",
+
+    UI_character_SpiffUI_noEquip = "Я Голый!",
+
+    UI_character_SpiffUI_notHungry = "Я не голоден.",
+    UI_character_SpiffUI_noFood = "Нет еды, чтобы поесть.",
+
+    UI_character_SpiffUI_notThirsty = "Я не хочу пить.",
+    UI_character_SpiffUI_noDrinks = "Пить нечего.",
+
+    UI_character_SpiffUI_noRepair = "Ремонтировать нечего.",
+    UI_character_SpiffUI_noRepairItems = "Я не могу отремонтировать это.",
+
+    UI_character_SpiffUI_noPillsQuick = "У меня нет ",
+    UI_character_SpiffUI_noPills = "Нет таблеток",
+    UI_character_SpiffUI_noPillsNeed = "Я не в настроении.",
+}

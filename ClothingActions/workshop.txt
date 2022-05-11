@@ -16,6 +16,17 @@ description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=26842855
 description=
 description=Should work with any other mods that add ExtraClothingOptions to item definitions too.
 description=
+description=UPDATE 05/11/2022:
+description=Added Spanish and Thai Translations
+description=
+description=UPDATE 05/03/2022:
+description=Added integration for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2802525922]SpiffUI - Radials[/url]
+description=[list]
+description=[*]If SpiffUI - Radials is installed, a new configuration option is available to add this to the main SpiffUI Radial
+description=[*][b]Note:[/b]The SpiffUI Radial will override the Controller binding!  Use the SpiffUI Radial instead if its installed!
+description=[/list]
+description=Fixed an issue where the Radial could be given focus even if there were no items.
+description=
 description=UPDATE 04/02/2022: Added support for controllers
 description=This RadialMenu is now bound to the UP-DPad; this cannot be changed.  Select what you want with the right thumbstick and release to perform the action.
 description=Don't worry, when the player is near a car the Vehicle Menu will appear as expected.
@@ -46,8 +57,13 @@ description=[/tr]
 description=[/table]
 description=
 description=[h2]Translations[/h2]
+description=[list]
+description=[*]English
+description=[*]Spanish  - [url=https://steamcommunity.com/id/deadinside11]ElDoktor[/url]
+description=[*]Thai - radiusgreenhill
+description=[/list]
 description=
-description=This mod is currently only in English, but Actions in the Radial Menu will be translated (modded actions must include their own translations).
+description=Actions in the Radial Menu will be translated (modded actions must include their own translations).
 description=If you would like to contribute a translation, please submit a pull request on [url=https://github.com/hlfstr/pz-mods]GitHub![/url]  I will happily give credit!
 tags=Build 41;Interface;Realistic
 visibility=public

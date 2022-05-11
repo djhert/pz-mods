@@ -2,9 +2,19 @@
 -- Clothing Actions
 ------------------------------------------
 
+local CARM = require("ClothingActionsRadialMenu")
+
+local spiff
+if getActivatedMods():contains('SpiffUI-Rads') then
+    -- Register our Radials
+    spiff = SpiffUI:Register("radials")
+    if not spiff.radials then spiff.radials = {} end
+end
+
 CARMconfig = {
     filter = false,
-    delay = false
+    delay = false,
+    spiff = true
 }
 
 local function ClothingActions() 
@@ -25,14 +35,6 @@ local function ClothingActions()
         end
     end
 
-    if ModKey then
-        local CARMMODbindings = {
-            name = 'CARMMK',
-            key = 0
-        }
-        ModKey:AddBinding(CARMMODbindings)
-    end
-
     if ModOptions and ModOptions.getInstance then
         local function apply(data)
             local player = getSpecificPlayer(0)
@@ -40,6 +42,16 @@ local function ClothingActions()
             
             CARMconfig.filter = values.filter
             CARMconfig.delay = values.delay
+            CARMconfig.spiff = values.spiff
+
+            -- Register our Radial to SpiffUI
+            if spiff then
+                if CARMconfig.spiff then
+                    spiff.radials[9] = CARM
+                else
+                    spiff.radials[9] = nil
+                end
+            end
         end
 
         local CARMCONFIG = {
@@ -62,6 +74,15 @@ local function ClothingActions()
             mod_fullname = getText("UI_optionscreen_binding_ClothingActionsRM")
         }
 
+        if spiff then
+            CARMCONFIG.options_data.spiff = {
+                default = true,
+                name = getText("UI_ModOptions_CARMtoSpiff"),
+                OnApplyMainMenu = apply,
+                OnApplyInGame = apply
+            }
+        end
+
         local optionsInstance = ModOptions:getInstance(CARMCONFIG)
         ModOptions:loadFile()
         
@@ -69,8 +90,14 @@ local function ClothingActions()
             apply({settings = CARMCONFIG})
         end)
     end
+    
+    Events.OnGameBoot.Add(function()
+        print("Clothing Actions Boot!")
+    end)
 
     print(getText("UI_Init_ClothingActionsRM"))
 end
+
+
 
 ClothingActions() 

@@ -1,8 +1,8 @@
 ------------------------------------------
 -- Clothing Actions Radial Menu
 ------------------------------------------
+local CARadialMenu = ISBaseObject:derive("CARadialMenu")
 
-CARadialMenu = ISBaseObject:derive("CARadialMenu")
 activeMenu = nil
 
 ------------------------------------------
@@ -31,21 +31,6 @@ end
 
 ------------------------------------------
 
-function CARadialMenu:center()
-    local menu = getPlayerRadialMenu(self.playerNum)
-
-    local x = getPlayerScreenLeft(self.playerNum)
-    local y = getPlayerScreenTop(self.playerNum)
-    local w = getPlayerScreenWidth(self.playerNum)
-    local h = getPlayerScreenHeight(self.playerNum)
-
-    x = x + w / 2
-    y = y + h / 2
-    
-    menu:setX(x - menu:getWidth() / 2)
-    menu:setY(y - menu:getHeight() / 2)
-end
-
 local function checkClothes(item)
     -- If there's extra options
     if item and item:getClothingItemExtraOption() then
@@ -70,6 +55,7 @@ function CARadialMenu:fillMenu()
                 local action = item:getClothingItemExtraOption():get(i)
                 local itemType = moduleDotType(item:getModule(), item:getClothingItemExtra():get(i))
                 table.insert(commands, CACommand:new(self, item, getText("ContextMenu_" .. action), itemType, action))
+                self.hasCommands = true
             end
         end
     end
@@ -84,8 +70,12 @@ function CARadialMenu:fillMenu()
 end
 
 function CARadialMenu:display()
+    self:fillMenu()
+    
+    if not self.hasCommands then return end
+
     local menu = getPlayerRadialMenu(self.playerNum)
-    self:center()
+    menu:center()
     menu:addToUIManager()
     if JoypadState.players[self.playerNum+1] then
         menu:setHideWhenButtonReleased(Joypad.DPadUp)
@@ -106,6 +96,10 @@ local wasVisible = false
 
 function CARadialMenu.checkKey(key)
     if key ~= getCore():getKey("CARM") then
+        return false
+    end
+
+    if ModKey and ModKey.isKeyDown() then
         return false
     end
 
@@ -148,19 +142,22 @@ function CARadialMenu.showRadialMenu(player)
     end
 
     local menu = CARadialMenu:new(player)
-    menu:fillMenu()
+    --menu:fillMenu()
     menu:display()
-    activeMenu = menu
+    --activeMenu = menu
 end
 
----- Show the Radial Menu on the Up DPad when there's not a car around
-local _ISDPadWheels_onDisplayUp = ISDPadWheels.onDisplayUp
-function ISDPadWheels.onDisplayUp(joypadData)
-    local player = getSpecificPlayer(joypadData.player)
-    if not player:getVehicle() and not ISVehicleMenu.getVehicleToInteractWith(player) then
-        CARadialMenu.showRadialMenu(player)
-    else
-        _ISDPadWheels_onDisplayUp(joypadData)
+-- Only do this if SpiffUI doesn't
+if not SpiffUI then
+    ---- Show the Radial Menu on the Up DPad when there's not a car around
+    local _ISDPadWheels_onDisplayUp = ISDPadWheels.onDisplayUp
+    function ISDPadWheels.onDisplayUp(joypadData)
+        local player = getSpecificPlayer(joypadData.player)
+        if not player:getVehicle() and not ISVehicleMenu.getVehicleToInteractWith(player) then
+            CARadialMenu.showRadialMenu(player)
+        else
+            _ISDPadWheels_onDisplayUp(joypadData)
+        end
     end
 end
 ------------------------------------------
@@ -196,7 +193,7 @@ function CARadialMenu.onKeyHold(key)
     end
     if (getTimestampMs() - ticks >= delay) and not radialMenu:isReallyVisible() then
         local menu = CARadialMenu:new(getSpecificPlayer(0))
-        menu:fillMenu()
+        --menu:fillMenu()
         menu:display()
         activeMenu = menu
     end
@@ -207,3 +204,5 @@ Events.OnGameStart.Add(function()
     Events.OnKeyStartPressed.Add(CARadialMenu.onKeyPress)
     Events.OnKeyKeepPressed.Add(CARadialMenu.onKeyHold)
 end)
+
+return CARadialMenu

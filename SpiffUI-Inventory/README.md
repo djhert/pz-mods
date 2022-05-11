@@ -4,32 +4,33 @@
 
 ## About SpiffUI
 
-SpiffUI is an attempt to make the Project Zomboid in-game UI more player-friendly.  The UI currently acts like a windowing system overtop a video game; similar in behavior to the Openbox/Fluxbox windowing system for a Linux Desktop.  This is works as the complexity of the game warrants this, but with little tweaks it can be so much better. 
+SpiffUI (pronounced "Spiffy") is an attempt to make the Project Zomboid in-game UI more player-friendly.  The UI currently acts like a windowing system overtop a video game; similar in behavior to the Openbox/Fluxbox windowing system for a Linux Desktop.  This works as the complexity of the game warrants this, but with little tweaks it can be so much better.
 
-There will be several independent modules released under the SpiffUI name that each change/add their own features.  
+There will be several independent modules released under the SpiffUI name that each change/add their own features.  This allows me to make modifications to these independently, and allow you, the user, to choose which are active.
 
 **Supports B41+. Works in Multiplayer**
 
 ## SpiffUI - Inventory
-Changes the default behavior of the Loot and Player Inventories in how they are displayed.
+The goal of this mod is to change the default behavior of the Loot and Player Inventories in how they are displayed. The Inventory/Loot Panel rules should make sense in normal usage, but may take a small adjustment to your playstyle. Try it for yourself and let me know what you think!
 
-For starters, the Inventory and Loot panels are hidden until the player triggers an interaction.
+### Features
 
-The Inventory is now bound to the "Tab" key by default.  Pressing Tab will open/close both the inventory and loot panels for the player, the panels cannot be closed when open in this way until you press the key again.
+- The Inventory and Loot panels are hidden until the player triggers an interaction.
 
-Bringing the mouse to the top of the screen will show the inventory or loot panel allowing easy access; you can freely switch between which panel is open by moving the mouse.  The panel is automatically hidden after losing mouse focus.
+- The Inventory is now bound to the "Tab" key by default.  Pressing Tab will open/close both the inventory and loot panels for the player, the panels cannot be closed when open in this way until you press the key again.
 
-Panels are no longer able to be resized horizontally or moved around.  They are instead locked to the top of the screen in the default location, and can only be resized vertically.  The "Close", "Info", "Collapse", and "Pin" buttons are also hidden.
+- Bringing the mouse to the top of the screen will show the inventory or loot panel allowing easy access; you can freely switch between which panel is open by moving the mouse.  The panel is automatically hidden after losing mouse focus.
 
-Clicking on a world container will show the loot panel and lock it open until the window is interacted with, an external mouse click, or if you walk away changing the loot panel to a blank floor.
+- Panels are no longer able to be resized horizontally or moved around.  They are instead locked to the top of the screen in the default location, and can only be resized vertically.  The "Close", "Info", "Collapse", and "Pin" buttons are also hidden.
 
-Even when "hidden", the panels are only a small mouse-movement or key-press away!
+- Clicking on a world container will show the loot panel and lock it open until the window is interacted with, an external mouse click, or if you walk away changing the loot panel to a blank floor.
 
-Option to Hide the "Inventory" button in the left panel.  (I know the keybind, I don't need it)
+- Option to Hide the "Inventory" button in the left panel.  (I know the keybind, I don't need it)
 
-The Inventory/Loot Panel rules should make sense in normal usage, but may take a small adjustment to your playstyle.  Try it for yourself and let me know what you think!
+### Controllers
+If playing with a controller the new behavior will not apply and the inventory will behave like Vanilla.
 
-If playing with a controller these rules will not apply.
+**NOTE:** I HIGHLY recommend that you run both the "Set SpiffUI Recommended Keybinds" and "Run All SpiffUI Resets" after you first install and start the game!
 
 ## SpiffUI Configuration
 
@@ -62,8 +63,15 @@ If ModOptions is installed (Recommended) SpiffUI will appear as a category.  Thi
 
 ## Translations
 
-This mod is currently only in English!  If you would like to help with translations, please submit a Pull Request.
+English
+
+Spanish - [ElDoktor](https://github.com/fcastro97)
+
+Thai - [radiusgreenhill](https://github.com/radiusgreenhill)
+
+If you would like to help with translations, please submit a Pull Request.
 
 ```
-
+Workshop ID: 2799848602
+Mod ID: SpiffUI-Inv
 ```

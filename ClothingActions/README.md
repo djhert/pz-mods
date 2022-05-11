@@ -33,7 +33,13 @@ Default keybind is to the "Z" key.  Configurable in the "Keybinds" menu.
 
 ## Translations
 
-This mod is currently only in English.  If you would like to contribute a translation, please submit a pull request!  I will happily credit here and on the Steam Workshop Page!
+English
+
+Spanish - [ElDoktor](https://github.com/fcastro97)
+
+Thai - [radiusgreenhill](https://github.com/radiusgreenhill)
+
+If you would like to contribute a translation, please submit a pull request!  I will happily credit here and on the Steam Workshop Page!
 
 ```
 Workshop ID: 2786689104
