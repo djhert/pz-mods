@@ -1,0 +1,27 @@
+UI_TH = {
+    -- SpiffUI
+    UI_Hello_SpiffUI = "SpiffUI ยินดีต้อนรับ!",
+    UI_Name_SpiffUI = "SpiffUI",
+    UI_optionscreen_binding_SpiffUI = "SpiffUI"
+
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "ตั้งค่าปุ่มลัดตามที่ SpiffUI แนะนำ",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> ตั้งค่าปุ่มลัด SpiffUI <LINE><LINE><LEFT><SIZE:small> กำหนดค่าปุ่มดังต่อไปนี้: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  เป็นปุ่ม:  [%2] ",
+
+    UI_ModOptions_SpiffUI_runAllResets = "เรียกใช้การคืนค่า SpiffUI ทั้งหมด",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "ใช้งานได้ในเกมเท่านั้น!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> คืนค่า SpiffUI <LINE><LINE><LEFT><SIZE:small> การตั้งค่าดังต่อไปนี้จะถูกคืนค่าเป็นค่าเริ่มต้น: <LINE>",
+
+
+    -- SpiffUI -- Inventory
+    UI_Hello_SpiffUI_Inv = "SpiffUI สำหรับช่องเก็บของ ยินดีต้อนรับ!",
+
+    UI_Name_SpiffUI_Inv = "SpiffUI สำหรับช่องเก็บของ",
+
+    UI_ModOptions_SpiffUI_Inv_enable = "เปิดใช้งาน SpiffUI สำหรับช่องเก็บของ",
+    UI_ModOptions_SpiffUI_Inv_tooltip_enable = "หมายเหตุ: จำเป็นต้องเริ่มเกมใหม่หากเพิ่งเริ่มเปิดใช้งานในเกม!",
+
+    UI_ModOptions_SpiffUI_Inv_hideInv = "ซ่อนปุ่มช่องเก็บของ",
+
+    UI_optionscreen_binding_SpiffUI_Inv = "เปิด/ปิดช่องเก็บของ"
+}

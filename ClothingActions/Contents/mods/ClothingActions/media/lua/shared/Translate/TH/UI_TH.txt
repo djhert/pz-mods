@@ -1,0 +1,8 @@
+UI_TH = {
+    UI_Init_ClothingActionsRM = "ยินดีต้อนรับสู่เมนูแฉกรัศมีสำหรับเสื้อผ้า!",
+    UI_optionscreen_binding_ClothingActionsRM = "เมนูแฉกรัศมีสำหรับเสื้อผ้า",
+    UI_optionscreen_binding_CARM = "แสดงเมนูแฉกรัศมีสำหรับเสื้อผ้า",
+    UI_optionscreen_binding_CARMMK = "แสดงเมนูแฉกรัศมีสำหรับเสื้อผ้า",
+    UI_ModOptions_CARMfilter = "ปิดใช้งานตัวกรองเสื้อผ้า (แสดงกระเป๋า นาฬิกา ฯลฯ)",
+    UI_ModOptions_CARMdelay = "แสดงเมนูแฉกรัศมีทันทีเมื่อกดปุ่ม"
+}
