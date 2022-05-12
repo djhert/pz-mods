@@ -1,119 +1,119 @@
-UI_EN = {
+UI_ES = {
     -- SpiffUI
     UI_Hello_SpiffUI = "Hello SpiffUI!",
     UI_Name_SpiffUI = "SpiffUI",
     UI_optionscreen_binding_SpiffUI = "SpiffUI"
 
-    UI_ModOptions_SpiffUI_applyNewKeybinds = "Set SpiffUI Recommended Keybinds",
-    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Set SpiffUI Keybinds <LINE><LINE><LEFT><SIZE:small> Sets the following Keybinds: <LINE>",
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Establecer teclas recomendadas por SpiffUI",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Configurar teclas de SpiffUI <LINE><LINE><LEFT><SIZE:small> Configura las siguientes teclas: <LINE>",
     UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  to:  [%2] ",
 
-    UI_ModOptions_SpiffUI_runAllResets = "Run All SpiffUI Resets",
-    UI_ModOptions_SpiffUI_tooltip_runResets = "Only works In-Game!",
-    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> SpiffUI Reset <LINE><LINE><LEFT><SIZE:small> The following will be reset: <LINE>",
+    UI_ModOptions_SpiffUI_runAllResets = "Restablecer SpiffUI",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "Solo funciona dentro de la partida!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> Restablecer SpiffUI <LINE><LINE><LEFT><SIZE:small> Lo siguiente se restablecera: <LINE>",
 
     -- SpiffUI -- Radials
     UI_Hello_SpiffUI_Radials = "Hello SpiffUI - Radials",
     
     UI_Name_SpiffUI_Radials = "SpiffUI - Radials",
 
-    UI_ModOptions_SpiffUI_showTooltips = "Show Tooltips",
-    UI_ModOptions_SpiffUI_hideCraftButton = "Hide Crafting Button",
+    UI_ModOptions_SpiffUI_showTooltips = "Mostrar recuadro de información",
+    UI_ModOptions_SpiffUI_hideCraftButton = "Ocultar boton de elaboración",
 
-    UI_ModOptions_SpiffUI_smokeShowButts = "Show Cigarette Butts (Smoke)", 
-    UI_ModOptions_SpiffUI_smokeShowGum = "Show Gum (Smoke)",
-    UI_ModOptions_SpiffUI_smokeShowNow = "Show Radial on Press (Smoke)", 
+    UI_ModOptions_SpiffUI_smokeShowButts = "Mostrar colillas de cigarro (Fumar)", 
+    UI_ModOptions_SpiffUI_smokeShowGum = "Mostrar goma de mascar (Fumar)",
+    UI_ModOptions_SpiffUI_smokeShowNow = "Mostrar radial al presionar (Fumar)", 
 
-    UI_ModOptions_SpiffUI_pillsShowNow = "Show Radial on Press (Pills)",
+    UI_ModOptions_SpiffUI_pillsShowNow = "Mostrar radial al presionar (Pildoras)",
 
-    UI_ModOptions_SpiffUI_eatAmount = "Amount to Eat (Food)",
-    UI_ModOptions_SpiffUI_eatQuickAmount = "Amount to Quick Eat (Food)",
-    UI_ModOptions_SpiffUI_eatShowNow = "Show Radial on Press (Food)", 
+    UI_ModOptions_SpiffUI_eatAmount = "Cantidad a comer (Comida)",
+    UI_ModOptions_SpiffUI_eatQuickAmount = "Cantidad a comer del acceso rapido (Comida)",
+    UI_ModOptions_SpiffUI_eatShowNow = "Mostrar radial al presionar (Comida)", 
 
-    UI_ModOptions_SpiffUI_drinkAmount = "Amount to Drink (Drink)",
-    UI_ModOptions_SpiffUI_drinkQuickAmount = "Amount to Quick Drink (Drink)",
-    UI_ModOptions_SpiffUI_drinkShowNow = "Show Radial on Press (Drink)",
+    UI_ModOptions_SpiffUI_drinkAmount = "Cantidad a beber (Beber)",
+    UI_ModOptions_SpiffUI_drinkQuickAmount = "Cantidad a beber del acceso rapido (Beber)",
+    UI_ModOptions_SpiffUI_drinkShowNow = "Mostrar radial al presionar (Beber)",
 
-    UI_ModOptions_SpiffUI_smokeCraftShowDismantle = "Show Dismantle Recipes (Smoke Craft)",
-    UI_ModOptions_SpiffUI_smokeCraftShowCigPacks = "Show Cigarette Packs (Smoke Craft)",
-    UI_ModOptions_SpiffUI_smokeCraftAmount = "Amount To Craft (Smoke Craft)",
+    UI_ModOptions_SpiffUI_smokeCraftShowDismantle = "Mostrar recetas de desmantelamiento (Elaboración de cigarros)",
+    UI_ModOptions_SpiffUI_smokeCraftShowCigPacks = "Mostrar paquetes de cigarros (Elaboración de cigarros)",
+    UI_ModOptions_SpiffUI_smokeCraftAmount = "Cantidad a crear (Elaboración de cigarros)",
 
-    UI_ModOptions_SpiffUI_craftSwitch = "Show on Press (Crafting)",
-    UI_ModOptions_SpiffUI_craftShowEquipped = "Show Recipes on Equipped Items (Crafting)",
-    UI_ModOptions_SpiffUI_craftShowSmokeables = "Show Smokeable Recipes (Crafting)",
-    UI_ModOptions_SpiffUI_craftShowMedical = "Show Medical Recipes (Crafting)",
-    UI_ModOptions_SpiffUI_craftAmount = "Amount To Craft (Crafting)",
-    UI_ModOptions_SpiffUI_craftFilterUnique = "Filter Duplicate Recipes (Crafting)",
+    UI_ModOptions_SpiffUI_craftSwitch = "Mostrar al presionar (Elaboración)",
+    UI_ModOptions_SpiffUI_craftShowEquipped = "Mostrar recetas en objetos equipados (Elaboración)",
+    UI_ModOptions_SpiffUI_craftShowSmokeables = "Mostrar recetas de cigarros (Elaboración)",
+    UI_ModOptions_SpiffUI_craftShowMedical = "Mostrar recetas medicas (Elaboración)",
+    UI_ModOptions_SpiffUI_craftAmount = "Cantidad a crear (Elaboración)",
+    UI_ModOptions_SpiffUI_craftFilterUnique = "Filtrar recetas duplicadas (Elaboración)",
 
-    UI_ModOptions_SpiffUI_equipShowDrop = "Show Drop Action (Equipment)",
-    UI_ModOptions_SpiffUI_equipShowAllRepairs = "Show Unavailable Repair Options (Equipment)",
-    UI_ModOptions_SpiffUI_equipShowClothingActions = "Show Extra Clothing Actions (Equipment)",
-    UI_ModOptions_SpiffUI_equipShowRecipes = "Show Recipes (Equipment)",
+    UI_ModOptions_SpiffUI_equipShowDrop = "Mostrar acción de tirar objeto (Equipamiento)",
+    UI_ModOptions_SpiffUI_equipShowAllRepairs = "Mostrar opciones de reparación no disponibles (Equipamiento)",
+    UI_ModOptions_SpiffUI_equipShowClothingActions = "Mostrar acciones extra de vestimenta (Equipamiento)",
+    UI_ModOptions_SpiffUI_equipShowRecipes = "Mostrar recetas (Equipamiento)",
 
-    UI_ModOptions_SpiffUI_repairShowEquipped = "Show Repairs on Equipped Items (Repair)",
-    UI_ModOptions_SpiffUI_repairShowHotbar = "Show Repairs for Items in Hotbar (Repair)",
+    UI_ModOptions_SpiffUI_repairShowEquipped = "Mostrar reparaciones en objetos equipados (Reparar)",
+    UI_ModOptions_SpiffUI_repairShowHotbar = "Mostrar reparaciones de objetos en la barra de acceso rapido (Reparar)",
 
-    UI_ModOptions_SpiffUI_firstAidCraftAmount = "Amount to Craft (Medical Craft)",
+    UI_ModOptions_SpiffUI_firstAidCraftAmount = "Cantidad a crear (Elaboración medica)",
 
-    UI_ModOptions_SpiffUI_tooltip_showTooltips = "Show Tooltips in Radial Menus for Items, Recipes, and Repairs (Recommended)",
+    UI_ModOptions_SpiffUI_tooltip_showTooltips = "Mostrar recuadro de información en los menus radiales para objetos, recetas, y reparaciones (Recomendado)",
     
-    UI_ModOptions_SpiffUI_tooltip_pillsShowNow = "Note: Disables Quick Pills Action",
+    UI_ModOptions_SpiffUI_tooltip_pillsShowNow = "Nota: Deshabilita la acción de tomar pildoras del acceso rapido",
     
-    UI_ModOptions_SpiffUI_tooltip_drinkShowNow = "Note: Disables Quick Drink Water Action",
+    UI_ModOptions_SpiffUI_tooltip_drinkShowNow = "Nota: Deshabilita la acción de beber agua del acceso rapido",
 
-    UI_ModOptions_SpiffUI_tooltip_eatShowNow = "Note: Disables Quick Eat Food Action",
+    UI_ModOptions_SpiffUI_tooltip_eatShowNow = "Nota: Deshabilita la acción de comer del acceso rapido",
     
-    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "Note: Some Recipes may still filter through.  Consider using the First Aid Crafting Menu instead!",
-    UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "Note: Recipes on worn items can be done from the Equipment Menu.  Items in your hand will still show recipes",
-    UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "Consider using the Smoke Crafting Menu instead!"
+    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "Nota: Algunas recetas podrian estar siendo filtradas.  Considera usar el menu de elaboración de primeros auxilios en su lugar!",
+    UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "Nota: Las recetas en objetos desgastados pueden hacerse en el menu de equipamiento.  Los objetos que tengas en las manos seguiran mostrando recetas",
+    UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "Considera usar el menu de elaboración de cigarros en su lugar!"
 
-    UI_ModOptions_SpiffUI_tooltip_smokeShowNow = "Note: Disables AutoSmoke Quick Smoke",
+    UI_ModOptions_SpiffUI_tooltip_smokeShowNow = "Nota: Deshabilita el auto-fumar del acceso rapido de fumar",
 
-    UI_ModOptions_SpiffUI_tooltip_CraftingWheelSwitch = "Press Opens Radial Menu, Hold for Crafting Window",
+    UI_ModOptions_SpiffUI_tooltip_CraftingWheelSwitch = "Presiona para abrir el menu radial, mantén presionado para abrir la ventana de elaboración",
 
-    UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "Show Repair Options even if the required items are not in your inventory",
+    UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "Mostrar opciones de reparación aun si los objetos requeridos no están en tu inventario",
     
-    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "Repairs for Equipment can be done from the Equipment Menu",
+    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "Las reparaciones del equipamiento pueden hacerse desde el menu de equipamiento",
 
-    UI_amount_SpiffUI_Ask = "Ask",
-    UI_amount_SpiffUI_All = "All",
-    UI_amount_SpiffUI_Full = "Dieter",
+    UI_amount_SpiffUI_Ask = "Preguntar",
+    UI_amount_SpiffUI_All = "Todo",
+    UI_amount_SpiffUI_Full = "Dieta",
     UI_amount_SpiffUI_One = "1",
     UI_amount_SpiffUI_Half = "1/2",
     UI_amount_SpiffUI_Quarter = "1/4",
 
-    UI_radial_SpiffUI_Accessories = "Accessories",
-    UI_radial_SpiffUI_Hotbar = "Hotbar",
-    UI_radial_SpiffUI_Transfer = "Transfer to ",
+    UI_radial_SpiffUI_Accessories = "Accesorios",
+    UI_radial_SpiffUI_Hotbar = "Barra de acceso rapido",
+    UI_radial_SpiffUI_Transfer = "Transferir a ",
 
-    UI_optionscreen_binding_SpiffUIPillWheel = "Pill Radial",
-    UI_optionscreen_binding_SpiffUIDrinkWheel = "Drink Radial",
-    UI_optionscreen_binding_SpiffUIEatWheel = "Eat Radial",
-    UI_optionscreen_binding_SpiffUISmokeWheel = "Smoke Radial",
-    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Smoke Craft Radial",
-    UI_optionscreen_binding_SpiffUICraftWheel = "Crafting UI/Radial",
-    UI_optionscreen_binding_SpiffUIEquipmentWheel = "Inventory Toggle/Radial",
-    UI_optionscreen_binding_SpiffUIRepairWheel = "Repair Radial",
-    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "First Aid Craft",
+    UI_optionscreen_binding_SpiffUIPillWheel = "Radial de pildoras",
+    UI_optionscreen_binding_SpiffUIDrinkWheel = "Radial de beber",
+    UI_optionscreen_binding_SpiffUIEatWheel = "Radial de comer",
+    UI_optionscreen_binding_SpiffUISmokeWheel = "Radial de fumar",
+    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Radial de elaboración de cigarros",
+    UI_optionscreen_binding_SpiffUICraftWheel = "UI/Radial de elaboración",
+    UI_optionscreen_binding_SpiffUIEquipmentWheel = "Alternar/Radial de inventario",
+    UI_optionscreen_binding_SpiffUIRepairWheel = "Radial de reparación",
+    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "Elaborar primeros auxilios",
     UI_optionscreen_binding_SpiffUIOneWheel = "SpiffUI Radial",
 
-    UI_character_SpiffUI_noLighter = "I need a lighter.",
-    UI_character_SpiffUI_noSmokes = "There's nothing to Smoke.",
+    UI_character_SpiffUI_noLighter = "Necesito un encendedor.",
+    UI_character_SpiffUI_noSmokes = "No tengo nada que fumar.",
 
-    UI_character_SpiffUI_noCraft = "There's nothing to Craft.",
+    UI_character_SpiffUI_noCraft = "No tengo nada que crear.",
 
-    UI_character_SpiffUI_noEquip = "I am Naked!",
+    UI_character_SpiffUI_noEquip = "Estoy desnudo!",
 
-    UI_character_SpiffUI_notHungry = "I'm not Hungry.",
-    UI_character_SpiffUI_noFood = "There's no Food to Eat.",
+    UI_character_SpiffUI_notHungry = "No tengo hambre.",
+    UI_character_SpiffUI_noFood = "No tengo ningun alimento para comer.",
 
-    UI_character_SpiffUI_notThirsty = "I'm not Thirsty.",
-    UI_character_SpiffUI_noDrinks = "There's nothing to Drink.",
+    UI_character_SpiffUI_notThirsty = "No tengo sed.",
+    UI_character_SpiffUI_noDrinks = "No tengo nada para beber.",
 
-    UI_character_SpiffUI_noRepair = "There's nothing to Repair.",
-    UI_character_SpiffUI_noRepairItems = "I can't Reapir that.",
+    UI_character_SpiffUI_noRepair = "No tengo nada que reparar.",
+    UI_character_SpiffUI_noRepairItems = "No puedo reparar eso.",
 
-    UI_character_SpiffUI_noPillsQuick = "I have no ",
-    UI_character_SpiffUI_noPills = "There's no pills",
-    UI_character_SpiffUI_noPillsNeed = "I'm not in any Mood."
+    UI_character_SpiffUI_noPillsQuick = "No tengo ",
+    UI_character_SpiffUI_noPills = "No tengo pildoras",
+    UI_character_SpiffUI_noPillsNeed = "No creo que las necesite en este momento."
 }
