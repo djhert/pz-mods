@@ -23,5 +23,7 @@ UI_ES = {
 
     UI_ModOptions_SpiffUI_Inv_hideInv = "Ocultar boton de inventario",
 
+    UI_ModOptions_SpiffUI_Inv_mouseHide = "Ocultar solo al hacer click con el mouse",
+
     UI_optionscreen_binding_SpiffUI_Inv = "Alternar inventario"
 }
