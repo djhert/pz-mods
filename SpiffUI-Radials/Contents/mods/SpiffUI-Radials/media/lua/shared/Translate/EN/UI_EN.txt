@@ -111,7 +111,7 @@ UI_EN = {
     UI_character_SpiffUI_noDrinks = "There's nothing to Drink.",
 
     UI_character_SpiffUI_noRepair = "There's nothing to Repair.",
-    UI_character_SpiffUI_noRepairItems = "I can't Reapir that.",
+    UI_character_SpiffUI_noRepairItems = "I can't Repair that.",
 
     UI_character_SpiffUI_noPillsQuick = "I have no ",
     UI_character_SpiffUI_noPills = "There's no pills",
