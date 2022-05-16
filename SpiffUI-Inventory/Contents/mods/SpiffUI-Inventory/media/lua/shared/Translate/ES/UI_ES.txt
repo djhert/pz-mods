@@ -4,11 +4,11 @@ UI_ES = {
     UI_Name_SpiffUI = "SpiffUI",
     UI_optionscreen_binding_SpiffUI = "SpiffUI"
 
-    UI_ModOptions_SpiffUI_applyNewKeybinds = "Establecer teclas recomendadas de SpiffUI",
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Establecer teclas recomendadas por SpiffUI",
     UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Configurar teclas de SpiffUI <LINE><LINE><LEFT><SIZE:small> Configura las siguientes teclas: <LINE>",
     UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  to:  [%2] ",
 
-    UI_ModOptions_SpiffUI_runAllResets = "Restablecer todo SpiffUI",
+    UI_ModOptions_SpiffUI_runAllResets = "Restablecer SpiffUI",
     UI_ModOptions_SpiffUI_tooltip_runResets = "Solo funciona dentro de la partida!",
     UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> Restablecer SpiffUI <LINE><LINE><LEFT><SIZE:small> Lo siguiente se restablecera: <LINE>",
 
@@ -22,6 +22,8 @@ UI_ES = {
     UI_ModOptions_SpiffUI_Inv_tooltip_enable = "Aviso: Se requiere reiniciar si esta en la partida!",
 
     UI_ModOptions_SpiffUI_Inv_hideInv = "Ocultar boton de inventario",
+
+    UI_ModOptions_SpiffUI_Inv_mouseHide = "Ocultar solo al hacer click con el mouse",
 
     UI_optionscreen_binding_SpiffUI_Inv = "Alternar inventario"
 }

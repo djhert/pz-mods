@@ -23,7 +23,7 @@ UI_EN = {
 
     UI_ModOptions_SpiffUI_Inv_hideInv = "Hide Inventory Button",
 
-    UI_ModOptions_SpiffUI_Inv_mouseHide = "Only Autohide on Mouse Click",
+    UI_ModOptions_SpiffUI_Inv_mouseHide = "Only hide on Mouse Click",
 
     UI_optionscreen_binding_SpiffUI_Inv = "Toggle Inventory"
 }
