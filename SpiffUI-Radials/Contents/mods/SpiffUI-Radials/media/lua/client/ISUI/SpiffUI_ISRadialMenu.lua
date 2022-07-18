@@ -5,7 +5,7 @@
 
 SpiffUI = SpiffUI or {}
 
--- Register our inventory
+-- Register our module
 local spiff = SpiffUI:Register("radials")
 
 local SpiffUIRadialRecipeTooltip = ISRecipeTooltip:derive("SpiffUIRadialRecipeTooltip")
@@ -179,7 +179,6 @@ function SpiffUIRadialRecipeTooltip:layoutContents(x, y)
 		-- Hack for "Dismantle Digital Watch" and similar recipes.
 		-- Recipe sources include both left-hand and right-hand versions of the same item.
 		-- We only want to display one of them.
-		---[[
 		for j=1,#itemDataList do
 			local item = itemDataList[j]
 			for k=#itemDataList,j+1,-1 do
@@ -189,7 +188,6 @@ function SpiffUIRadialRecipeTooltip:layoutContents(x, y)
 				end
 			end
 		end
-		--]]
 
 		for i,itemData in ipairs(itemDataList) do
 			local x2 = x1
@@ -284,6 +282,11 @@ function ISRadialMenu:getSliceTooltipMouse(x, y)
         return command[2].tooltip
     end
 	return nil
+end
+
+function ISRadialMenu:getSliceText(sliceIndex)
+	if sliceIndex < 1 or sliceIndex > #self.slices then return "" end
+	return self.slices[sliceIndex].text
 end
 
 function ISRadialMenu:showTooltip(item)
@@ -400,7 +403,6 @@ end
 local _ISRadialMenu_undisplay = ISRadialMenu.undisplay
 function ISRadialMenu:undisplay()
 	_ISRadialMenu_undisplay(self)
-
 	if self.toolRender and self.toolRender:getIsVisible() then
 		self.toolRender:removeFromUIManager()
 		self.toolRender:setVisible(false)
@@ -413,11 +415,17 @@ function ISRadialMenu:undisplay()
 		self.invRender:removeFromUIManager()
 		self.invRender:setVisible(false)
 	end
+	if self.activeMenu then 
+		self.activeMenu:undisplay()
+		self.activeMenu = nil
+	end
 end
 
 function ISRadialMenu:RadialTick()
 	if self:isReallyVisible() then
-		self:showTooltip(self:getSliceTooltipJoyPad())
+		if JoypadState.players[self.playerNum+1] then
+			self:showTooltip(self:getSliceTooltipJoyPad())
+		end
 	end
 end
 
@@ -425,11 +433,6 @@ local _ISRadialMenu_new = ISRadialMenu.new
 function ISRadialMenu:new(...)
 	local o = _ISRadialMenu_new(self, ...)
 	o:makeToolTip()
-	if JoypadState.players[o.playerNum+1] then
-		Events.OnRenderTick.Add(function() 
-			o:RadialTick()
-		end)
-	end
 	return o
 end
 

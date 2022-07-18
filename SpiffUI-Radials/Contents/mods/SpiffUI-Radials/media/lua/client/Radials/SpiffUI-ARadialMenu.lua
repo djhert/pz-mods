@@ -9,19 +9,18 @@ SpiffUI = SpiffUI or {}
 local spiff = SpiffUI:Register("radials")
 
 -- Base SpiffUI Radial Menu
-local SpiffUIRadialMenu = ISBaseObject:derive("SpiffUIRadialMenu")
+local SpiffUIRadialMenu = ISUIElement:derive("SpiffUIRadialMenu")
 
 -- Base Radial Command
 local SpiffUIRadialCommand = ISBaseObject:derive("SpiffUIRadialCommand")
 
--- Radial Command for asking amount
-local SpiffUIRadialCommandAsk = SpiffUIRadialCommand:derive("SpiffUIRadialCommandAsk")
 
 -- Radial Command for Next Page
 local SpiffUIRadialCommandNext = SpiffUIRadialCommand:derive("SpiffUIRadialCommandNext")
 
 -- Radial Command for Prev Page
 local SpiffUIRadialCommandPrev = SpiffUIRadialCommand:derive("SpiffUIRadialCommandPrev")
+spiff.prevCmd = SpiffUIRadialCommandPrev -- need to be able to call this other places
 
 ------------------------------------------
 function SpiffUIRadialCommand:new(menu, text, texture, tooltip)
@@ -33,24 +32,27 @@ function SpiffUIRadialCommand:new(menu, text, texture, tooltip)
 
     o.tooltip = tooltip
 
+    -- -- Disable the text if the menu has a forced center image
+    -- if menu.centerImg and menu.cIndex then
+    --     text = ""
+    -- end
     o.text = text
+
     o.texture = texture
 
     o.shouldAsk = 0
+    o.askText = nil
+
     o.amount = 0
 
     return o
 end
 
 function SpiffUIRadialCommand:fillMenu()
-    if spiff.config.showTooltips and self.tooltip then
-        if self.forceText then
-            self.rmenu:addSlice(self.text, self.texture, self.invoke, self)
-        else
-            self.rmenu:addSlice("", self.texture, self.invoke, self)
-        end
-    else 
-        self.rmenu:addSlice(self.text, self.texture, self.invoke, self)
+    if self.texture then
+        self.rmenu:addSlice("", self.texture, self.invoke, self)
+    else -- add a blank
+        self.rmenu:addSlice(nil, nil, nil)
     end
 end
 
@@ -61,7 +63,8 @@ end
 function SpiffUIRadialCommand:invoke()
     if self.shouldAsk > 0 then
         self.menu.command = self
-        self.menu:askAmount()
+        local rad = spiff.subradial.ask:new(self.player, self.menu, self.texture, self.menu.askText)
+        rad:start()
         return
     end
     self:Action()
@@ -69,19 +72,6 @@ end
 
 -- Add Definition
 spiff.radialcommand = SpiffUIRadialCommand
-
-------------------------------------------
-
-function SpiffUIRadialCommandAsk:invoke()
-    self.menu.command.amount = self.amount
-    self.menu.command:Action()
-end
-
-function SpiffUIRadialCommandAsk:new(menu, text, texture, amount)
-    local o = spiff.radialcommand.new(self, menu, text, texture, nil)
-    o.amount = amount
-    return o
-end
 
 ------------------------------------------
 
@@ -97,11 +87,19 @@ end
 ------------------------------------------
 
 function SpiffUIRadialCommandPrev:invoke()
-    self.menu.page = self.menu.page - 1
-    if self.menu.pageReset then
-        self.menu.maxPage = self.menu.page
+    if self.menu.page > 1 then
+        local p = self.menu.page
+        self.menu.page = self.menu.page - 1
+        if self.menu.pageReset then
+            self.menu.maxPage = self.menu.page
+            self.menu.btmText[p] = nil
+            self.menu.centerImg[p] = nil
+            self.menu.cImgChange[p] = nil
+        end
+        self.menu:show()
+    else
+        self.menu.prev:show()
     end
-    self.menu:show()
 end
 
 function SpiffUIRadialCommandPrev:new(menu, text, texture)
@@ -109,93 +107,66 @@ function SpiffUIRadialCommandPrev:new(menu, text, texture)
 end
 
 ------------------------------------------
-
-function SpiffUIRadialMenu:build()
-    print("Base SpiffUIRadialMenu build -- Override me!")
+function SpiffUIRadialMenu:start()
+    print("Base SpiffUIRadialMenu start -- Override me!")
 end
 
-function SpiffUIRadialMenu:askAmount()
-    self.rmenu:clear()
-    --table.wipe(self.commands)
-
-    local askCommands = {}
-
-    if self.command.shouldAsk == 1 then -- Consume: 1 (all), 1/2, 1/4, Dieter
-        table.insert(askCommands, SpiffUIRadialCommandAsk:new(self, self.command.item:getName(), spiff.icons[4], 1))
-        table.insert(askCommands, SpiffUIRadialCommandAsk:new(self, self.command.item:getName(), spiff.icons[2], 0.5))
-        table.insert(askCommands, SpiffUIRadialCommandAsk:new(self, self.command.item:getName(), spiff.icons[3], 0.25))
-        table.insert(askCommands, SpiffUIRadialCommandAsk:new(self, self.command.item:getName(), spiff.icons[5], -1))
-    elseif self.command.shouldAsk == 2 then -- Crafting, all or 1
-        table.insert(askCommands, SpiffUIRadialCommandAsk:new(self, self.command.recipe:getName(), spiff.icons[4], true))
-        table.insert(askCommands, SpiffUIRadialCommandAsk:new(self, self.command.recipe:getName(), spiff.icons[1], false))
-    end
-
-    for _,command in ipairs(askCommands) do
-        local count = #self.rmenu.slices
-        command:fillMenu()
-        if count == #self.rmenu.slices then
-            self.rmenu:addSlice(nil, nil, nil)
-        end
-    end
-
-    self.rmenu:center()
-    self.rmenu:addToUIManager()
-    self.rmenu:setVisible(true)
-    SpiffUI.action.wasVisible = true
-    if JoypadState.players[self.playerNum+1] then
-        self.rmenu:setHideWhenButtonReleased(Joypad.DPadUp)
-        setJoypadFocus(self.playerNum, self.rmenu)
-        self.player:setJoypadIgnoreAimUntilCentered(true)
+function SpiffUIRadialMenu:display()
+    if self.start then
+        self:start()
+        self.page = 1      
+        self:show()
     end
 end
 
-function SpiffUIRadialMenu:display()    
-    self:build()
-    self.page = 1
-    
-    self:show()
+function SpiffUIRadialMenu:prepareCmds()
+    if not self.commands[self.page] then
+        self.commands[self.page] = {}
+    else
+        table.wipe(self.commands[self.page])
+    end
 end
 
 function SpiffUIRadialMenu:show()
     self.rmenu:clear()
-
-    local hasCommands = false
+    local count = 0
+    local min = 3
 
     -- Add the next page
     if self.maxPage > 1 and self.page < self.maxPage then
-        local nextp = SpiffUIRadialCommandNext:new(self, "Next", self.nextTex)
-        local count = #self.rmenu.slices
+        local nextp = SpiffUIRadialCommandNext:new(self, getText("UI_radial_SpiffUI_Next"), self.nextTex)
         nextp:fillMenu()
-        if count == #self.rmenu.slices then
-            self.rmenu:addSlice(nil, nil, nil)
-        end
     end
 
     if self.commands[self.page] then
         for _,command in ipairs(self.commands[self.page]) do
-            local count = #self.rmenu.slices
             command:fillMenu()
-            if count == #self.rmenu.slices then
-                self.rmenu:addSlice(nil, nil, nil)
-            end
-            hasCommands = true
+            count = count + 1
         end
     end
 
-    -- Add the previous page
-    if self.maxPage > 1 and self.page > 1 then
-        local nextp = SpiffUIRadialCommandPrev:new(self, "Previous", self.prevTex)
-        local count = #self.rmenu.slices
-        nextp:fillMenu()
-        if count == #self.rmenu.slices then
+    -- rule of 3
+    if count < min then
+        for i=count,min-1 do
             self.rmenu:addSlice(nil, nil, nil)
         end
     end
 
-    if hasCommands then
+    -- Add the previous page
+    if (self.maxPage > 1 and self.page > 1) or (self.page == 1 and self.prev) then
+        local nextp = SpiffUIRadialCommandPrev:new(self, getText("UI_radial_SpiffUI_Previous"), self.prevTex)
+        nextp:fillMenu()
+    end
+
+    if count > 0 then
         self.rmenu:center()
+        self:center()
         self.rmenu:addToUIManager()
+        self:addToUIManager()
         self.rmenu:setVisible(true)
+        self:setVisible(true)
+        self:bringToTop()
+        self.rmenu.activeMenu = self
         SpiffUI.action.wasVisible = true
         if JoypadState.players[self.playerNum+1] then
             self.rmenu:setHideWhenButtonReleased(Joypad.DPadUp)
@@ -208,9 +179,117 @@ function SpiffUIRadialMenu:show()
     end
 end
 
+function SpiffUIRadialMenu:center()
+    local x = getPlayerScreenLeft(self.playerNum)
+	local y = getPlayerScreenTop(self.playerNum)
+	local w = getPlayerScreenWidth(self.playerNum)
+	local h = getPlayerScreenHeight(self.playerNum)
+
+    x = x + w / 2
+	y = y + h / 2
+
+    if self.cmdText then
+        local cH = getTextManager():getFontHeight(UIFont.Medium)
+        local cW = getTextManager():MeasureStringX(UIFont.Medium, self.cmdText)
+
+        self.cTX = (x - cW / 2)
+        self.cTY = (y - cH / 2)
+        self.bTY = (y - cH / 2) + (cH * 2)
+    end
+
+    if self.btmText[self.page] then
+        local bh = getTextManager():getFontHeight(UIFont.Medium)
+        local bw = getTextManager():MeasureStringX(UIFont.Medium, self.btmText[self.page])
+
+        self.bTX = (x - bw / 2)
+        self.bTY = (y - bh / 2) + (bh * 2)
+    end
+
+    self.imgH = self.rmenu.innerRadius/2
+    self.imgW = self.imgH
+
+    self.imgX = (x - self.imgW / 2)
+    self.imgY = (y - self.imgH / 2)
+
+    self.cenX = x
+    self.cenY = y
+end
+
+function SpiffUIRadialMenu:render()
+    local index = -1 
+    -- This is a better way to handle this. :D
+    if self.cIndex then -- force show
+        index = -1
+    elseif JoypadState.players[self.playerNum+1] then
+        index = self.rmenu.javaObject:getSliceIndexFromJoypad(self.rmenu.joyfocus.id)
+    else
+        index = self.rmenu.javaObject:getSliceIndexFromMouse(self.rmenu:getMouseX(), self.rmenu:getMouseY())
+    end
+
+    self.cmdText = nil
+    self.cmdImg = nil
+
+    if index > -1 then
+        if self.rmenu:getSliceCommand(index+1) and self.rmenu:getSliceCommand(index+1)[2] then
+            self.cmdText = SpiffUI.textwrap(self.rmenu:getSliceCommand(index+1)[2].text,20)
+            self.cmdImg = self.rmenu:getSliceCommand(index+1)[2].texture
+        end
+    end
+    
+    self:center()
+
+    if index == -1 then
+        if self.centerImg[self.page] then
+            self:drawTextureScaledAspect(self.centerImg[self.page], self.imgX, self.imgY, self.imgW, self.imgH, 1, 1, 1, 1)
+        end
+        if self.btmText[self.page] then
+            self:drawText(self.btmText[self.page], self.bTX, self.bTY, 1,1,1,1, UIFont.Medium)
+        end
+    else
+        if self.cImgChange[self.page] then
+            if self.cmdImg then
+                self:drawTextureScaledAspect(self.cmdImg, self.imgX, self.imgY, self.imgW, self.imgH, 1, 1, 1, 1)
+            else
+                if self.centerImg[self.page] then
+                    self:drawTextureScaledAspect(self.centerImg[self.page], self.imgX, self.imgY, self.imgW, self.imgH, 1, 1, 1, 1)
+                end
+            end
+        else
+            if self.centerImg[self.page] then 
+                self:drawTextureScaledAspect(self.centerImg[self.page], self.imgX, self.imgY, self.imgW, self.imgH, 1, 1, 1, 1)
+            end
+        end
+
+        if self.cmdText then
+            if self.centerImg[self.page] or self.cImgChange[self.page] then
+                -- Draw cmdText at bottom
+                self:drawText(self.cmdText, self.cTX, self.bTY, 1,1,1,1, UIFont.Medium)
+            else
+                if self.btmText[self.page] then
+                    -- Draw btmText
+                    self:drawText(self.btmText[self.page], self.bTX, self.bTY, 1,1,1,1, UIFont.Medium)
+                end
+                -- Draw cmdText at middle
+                self:drawText(self.cmdText, self.cTX, self.cTY, 1,1,1,1, UIFont.Medium)
+            end
+        else
+            if self.btmText[self.page] then
+                self:drawText(self.btmText[self.page], self.bTX, self.bTY, 1,1,1,1, UIFont.Medium)
+            end
+        end
+
+        if JoypadState.players[self.playerNum+1] then
+            self.rmenu:showTooltip(self.rmenu:getSliceTooltipJoyPad())
+        end
+    end
+end
+
+function SpiffUIRadialMenu:undisplay()
+    self:removeFromUIManager()
+end
+
 function SpiffUIRadialMenu:AddCommand(command)
     if self.cCount == self.cMax then
-        --print("Adding New Page: " .. self.cCount)
         self.cCount = 0
         self.page = self.page + 1
         self.maxPage = self.page
@@ -221,11 +300,10 @@ function SpiffUIRadialMenu:AddCommand(command)
     end
     table.insert(self.commands[self.page], command)
     self.cCount = self.cCount + 1
-    --print("Count: " .. self.cCount)
 end
 
-function SpiffUIRadialMenu:new(player)
-    local o = ISBaseObject.new(self)
+function SpiffUIRadialMenu:new(player, prev, centerImg, btmText)
+    local o = ISUIElement.new(self, 0,0,0,0)
 
     o.player = player
     o.playerNum = player:getPlayerNum()
@@ -238,8 +316,26 @@ function SpiffUIRadialMenu:new(player)
     o.page = 1
     o.maxPage = 1
 
-    o.nextTex = getTexture("media/SpiffUI/nextpage.png")                                              
-    o.prevTex = getTexture("media/SpiffUI/prevpage.png")
+    o.prev = prev or nil
+
+    o.nextTex = getTexture("media/spifcons/nextpage.png")
+    o.prevTex = getTexture("media/spifcons/prevpage.png")
+
+    o.centerImg = {
+        [o.page] = centerImg
+    }
+    o.btmText = {
+        [o.page] = btmText
+    }
+
+    o.cmdText = nil
+    o.cmdImg = nil
+    
+    --o.cIndex = ((o.centerImg[o.page] ~= nil) or false)
+    o.cImgChange = {}
+
+    o:initialise()
+    o.background = false
 
     return o
 end

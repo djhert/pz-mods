@@ -70,9 +70,7 @@ local function doDrink(item, player, amount)
 end
 
 function SpiffUIDrinkRadialCommand:Action()
-    doDrink(self.item, self.player, self.amount)
-    --ISInventoryPaneContextMenu.eatItem(self.item, self.amount, self.playerNum)
- 
+    doDrink(self.item, self.player, self.amount) 
     -- Return from whence it came...
     if self.item:getContainer() ~= self.player:getInventory() then
         ISTimedActionQueue.add(ISInventoryTransferAction:new(self.player, self.item, self.player:getInventory(), self.item:getContainer()))
@@ -97,8 +95,11 @@ local function getItems(packs, player)
     local items = {}
     for p = 0, packs:size() - 1 do
         local pack = packs:get(p)
-        local ps = pack:getAllEval(function(item) 
-            return not player:isKnownPoison(item) and (item:getCustomMenuOption() and item:getCustomMenuOption() == "Drink") or item:isWaterSource()
+        local ps = pack:getAllEval(function(item)
+            -- the only real difference between food and drinks is if there is a custom menu option/animation it seems.
+            return item:isWaterSource()
+                    or (instanceof(item, "Food") and not player:isKnownPoison(item) and not item:getScriptItem():isCantEat()) 
+                    and (item:getThirstChange() < 0 and item:getCustomMenuOption() == getText("ContextMenu_Drink"))
         end)
         if ps and ps:size() > 0 then
             for i = 0, ps:size() - 1 do
@@ -143,7 +144,7 @@ end
 
 ------------------------------------------
 
-function SpiffUIDrinkRadial:build()
+function SpiffUIDrinkRadial:start()
     local packs = ISInventoryPaneContextMenu.getContainers(self.player)
     local drinks = getItems(packs, self.player)
 
@@ -165,6 +166,9 @@ function SpiffUIDrinkRadial:build()
             self:AddCommand(SpiffUIDrinkRadialCommand:new(self, j))
             hasCmd = true
         end
+        self.centerImg[self.page] = InventoryItemFactory.CreateItem("Base.WaterBottleFull"):getTexture()
+        self.btmText[self.page] = getText("UI_SpiffUI_Radial_Drink")
+        self.cImgChange[self.page] = true
     end
 
     if not hasCmd then
@@ -172,8 +176,10 @@ function SpiffUIDrinkRadial:build()
     end
 end
 
-function SpiffUIDrinkRadial:new(player)
-    return spiff.radialmenu.new(self, player)    
+function SpiffUIDrinkRadial:new(player, prev)
+    local o = spiff.radialmenu.new(self, player, prev)    
+    o.askText = getText("UI_amount_SpiffUI_DrinkHowMuch")
+    return o
 end
 
 local function quickDrink(player)

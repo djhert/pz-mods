@@ -92,7 +92,7 @@ local function getRecipes(packs, player)
 end
 
 
-function SpiffUISmokeCraftRadial:build()
+function SpiffUISmokeCraftRadial:start()
     local recipes = {}
     
     local bags = ISInventoryPaneContextMenu.getContainers(self.player)
@@ -131,6 +131,9 @@ function SpiffUISmokeCraftRadial:build()
     for i,j in pairs(recipes) do      
         self:AddCommand(SpiffUISmokeCraftRadialCommand:new(self, j))
         hasCraft = true
+        self.btmText[self.page] = getText("UI_SpiffUI_Radial_SmokeCraft")
+        self.centerImg[self.page] = self.icon
+        self.cImgChange[self.page] = true
     end
 
     if not hasCraft then
@@ -138,8 +141,21 @@ function SpiffUISmokeCraftRadial:build()
     end
 end
 
-function SpiffUISmokeCraftRadial:new(player)
-    return spiff.radialmenu.new(self, player)
+function SpiffUISmokeCraftRadial:new(player, prev)
+    local o = spiff.radialmenu.new(self, player, prev)
+    o.askText = getText("UI_amount_SpiffUI_CraftHowMany")
+
+    if getActivatedMods():contains('jiggasGreenfireMod') then
+       o.icon = InventoryItemFactory.CreateItem("Greenfire.SmokingPipe"):getTexture()
+    elseif getActivatedMods():contains('Smoker') then
+       o.icon = InventoryItemFactory.CreateItem("SM.SMSmokingBlendPipe"):getTexture()
+    elseif getActivatedMods():contains('MoreCigsMod') then
+       o.icon = InventoryItemFactory.CreateItem("Cigs.CigsOpenPackReg"):getTexture()
+    else
+       o.icon = InventoryItemFactory.CreateItem("Base.Cigarettes"):getTexture()
+    end
+
+    return o  
 end
 
 local function SmokeCraftDown(player)

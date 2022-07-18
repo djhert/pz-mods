@@ -74,12 +74,13 @@ function SpiffUIEatRadialCommand:new(menu, item)
     return o
 end
 
-local function getItems(packs)
+local function getItems(packs, player)
     local items = {}
     for p = 0, packs:size() - 1 do
         local pack = packs:get(p)
         local ps = pack:getAllEval(function(item)
-            return instanceof(item, "Food") and item:getHungChange() < 0 and not item:getScriptItem():isCantEat() and not item:getCustomMenuOption()
+            return (instanceof(item, "Food") and not player:isKnownPoison(item) and not item:getScriptItem():isCantEat())
+                    and item:getHungChange() < 0 and not item:getCustomMenuOption()
         end)
         if ps and ps:size() > 0 then
             for i = 0, ps:size() - 1 do
@@ -111,9 +112,9 @@ end
 
 ------------------------------------------
 
-function SpiffUIEatRadial:build()
+function SpiffUIEatRadial:start()
     local packs = ISInventoryPaneContextMenu.getContainers(self.player)
-    local food = getItems(packs)
+    local food = getItems(packs, self.player)
 
     if not food then
         self.player:Say(getText("UI_character_SpiffUI_noFood"))
@@ -123,11 +124,16 @@ function SpiffUIEatRadial:build()
     -- Build
     for _,j in ipairs(food) do
         self:AddCommand(SpiffUIEatRadialCommand:new(self, j))
+        self.centerImg[self.page] = InventoryItemFactory.CreateItem("Base.Apple"):getTexture()
+        self.btmText[self.page] = getText("UI_SpiffUI_Radial_Eat")
+        self.cImgChange[self.page] = true
     end
 end
 
-function SpiffUIEatRadial:new(player)
-    return spiff.radialmenu.new(self, player)    
+function SpiffUIEatRadial:new(player, prev)
+    local o = spiff.radialmenu.new(self, player, prev)
+    o.askText = getText("UI_amount_SpiffUI_EatHowMuch")
+    return o    
 end
 
 local function quickEat(player)

@@ -21,7 +21,16 @@ function SpiffUICraftingRadialCommand:Action()
 end
 
 function SpiffUICraftingRadialCommand:new(menu, recipe)
-    local texture = InventoryItemFactory.CreateItem(recipe.recipe:getResult():getFullType()):getTexture()
+    if SpiffUI.config.debug then
+        print("Item: " .. recipe.item:getFullType() .. " | Recipe: " .. recipe.recipe:getName() .. " | Result: " .. recipe.recipe:getResult():getFullType())
+    end
+    local texture
+    local itex = InventoryItemFactory.CreateItem(recipe.recipe:getResult():getFullType())
+    if itex then
+        texture = itex:getTexture()
+    else
+        texture = recipe.item:getTexture()
+    end
 
     local tooltip = {
         recipe = recipe.recipe,
@@ -50,7 +59,7 @@ local function getRecipes(packs, player)
     for p = 0, packs:size() - 1 do
         local pack = packs:get(p)
         local ps = pack:getAllEval(function(item)
-            return instanceof(item, "InventoryItem")
+            return instanceof(item, "InventoryItem") and not instanceof(item, "Moveable")
         end)
         if ps and ps:size() > 0 then
             for i = 0, ps:size() - 1 do
@@ -115,7 +124,7 @@ end
 
 ------------------------------------------
 
-function SpiffUICraftingRadial:build()
+function SpiffUICraftingRadial:start()
     local bags = ISInventoryPaneContextMenu.getContainers(self.player)
     local recipes = getRecipes(bags, self.player)
 
@@ -123,15 +132,20 @@ function SpiffUICraftingRadial:build()
     for i,j in pairs(recipes) do      
         self:AddCommand(SpiffUICraftingRadialCommand:new(self, j))
         hasRecipes = true
-    end
+        self.centerImg[self.page] = getTexture("media/spifcons/crafting.png")
+        self.btmText[self.page] = getText("UI_SpiffUI_Radial_Crafting")
+        self.cImgChange[self.page] = true
+    end    
 
     if not hasRecipes then
         self.player:Say(getText("UI_character_SpiffUI_noCraft"))
     end
 end
 
-function SpiffUICraftingRadial:new(player)
-    return spiff.radialmenu.new(self, player)
+function SpiffUICraftingRadial:new(player, prev)
+    local o = spiff.radialmenu.new(self, player, prev)
+    o.askText = getText("UI_amount_SpiffUI_CraftHowMany")
+    return o
 end
 
 local function SpiffUICraftDown(player)

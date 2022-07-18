@@ -48,7 +48,7 @@ local function getItems(packs, pills)
                 local pill = ps:get(i)
                 if pill then
                     -- If not found or has less pills
-                    if not pills[pill:getType()] or pills[pill:getType()]:getUsedDelta() > pill:getUsedDelta() then
+                    if not pills[pill:getType()] or (pill.getUsedDelta and pills[pill:getType()]:getUsedDelta() > pill:getUsedDelta()) then
                         pills[pill:getType()] = pill                        
                     end
                 end
@@ -58,7 +58,7 @@ local function getItems(packs, pills)
     return pills
 end
 
-function SpiffUIPillsRadial:build()
+function SpiffUIPillsRadial:start()
     local pills = {}
 
     local packs = ISInventoryPaneContextMenu.getContainers(self.player)
@@ -69,14 +69,19 @@ function SpiffUIPillsRadial:build()
     for i,j in pairs(pills) do
         self:AddCommand(SpiffUIPillsRadialCommand:new(self, j))
         hasPills = true
+        self.btmText[self.page] = getText("UI_SpiffUI_Radial_Pills")
+        self.centerImg[self.page] = InventoryItemFactory.CreateItem("Base.PillsAntiDep"):getTexture()
+        self.cImgChange[self.page] = true
     end
     if not hasPills then
         self.player:Say(getText("UI_character_SpiffUI_noPills"))
     end
 end
 
-function SpiffUIPillsRadial:new(player)
-    return spiff.radialmenu.new(self, player)
+function SpiffUIPillsRadial:new(player, prev)
+    local o = spiff.radialmenu.new(self, player, prev)
+    o.askText = getText("UI_amount_SpiffUI_HowManyPills")
+    return o  
 end
 
 ------------------------------------------

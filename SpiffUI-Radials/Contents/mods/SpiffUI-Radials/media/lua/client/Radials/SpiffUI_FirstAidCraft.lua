@@ -82,7 +82,7 @@ local function getRecipes(packs, player)
     return recipes
 end
 
-function SpiffUIFirstAidCraftRadial:build()
+function SpiffUIFirstAidCraftRadial:start()
     local recipes = {}
     
     local bags = ISInventoryPaneContextMenu.getContainers(self.player)
@@ -93,6 +93,9 @@ function SpiffUIFirstAidCraftRadial:build()
     for i,j in pairs(recipes) do      
         self:AddCommand(SpiffUIFirstAidCraftRadialCommand:new(self, j))
         hasCraft = true
+        self.btmText[self.page] = getText("UI_SpiffUI_Radial_FirstAidCraft")
+        self.centerImg[self.page] = InventoryItemFactory.CreateItem("Base.Bandage"):getTexture()
+        self.cImgChange[self.page] = true
     end
 
     if not hasCraft then
@@ -100,8 +103,10 @@ function SpiffUIFirstAidCraftRadial:build()
     end
 end
 
-function SpiffUIFirstAidCraftRadial:new(player)
-    return spiff.radialmenu.new(self, player)
+function SpiffUIFirstAidCraftRadial:new(player, prev)
+    local o = spiff.radialmenu.new(self, player, prev)
+    o.askText = getText("UI_amount_SpiffUI_CraftHowMany")
+    return o  
 end
 
 local function FirstAidCraftDown(player)

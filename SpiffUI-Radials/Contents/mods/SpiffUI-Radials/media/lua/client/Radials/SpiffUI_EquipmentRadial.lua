@@ -63,8 +63,15 @@ function SpiffUIEquipmentItemRadialCommand:Action()
         end
         local frm = ISFirearmRadialMenu:new(self.player)
         frm.weapon = self.item.item
+        frm.prev = self.menu
 		frm:fillMenu()
 		frm:display()
+    elseif self.mode == 8 then -- Place
+        ISInventoryPaneContextMenu.onPlaceItemOnGround({self.item.item}, self.player)
+    elseif self.mode == 9 then
+        spiff.subradial.alarm:new(self.player, self.item.item, self.menu):display()
+    elseif self.mode == 10 then
+        self.item.item:stopRinging()
     else
         self.player:Say("OOPS! I don't know how to do that.  That's not supposed to happen!")
     end
@@ -156,6 +163,7 @@ local clothesSort = {
     ["FannyPackBack"] = 41,
     ["FannyPackFront"] = 42,
     ["Hands"] = 43,
+    ["Watch"] = 44,
     ["Left_MiddleFinger"] = 144,
     ["Left_RingFinger"] = 145,
     ["LeftWrist"] = 146,
@@ -184,6 +192,14 @@ local clothesFilter = {
     ["ZedDmg"] = true
 }
 
+local isWatch = function(item)
+    if instanceof(item, "AlarmClock") or instanceof(item, "AlarmClockClothing") then
+        return "Watch"
+    else
+        return nil
+    end
+end
+
 local function getItems(packs, player)
     local items = nil
 
@@ -192,7 +208,7 @@ local function getItems(packs, player)
     for i=0, clothes:size() - 1 do
         if not items then items = {} end
         local item = clothes:get(i):getItem()
-        if item and not clothesFilter[item:getBodyLocation()] then
+        if item and not clothesFilter[(isWatch(item) or item:getBodyLocation())] then
             table.insert(items, item)
         end      
     end
@@ -211,9 +227,12 @@ local function getItems(packs, player)
 
     if items then
         -- order our clothes from head to toe
+        ---- NEW: We have to handle watches a bit funny due to how this works
+        ------ Mods may add bracelets or other items that go on the wrist, and we don't want those
+
         table.sort(items, function(a,b)
-            if not clothesSort[a:getBodyLocation()] or not clothesSort[b:getBodyLocation()] then return false end
-            return clothesSort[a:getBodyLocation()] < clothesSort[b:getBodyLocation()]
+            if not clothesSort[isWatch(a) or a:getBodyLocation()] or not clothesSort[isWatch(b) or b:getBodyLocation()] then return false end
+            return clothesSort[isWatch(a) or a:getBodyLocation()] < clothesSort[isWatch(b) or b:getBodyLocation()]
         end)
     end
     return items
@@ -301,10 +320,6 @@ local function fixerStuff(item, fixing, fixer, player)
 		end
 	end
 
-    if unavailable then
-        tooltip.description = tooltip.description .. " <LINE> <RED> " .. "**FUCK YOU, ASSHOLE**" 
-    end
-
     return {
         fixing = fixing,
         fixer = fixer,
@@ -328,9 +343,15 @@ function SpiffUIEquipmentRadial:itemOptions(item)
 
     if not item then return end
 
-    -- Get Hotbar
+    -- Get Hotbar & loot
     local hotbar = getPlayerHotbar(self.player:getPlayerNum())
-    
+    local loot = getPlayerLoot(self.playerNum)
+
+    self.btmText[self.page] = SpiffUI.textwrap(item:getName(), 20) -- some names are just too long :/
+
+    --self.btmText[self.page] = nil
+    self.centerImg[self.page] = item:getTexture()
+
     -- Add "Inspect"
     if item:getCategory() == "Clothing" and item:getCoveredParts():size() > 0 then
         local stuff = {
@@ -347,7 +368,7 @@ function SpiffUIEquipmentRadial:itemOptions(item)
         local stuff = {
             item = item,
             label = getText("ContextMenu_Unequip"),
-            texture = spiff.icons["unequip"],
+            texture = getTexture("media/ui/Icon_InventoryBasic.png"),
             tooltip = item,
             inHotbar = hotbar:isInHotbar(item) and not self.player:isEquipped(item), -- Trigger a remove from hotbar if item is not equipped
             mode = 1
@@ -355,17 +376,30 @@ function SpiffUIEquipmentRadial:itemOptions(item)
         table.insert(self.commands[self.page], SpiffUIEquipmentItemRadialCommand:new(self, stuff))
     end
 
-    local loot = getPlayerLoot(self.playerNum)
-    if loot.inventory:getType() ~= "floor" then
-        local stuff = {
-            item = item,
-            label = getText("UI_radial_SpiffUI_Transfer") .. loot.title,
-            texture = ContainerButtonIcons[loot.inventory:getType()],
-            inv = loot.inventory,
-            tooltip = item,
-            mode = 2
-        }
-        table.insert(self.commands[self.page], SpiffUIEquipmentItemRadialCommand:new(self, stuff))
+    -- Transfer
+    if spiff.config.equipShowTransfer then
+        if loot.inventory:getType() ~= "floor" then
+            local tex = nil
+            if instanceof(loot.inventory:getContainingItem(), "InventoryContainer") then
+                tex = loot.inventory:getContainingItem():getTex()
+            else
+                tex = ContainerButtonIcons[loot.inventory:getType()]
+            end
+
+            if not tex then
+                tex = getTexture("media/ui/Container_Shelf.png")
+            end
+
+            local stuff = {
+                item = item,
+                label = getText("UI_radial_SpiffUI_Transfer") .. loot.title,
+                texture = tex,
+                inv = loot.inventory,
+                tooltip = item,
+                mode = 2
+            }
+            table.insert(self.commands[self.page], SpiffUIEquipmentItemRadialCommand:new(self, stuff))
+        end
     end
 
     -- Add "Drop"
@@ -373,13 +407,58 @@ function SpiffUIEquipmentRadial:itemOptions(item)
         local stuff = {
             item = item,
             label = getText("ContextMenu_Drop"),
-            texture = spiff.icons["drop"],
+            texture = getTexture("media/ui/Container_Floor.png"),
             tooltip = item,
             mode = 3
         }
         table.insert(self.commands[self.page], SpiffUIEquipmentItemRadialCommand:new(self, stuff))
     end
 
+    -- Add "Place"
+    if spiff.config.equipShowPlace then
+        -- adapted from ISInventoryPaneContextMenu
+        local id3 = true
+        if not item:getWorldStaticItem() and not instanceof(item, "HandWeapon") and not instanceof(item, "Clothing") or item:getType() == "CarBatteryCharger" then
+            id3 = false
+        end
+		
+        if id3 and instanceof(item, "Clothing") then
+            id3 = item:canBe3DRender()
+        end
+
+        if id3 then
+            local stuff = {
+                item = item,
+                label = getText("IGUI_PlaceObject"),
+                texture = getTexture("media/spifcons/place_item.png"),
+                tooltip = item,
+                mode = 8
+            }
+            
+            table.insert(self.commands[self.page], SpiffUIEquipmentItemRadialCommand:new(self, stuff))
+        end
+    end
+
+    -- Watch!
+    if instanceof(item, "AlarmClock") or instanceof(item, "AlarmClockClothing") then
+        if item:isRinging() then
+            local stuff = {
+                item = item,
+                label = getText("ContextMenu_StopAlarm"),
+                texture = getTexture("media/ui/emotes/no.png"),
+                mode = 10
+            }
+            table.insert(self.commands[self.page], SpiffUIEquipmentItemRadialCommand:new(self, stuff))
+        end
+
+        local stuff = {
+            item = item,
+            label = getText("ContextMenu_SetAlarm"),
+            texture = getTexture("media/ui/ClockAssets/ClockAlarmLargeSound.png"),
+            mode = 9
+        }
+        table.insert(self.commands[self.page], SpiffUIEquipmentItemRadialCommand:new(self, stuff))
+    end
 
        -- Add Clothing Items Extra
     if item.getClothingItemExtraOption and item:getClothingItemExtraOption() and spiff.config.equipShowClothingActions then 
@@ -445,27 +524,26 @@ function SpiffUIEquipmentRadial:itemOptions(item)
     if item.isRanged and item:isRanged() then 
         local stuff = {
             item = item,
-            label = "Firearm Radial",
+            label = getText("UI_equip_SpiffUI_FirearmRadial"),
             texture = item:getTexture(),
             tooltip = item,
             mode = 7
         }
         table.insert(self.commands[self.page], SpiffUIEquipmentItemRadialCommand:new(self, stuff))
-    end
+    end    
 
     self:show()
 end
 
 function SpiffUIEquipmentRadial:accessories()
+    self:prepareCmds()
 
-    if not self.commands[self.page] then
-        self.commands[self.page] = {}
-    else
-        table.wipe(self.commands[self.page])
-    end
+    self.btmText[self.page] = getText("UI_radial_SpiffUI_Accessories")
+    self.centerImg[self.page] = self.accTex
+    self.cImgChange[self.page] = true
 
     for _,j in ipairs(self.items) do
-        if not clothesSort[j:getBodyLocation()] or clothesSort[j:getBodyLocation()] > 100 then
+        if not clothesSort[isWatch(j) or j:getBodyLocation()] or clothesSort[isWatch(j) or j:getBodyLocation()] > 100 then
             -- Add our items to page 2
             table.insert(self.commands[self.page], SpiffUIEquipmentRadialCommand:new(self, j, 0))
         end
@@ -475,11 +553,11 @@ function SpiffUIEquipmentRadial:accessories()
 end
 
 function SpiffUIEquipmentRadial:hotbar() 
-    if not self.commands[self.page] then
-        self.commands[self.page] = {}
-    else
-        table.wipe(self.commands[self.page])
-    end
+    self:prepareCmds()
+
+    self.btmText[self.page] = getText("UI_radial_SpiffUI_Hotbar")
+    self.centerImg[self.page] = self.hotTex
+    self.cImgChange[self.page] = true
 
     local hotbar = getPlayerHotbar(self.playerNum)
     for i,item in pairs(hotbar.attachedItems) do
@@ -489,7 +567,7 @@ function SpiffUIEquipmentRadial:hotbar()
     self:show()
 end
 
-function SpiffUIEquipmentRadial:build()
+function SpiffUIEquipmentRadial:start()
 
     self.packs = ISInventoryPaneContextMenu.getContainers(self.player)
     self.items = getItems(self.packs, self.player)
@@ -497,22 +575,27 @@ function SpiffUIEquipmentRadial:build()
     self.page = 1
     self.maxPage = 1
 
+    self.btmText[self.page] = getText("UI_SpiffUI_Radial_Equipment")
+    self.centerImg[self.page] = getTexture("media/spifcons/inventory.png")
+
     local haveAccs = false
     local accTex
     local hasItems = false
     if self.items then
+        -- Start at page 1
+        if not self.commands[1] then
+            self.commands[1] = {}
+        end
+        
         for _,j in ipairs(self.items) do
-            if clothesSort[j:getBodyLocation()] and clothesSort[j:getBodyLocation()] < 100 then
-                -- Add our items to page 1
-                if not self.commands[1] then
-                    self.commands[1] = {}
-                end
+            if clothesSort[isWatch(j) or j:getBodyLocation()] and clothesSort[isWatch(j) or j:getBodyLocation()] < 100 then
                 table.insert(self.commands[1], SpiffUIEquipmentRadialCommand:new(self, j, 0))
                 hasItems = true
             else
                 haveAccs = true
                 if not accTex then
                     accTex = j:getTexture()
+                    self.accTex = accTex
                 end
             end
         end
@@ -534,6 +617,7 @@ function SpiffUIEquipmentRadial:build()
                     label = getText("UI_radial_SpiffUI_Hotbar"),
                     texture = item:getTexture()
                 }
+                self.hotTex = item:getTexture()
                 table.insert(self.commands[1], SpiffUIEquipmentRadialCommand:new(self, stuff, 2))
                 hasItems = true
                 break
@@ -546,10 +630,11 @@ function SpiffUIEquipmentRadial:build()
     end
 end
 
-function SpiffUIEquipmentRadial:new(player)
-    local o = spiff.radialmenu.new(self, player)
+function SpiffUIEquipmentRadial:new(player, prev)
+    local o = spiff.radialmenu.new(self, player, prev)
     -- If we end up back at page 1, then we're at the main menu
     o.pageReset = true
+    o.cImgChange[o.page] = true
     return o
 end
 

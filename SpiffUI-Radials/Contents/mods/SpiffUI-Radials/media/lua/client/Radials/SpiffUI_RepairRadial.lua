@@ -119,16 +119,12 @@ local function fixerStuff(item, fixing, fixer, player)
 		end
 	end
 
-    if unavailable then
-        tooltip.description = tooltip.description .. " <LINE> <RED> " .. "**FUCK YOU, ASSHOLE**" 
-    end
-
     return {
         fixing = fixing,
         fixer = fixer,
         item = item,
         tooltip = tooltip,
-        label = getText("ContextMenu_Repair") .. getItemNameFromFullType(item:getFullType()),
+        label = getItemNameFromFullType(item:getFullType()),
         texture = tooltip.texture,
         unavailable = unavailable,
         mode = 5
@@ -190,7 +186,7 @@ local function getItems(packs, player)
     return repairs
 end
 
-function SpiffUIRepairRadial:build()
+function SpiffUIRepairRadial:start()
 
     local packs = ISInventoryPaneContextMenu.getContainers(self.player)
     local items = getItems(packs, self.player)
@@ -199,14 +195,17 @@ function SpiffUIRepairRadial:build()
     if items then
         for _,stuff in ipairs(items) do
             self:AddCommand(SpiffUIRepairRadialCommand:new(self, stuff))
+            self.btmText[self.page] = getText("UI_SpiffUI_Radial_Repair")
+            self.centerImg[self.page] = InventoryItemFactory.CreateItem("Base.Hammer"):getTexture()
+            self.cImgChange[self.page] = true
         end
     else
         self.player:Say(getText("UI_character_SpiffUI_noRepair"))
     end
 end
 
-function SpiffUIRepairRadial:new(player)
-    return spiff.radialmenu.new(self, player)    
+function SpiffUIRepairRadial:new(player, prev)
+    return spiff.radialmenu.new(self, player, prev)    
 end
 
 local function RepairDown(player)

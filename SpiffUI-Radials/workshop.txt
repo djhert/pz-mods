@@ -131,6 +131,12 @@ description=
 description=Each Radial has its own Configuration as well.  This is expanded upon in the Discussion [url=https://steamcommunity.com/workshop/filedetails/discussion/2802525922/3273564019257617796]SpiffUI Radials and their Configurations[/url].
 description=
 description=[h2]Translations[/h2]
+description=[list]
+description=[*]English
+description=[*]Russian - [url=https://steamcommunity.com/profiles/76561198433229952]fourteensix[/url]
+description=[*]Spanish  - [url=https://steamcommunity.com/id/deadinside11]ElDoktor[/url]
+description=[/list]
+description=
 description=Item Names, Recipes, and others use the built-in translations; mods must include this.  If you would like to contribute a translation, please submit a pull request on [url=https://github.com/hlfstr/pz-mods]GitHub![/url]  I will happily give credit!
 tags=Build 41;Food;Interface;Silly/Fun
 visibility=public

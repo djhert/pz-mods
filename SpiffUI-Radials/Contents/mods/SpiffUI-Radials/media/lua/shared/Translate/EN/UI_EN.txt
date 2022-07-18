@@ -2,7 +2,7 @@ UI_EN = {
     -- SpiffUI
     UI_Hello_SpiffUI = "Hello SpiffUI!",
     UI_Name_SpiffUI = "SpiffUI",
-    UI_optionscreen_binding_SpiffUI = "SpiffUI"
+    UI_optionscreen_binding_SpiffUI = "SpiffUI",
 
     UI_ModOptions_SpiffUI_applyNewKeybinds = "Set SpiffUI Recommended Keybinds",
     UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Set SpiffUI Keybinds <LINE><LINE><LEFT><SIZE:small> Sets the following Keybinds: <LINE>",
@@ -63,7 +63,7 @@ UI_EN = {
 
     UI_ModOptions_SpiffUI_tooltip_eatShowNow = "Note: Disables Quick Eat Food Action",
     
-    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "Note: Some Recipes may still filter through.  Consider using the First Aid Crafting Menu instead!",
+    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "Note: Some Recipes may still filter through.  Consider using the Medical Craft Menu instead!",
     UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "Note: Recipes on worn items can be done from the Equipment Menu.  Items in your hand will still show recipes",
     UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "Consider using the Smoke Crafting Menu instead!"
 
@@ -88,13 +88,13 @@ UI_EN = {
 
     UI_optionscreen_binding_SpiffUIPillWheel = "Pill Radial",
     UI_optionscreen_binding_SpiffUIDrinkWheel = "Drink Radial",
-    UI_optionscreen_binding_SpiffUIEatWheel = "Eat Radial",
+    UI_optionscreen_binding_SpiffUIEatWheel = "Food Radial",
     UI_optionscreen_binding_SpiffUISmokeWheel = "Smoke Radial",
     UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Smoke Craft Radial",
     UI_optionscreen_binding_SpiffUICraftWheel = "Crafting UI/Radial",
     UI_optionscreen_binding_SpiffUIEquipmentWheel = "Inventory Toggle/Radial",
     UI_optionscreen_binding_SpiffUIRepairWheel = "Repair Radial",
-    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "First Aid Craft",
+    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "Medical Craft",
     UI_optionscreen_binding_SpiffUIOneWheel = "SpiffUI Radial",
 
     UI_character_SpiffUI_noLighter = "I need a lighter.",
@@ -115,5 +115,60 @@ UI_EN = {
 
     UI_character_SpiffUI_noPillsQuick = "I have no ",
     UI_character_SpiffUI_noPills = "There's no pills",
-    UI_character_SpiffUI_noPillsNeed = "I'm not in any Mood."
+    UI_character_SpiffUI_noPillsNeed = "I'm not in any Mood.",
+
+    -------------------------------------------
+    -- NEW v8:
+    UI_radial_SpiffUI_Previous = "Previous",
+    UI_radial_SpiffUI_Next = "Next",
+
+    UI_alarm_SpiffUI_Silence = "Silence Alarm",
+    UI_alarm_SpiffUI_Enable = "Enable Alarm",
+    UI_alarm_SpiffUI_Reset = "Reset Alarm",
+    UI_alarm_SpiffUI_HH = "HH",
+    UI_alarm_SpiffUI_MM = "MM",
+
+    -- These next few include formatting so that the text lines up more or less.
+    ---- EX: Current Alarm
+    ----         HH:MM
+    -- I can't do this with richtext, and there's only one label (for simplicity) so brute force it is
+    -- Sorry to all translators for any tweaks or weirdness you may have to do
+
+    -- Hour:Minutes or HH:MM if no alarm
+    UI_alarm_SpiffUI_CurrentF = "Current Alarm \n          %1:%2", 
+    -- HH:MM
+    UI_alarm_SpiffUI_SetHourF = "SET HOUR \n    %1:%2", 
+    -- Hour:MM
+    UI_alarm_SpiffUI_SetMinuteF = "SET MINUTE \n      %1:%2",
+
+    UI_equip_SpiffUI_FirearmRadial = "Firearm Radial",
+
+    UI_SpiffUI_Radial_Equipment = "Equipment",
+    UI_SpiffUI_Radial_Crafting = "Crafting",
+    UI_SpiffUI_Radial_Drink = "Drink",
+    UI_SpiffUI_Radial_Eat = "Food",
+    UI_SpiffUI_Radial_FirstAidCraft = "Medical Craft",
+    UI_SpiffUI_Radial_Pills = "Pills",
+    UI_SpiffUI_Radial_Repair = "Repair",
+    UI_SpiffUI_Radial_Smoke = "Smoke",
+    UI_SpiffUI_Radial_SmokeCraft = "Smoke Craft",
+
+    UI_amount_SpiffUI_CraftHowMany = "Craft How Many",
+    UI_amount_SpiffUI_EatHowMuch = "Eat How Much",
+    UI_amount_SpiffUI_DrinkHowMuch = "Drink How Much",
+    UI_amount_SpiffUI_HowManyPills = "Take How Many Pills",
+
+    UI_optionscreen_binding_SpiffUIGSWheel = "Game Speed Radial",
+    UI_SpiffUI_Radial_GameSpeed = "Game Speed",
+
+    UI_ModOptions_SpiffUI_equipShowRecipes = "Show Recipes (Equipment)",
+
+    UI_ModOptions_SpiffUI_hideClock = "Hide Vanilla Clock",
+    UI_ModOptions_SpiffUI_hideClockTooltip = "RECOMMENDED: The clock is now present in the SpiffUI Radial.  A restart is required if in-game.",
+
+    UI_ModOptions_SpiffUI_equipShowPlace = "Show Place Action (Equipment)",
+    UI_ModOptions_SpiffUI_equipShowTransfer = "Show Transfer Action (Equipment)",
+
+    UI_ModOptions_SpiffUI_showSmokeCraftRadial = "Show Smoke Craft Radial (SpiffUI)",
+    UI_ModOptions_SpiffUI_showSmokingRadial = "Show Smoking Radial (SpiffUI)"
 }

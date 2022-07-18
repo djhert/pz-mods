@@ -1,122 +1,121 @@
 UI_RU = {
-    -- Translation By: fourteensix
-    -- РџРµСЂРµРІРѕРґ: fourteensix
 
-	-- SpiffUI Radial
+
+	 -- SpiffUI Radial
     UI_Hello_SpiffUI = "Hello SpiffUI!",
     UI_Name_SpiffUI = "SpiffUI",
     UI_optionscreen_binding_SpiffUI = "SpiffUI"
 
-    UI_ModOptions_SpiffUI_applyNewKeybinds = "РЈСЃС‚Р°РЅРѕРІРёС‚Рµ СЂРµРєРѕРјРµРЅРґСѓРµРјС‹Рµ СЃРѕС‡РµС‚Р°РЅРёСЏ РєР»Р°РІРёС€ SpiffUI",
-    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёРІСЏР·РєРё РєР»Р°РІРёС€ SpiffUI <LINE><LINE><LEFT><SIZE:small> РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЃР»РµРґСѓСЋС‰РёРµ СЃРѕС‡РµС‚Р°РЅРёСЏ РєР»Р°РІРёС€: <LINE>",
-    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1   РґР»СЏ:  [%2] ",
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Установите рекомендуемые сочетания клавиш SpiffUI",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Установить привязки клавиш SpiffUI <LINE><LINE><LEFT><SIZE:small> Устанавливает следующие сочетания клавиш: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1   для:  [%2] ",
 
-    UI_ModOptions_SpiffUI_runAllResets = "Р—Р°РїСѓСЃС‚РёС‚СЊ РїРѕР»РЅС‹Р№ СЃР±СЂРѕСЃ SpiffUI",
-    UI_ModOptions_SpiffUI_tooltip_runResets = "Р Р°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РІ РёРіСЂРµ!",
-    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> РЎР±СЂРѕСЃ SpiffUI <LINE><LINE><LEFT><SIZE:small> Р‘СѓРґРµС‚ СЃР±СЂРѕС€РµРЅРѕ СЃР»РµРґСѓСЋС‰РµРµ: <LINE>",
+    UI_ModOptions_SpiffUI_runAllResets = "Запустить полный сброс SpiffUI",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "Работает только в игре!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> Сброс SpiffUI <LINE><LINE><LEFT><SIZE:small> Будет сброшено следующее: <LINE>",
 
     -- SpiffUI -- Radials
     UI_Hello_SpiffUI_Radials = "Hello SpiffUI - Radials",
-    
+
     UI_Name_SpiffUI_Radials = "SpiffUI - Radials",
 
-    UI_ModOptions_SpiffUI_showTooltips = "РџРѕРєР°Р·Р°С‚СЊ РїРѕРґСЃРєР°Р·РєРё",
-    UI_ModOptions_SpiffUI_hideCraftButton = "РЎРєСЂС‹С‚СЊ РєРЅРѕРїРєСѓ РєСЂР°С„С‚Р°",
+    UI_ModOptions_SpiffUI_showTooltips = "Показать подсказки",
+    UI_ModOptions_SpiffUI_hideCraftButton = "Скрыть кнопку крафта",
 
-    UI_ModOptions_SpiffUI_smokeShowButts = "РџРѕРєР°Р·Р°С‚СЊ РѕРєСѓСЂРєРё (РјРѕРґ Smoke)", 
-    UI_ModOptions_SpiffUI_smokeShowGum = "РџРѕРєР°Р·Р°С‚СЊ Р¶РІР°С‡РєСѓ (РјРѕРґ Smoke)",
-    UI_ModOptions_SpiffUI_smokeShowNow = "РџРѕРєР°Р·Р°С‚СЊ СЂР°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ РїСЂРё РЅР°Р¶Р°С‚РёРё (РјРѕРґ Smoke)", 
+    UI_ModOptions_SpiffUI_smokeShowButts = "Показать окурки (мод Smoke)",
+    UI_ModOptions_SpiffUI_smokeShowGum = "Показать жвачку (мод Smoke)",
+    UI_ModOptions_SpiffUI_smokeShowNow = "Показать радиальное меню при нажатии (мод Smoke)",
 
-    UI_ModOptions_SpiffUI_pillsShowNow = "РџРѕРєР°Р·Р°С‚СЊ СЂР°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ РїСЂРё РЅР°Р¶Р°С‚РёРё (РўР°Р±Р»РµС‚РєРё)",
+    UI_ModOptions_SpiffUI_pillsShowNow = "Показать радиальное меню при нажатии (Таблетки)",
 
-    UI_ModOptions_SpiffUI_eatAmount = "РљРѕР»РёС‡РµСЃС‚РІРѕ РµРґС‹ (Р•РґР°)",
-    UI_ModOptions_SpiffUI_eatQuickAmount = "РљРѕР»РёС‡РµСЃС‚РІРѕ РµРґС‹ РґР»СЏ Р±С‹СЃС‚СЂРѕРіРѕ РїРµСЂРµРєСѓСЃР° (Р•РґР°)",
-    UI_ModOptions_SpiffUI_eatShowNow = "РџРѕРєР°Р·Р°С‚СЊ СЂР°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ РїСЂРё РЅР°Р¶Р°С‚РёРё (Р•РґР°)", 
+    UI_ModOptions_SpiffUI_eatAmount = "Количество еды (Еда)",
+    UI_ModOptions_SpiffUI_eatQuickAmount = "Количество еды для быстрого перекуса (Еда)",
+    UI_ModOptions_SpiffUI_eatShowNow = "Показать радиальное меню при нажатии (Еда)",
 
-    UI_ModOptions_SpiffUI_drinkAmount = "РљРѕР»РёС‡РµСЃС‚РІРѕ РїРёС‚СЊСЏ (РќР°РїРёС‚РєРё)",
-    UI_ModOptions_SpiffUI_drinkQuickAmount = "РљРѕР»РёС‡РµСЃС‚РІРѕ РЅР°РїРёС‚РєР° РґР»СЏ Р±С‹СЃС‚СЂРѕРіРѕ СѓРґР°Р»РµРЅРёСЏ Р¶Р°Р¶РґС‹ (РќР°РїРёС‚РєРё)",
-    UI_ModOptions_SpiffUI_drinkShowNow = "РџРѕРєР°Р·Р°С‚СЊ СЂР°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ РїСЂРё РЅР°Р¶Р°С‚РёРё (РќР°РїРёС‚РєРё)",
+    UI_ModOptions_SpiffUI_drinkAmount = "Количество питья (Напитки)",
+    UI_ModOptions_SpiffUI_drinkQuickAmount = "Количество напитка для быстрого удаления жажды (Напитки)",
+    UI_ModOptions_SpiffUI_drinkShowNow = "Показать радиальное меню при нажатии (Напитки)",
 
-    UI_ModOptions_SpiffUI_smokeCraftShowDismantle = "РџРѕРєР°Р·Р°С‚СЊ СЂРµС†РµРїС‚С‹ СЂР°Р·Р±РѕСЂРєРё (РєСЂР°С„С‚ РјРѕРґР° Smoke)",
-    UI_ModOptions_SpiffUI_smokeCraftShowCigPacks = "РџРѕРєР°Р·Р°С‚СЊ РїР°С‡РєРё СЃРёРіР°СЂРµС‚ (РєСЂР°С„С‚ РјРѕРґР° Smoke)",
-    UI_ModOptions_SpiffUI_smokeCraftAmount = "РљРѕР»РёС‡РµСЃС‚РІРѕ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ (РєСЂР°С„С‚ РјРѕРґР° Smoke)",
+    UI_ModOptions_SpiffUI_smokeCraftShowDismantle = "Показать рецепты разборки (крафт мода Smoke)",
+    UI_ModOptions_SpiffUI_smokeCraftShowCigPacks = "Показать пачки сигарет (крафт мода Smoke)",
+    UI_ModOptions_SpiffUI_smokeCraftAmount = "Количество для создания (крафт мода Smoke)",
 
-    UI_ModOptions_SpiffUI_craftSwitch = "РџРѕРєР°Р·Р°С‚СЊ СЂР°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ РїСЂРё РЅР°Р¶Р°С‚РёРё (РљСЂР°С„С‚)",
-    UI_ModOptions_SpiffUI_craftShowEquipped = "РџРѕРєР°Р·Р°С‚СЊ СЂРµС†РµРїС‚С‹ РЅР° СЌРєРёРїРёСЂРѕРІР°РЅРЅС‹С… РїСЂРµРґРјРµС‚Р°С… (РљСЂР°С„С‚)",
-    UI_ModOptions_SpiffUI_craftShowSmokeables = "РџРѕРєР°Р·Р°С‚СЊ СЂРµС†РµРїС‚С‹ РґР»СЏ РєСѓСЂРµРЅРёСЏ (РљСЂР°С„С‚)",
-    UI_ModOptions_SpiffUI_craftShowMedical = "РџРѕРєР°Р·Р°С‚СЊ РјРµРґРёС†РёРЅСЃРєРёРµ СЂРµС†РµРїС‚С‹ (РљСЂР°С„С‚)",
-    UI_ModOptions_SpiffUI_craftAmount = "РљРѕР»РёС‡РµСЃС‚РІРѕ РґР»СЏ РєСЂР°С„С‚Р° (РљСЂР°С„С‚)",
-    UI_ModOptions_SpiffUI_craftFilterUnique = "Р¤РёР»СЊС‚СЂ РїРѕРІС‚РѕСЂСЏСЋС‰РёС…СЃСЏ СЂРµС†РµРїС‚РѕРІ (РљСЂР°С„С‚)",
+    UI_ModOptions_SpiffUI_craftSwitch = "Показать радиальное меню при нажатии (Крафт)",
+    UI_ModOptions_SpiffUI_craftShowEquipped = "Показать рецепты на экипированных предметах (Крафт)",
+    UI_ModOptions_SpiffUI_craftShowSmokeables = "Показать рецепты для курения (Крафт)",
+    UI_ModOptions_SpiffUI_craftShowMedical = "Показать медицинские рецепты (Крафт)",
+    UI_ModOptions_SpiffUI_craftAmount = "Количество для крафта (Крафт)",
+    UI_ModOptions_SpiffUI_craftFilterUnique = "Фильтр повторяющихся рецептов (Крафт)",
 
-    UI_ModOptions_SpiffUI_equipShowDrop = "РџРѕРєР°Р·Р°С‚СЊ РґРµР№СЃС‚РІРёРµ РґСЂРѕРїР° (Р­РєРёРїРёСЂРѕРІРєР°)",
-    UI_ModOptions_SpiffUI_equipShowAllRepairs = "РџРѕРєР°Р·Р°С‚СЊ РЅРµРґРѕСЃС‚СѓРїРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ СЂРµРјРѕРЅС‚Р° (Р­РєРёРїРёСЂРѕРІРєР°)",
-    UI_ModOptions_SpiffUI_equipShowClothingActions = "РџРѕРєР°Р·Р°С‚СЊ РґРµР№СЃС‚РІРёСЏ СЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РѕРґРµР¶РґРѕР№ (Р­РєРёРїРёСЂРѕРІРєР°)",
-    UI_ModOptions_SpiffUI_equipShowRecipes = "РџРѕРєР°Р·Р°С‚СЊ СЂРµС†РµРїС‚С‹ (Р­РєРёРїРёСЂРѕРІРєР°)",
+    UI_ModOptions_SpiffUI_equipShowDrop = "Показать действие дропа (Экипировка)",
+    UI_ModOptions_SpiffUI_equipShowAllRepairs = "Показать недоступные параметры ремонта (Экипировка)",
+    UI_ModOptions_SpiffUI_equipShowClothingActions = "Показать действия с дополнительной одеждой (Экипировка)",
+    UI_ModOptions_SpiffUI_equipShowRecipes = "Показать рецепты (Экипировка)",
 
-    UI_ModOptions_SpiffUI_repairShowEquipped = "РџРѕРєР°Р·Р°С‚СЊ СЂРµРјРѕРЅС‚ СЌРєРёРїРёСЂРѕРІР°РЅРЅС‹С… РїСЂРµРґРјРµС‚РѕРІ (Р РµРјРѕРЅС‚)",
-    UI_ModOptions_SpiffUI_repairShowHotbar = "РџРѕРєР°Р·Р°С‚СЊ СЂРµРјРѕРЅС‚ РїСЂРµРґРјРµС‚РѕРІ РІ С…РѕС‚Р±Р°СЂРµ (Р РµРјРѕРЅС‚)",
+    UI_ModOptions_SpiffUI_repairShowEquipped = "Показать ремонт экипированных предметов (Ремонт)",
+    UI_ModOptions_SpiffUI_repairShowHotbar = "Показать ремонт предметов в хотбаре (Ремонт)",
 
-    UI_ModOptions_SpiffUI_firstAidCraftAmount = "РљРѕР»РёС‡РµСЃС‚РІРѕ РґР»СЏ РєСЂР°С„С‚Р° (РљСЂР°С„С‚ РјРµРґРёРєР°РјРµРЅС‚РѕРІ)",
+    UI_ModOptions_SpiffUI_firstAidCraftAmount = "Количество для крафта (Крафт медикаментов)",
 
-    UI_ModOptions_SpiffUI_tooltip_showTooltips = "РџРѕРєР°Р·С‹РІР°С‚СЊ РІСЃРїР»С‹РІР°СЋС‰РёРµ РїРѕРґСЃРєР°Р·РєРё РІ СЂР°РґРёР°Р»СЊРЅС‹С… РјРµРЅСЋ РґР»СЏ РїСЂРµРґРјРµС‚РѕРІ, СЂРµС†РµРїС‚РѕРІ Рё СЂРµРјРѕРЅС‚РѕРІ (Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ)",
-    
-    UI_ModOptions_SpiffUI_tooltip_pillsShowNow = "РџСЂРёРјРµС‡Р°РЅРёРµ: РѕС‚РєР»СЋС‡Р°РµС‚ РґРµР№СЃС‚РІРёРµ *Р‘С‹СЃС‚СЂС‹Рµ С‚Р°Р±Р»РµС‚РєРё*",
-    
-    UI_ModOptions_SpiffUI_tooltip_drinkShowNow = "РџСЂРёРјРµС‡Р°РЅРёРµ: РѕС‚РєР»СЋС‡Р°РµС‚ РґРµР№СЃС‚РІРёРµ *Р‘С‹СЃС‚СЂРѕРµ РїРёС‚СЊС‘ РІРѕРґС‹*",
+    UI_ModOptions_SpiffUI_tooltip_showTooltips = "Показывать всплывающие подсказки в радиальных меню для предметов, рецептов и ремонтов (Рекомендуется)",
 
-    UI_ModOptions_SpiffUI_tooltip_eatShowNow = "РџСЂРёРјРµС‡Р°РЅРёРµ: РѕС‚РєР»СЋС‡Р°РµС‚ РґРµР№СЃС‚РІРёРµ *Р‘С‹СЃС‚СЂРѕ СЃСЉРµСЃС‚СЊ РµРґСѓ*",
-    
-    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "РџСЂРёРјРµС‡Р°РЅРёРµ: РЅРµРєРѕС‚РѕСЂС‹Рµ СЂРµС†РµРїС‚С‹ РјРѕРіСѓС‚ РїРѕ-РїСЂРµР¶РЅРµРјСѓ С„РёР»СЊС‚СЂРѕРІР°С‚СЊСЃСЏ. Р’РјРµСЃС‚Рѕ СЌС‚РѕРіРѕ СЂР°СЃСЃРјРѕС‚СЂРёС‚Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РјРµРЅСЋ РєСЂР°С„С‚Р° РїРµСЂРІРѕР№ РїРѕРјРѕС‰Рё!",
-    UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "РџСЂРёРјРµС‡Р°РЅРёРµ: СЂРµС†РµРїС‚С‹ РЅР° РёР·РЅРѕС€РµРЅРЅС‹Рµ РїСЂРµРґРјРµС‚С‹ РјРѕР¶РЅРѕ СЃРґРµР»Р°С‚СЊ РёР· РјРµРЅСЋ СЃРЅР°СЂСЏР¶РµРЅРёСЏ. РџСЂРµРґРјРµС‚С‹ РІ РІР°С€РµР№ СЂСѓРєРµ РїРѕ-РїСЂРµР¶РЅРµРјСѓ Р±СѓРґСѓС‚ РїРѕРєР°Р·С‹РІР°С‚СЊ СЂРµС†РµРїС‚С‹",
-    UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "Р’РјРµСЃС‚Рѕ СЌС‚РѕРіРѕ СЂР°СЃСЃРјРѕС‚СЂРёС‚Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РјРµРЅСЋ РєСЂР°С„С‚Р° РјРѕРґР° Smoke!"
+    UI_ModOptions_SpiffUI_tooltip_pillsShowNow = "Примечание: отключает действие *Быстрые таблетки*",
 
-    UI_ModOptions_SpiffUI_tooltip_smokeShowNow = "РџСЂРёРјРµС‡Р°РЅРёРµ: РѕС‚РєР»СЋС‡Р°РµС‚ РјРѕРґ AutoSmoke РґР»СЏ Р±С‹СЃС‚СЂРѕРіРѕ РєСѓСЂРµРЅРёСЏ",
+    UI_ModOptions_SpiffUI_tooltip_drinkShowNow = "Примечание: отключает действие *Быстрое питьё воды*",
 
-    UI_ModOptions_SpiffUI_tooltip_CraftingWheelSwitch = "РќР°Р¶РјРёС‚Рµ, С‡С‚РѕР±С‹ РѕС‚РєСЂС‹С‚СЊ СЂР°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ, СѓРґРµСЂР¶РёРІР°Р№С‚Рµ, С‡С‚РѕР±С‹ РѕС‚РєСЂС‹С‚СЊ РѕРєРЅРѕ РєСЂР°С„С‚Р°",
+    UI_ModOptions_SpiffUI_tooltip_eatShowNow = "Примечание: отключает действие *Быстро съесть еду*",
 
-    UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "РџРѕРєР°Р·Р°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ СЂРµРјРѕРЅС‚Р°, РґР°Р¶Рµ РµСЃР»Рё С‚СЂРµР±СѓРµРјС‹С… РїСЂРµРґРјРµС‚РѕРІ РЅРµС‚ РІ РІР°С€РµРј РёРЅРІРµРЅС‚Р°СЂРµ",
-    
-    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "Р РµРјРѕРЅС‚ СЃРЅР°СЂСЏР¶РµРЅРёСЏ РјРѕР¶РЅРѕ РІС‹РїРѕР»РЅРёС‚СЊ РёР· РјРµРЅСЋ СЃРЅР°СЂСЏР¶РµРЅРёСЏ.",
+    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "Примечание: некоторые рецепты могут по-прежнему фильтроваться. Вместо этого рассмотрите возможность использования меню крафта первой помощи!",
+    UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "Примечание: рецепты на изношенные предметы можно сделать из меню снаряжения. Предметы в вашей руке по-прежнему будут показывать рецепты",
+    UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "Вместо этого рассмотрите возможность использования меню крафта мода Smoke!"
 
-    UI_amount_SpiffUI_Ask = "РЎРїСЂРѕСЃРёС‚СЊ",
-    UI_amount_SpiffUI_All = "Р’СЃС‘",
-    UI_amount_SpiffUI_Full = "Р”РёРµС‚РѕР»РѕРі",
+    UI_ModOptions_SpiffUI_tooltip_smokeShowNow = "Примечание: отключает мод AutoSmoke для быстрого курения",
+
+    UI_ModOptions_SpiffUI_tooltip_CraftingWheelSwitch = "Нажмите, чтобы открыть радиальное меню, удерживайте, чтобы открыть окно крафта",
+
+    UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "Показать параметры ремонта, даже если требуемых предметов нет в вашем инвентаре",
+
+    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "Ремонт снаряжения можно выполнить из меню снаряжения.",
+
+    UI_amount_SpiffUI_Ask = "Спросить",
+    UI_amount_SpiffUI_All = "Всё",
+    UI_amount_SpiffUI_Full = "Диетолог",
     UI_amount_SpiffUI_One = "1",
     UI_amount_SpiffUI_Half = "1/2",
     UI_amount_SpiffUI_Quarter = "1/4",
 
-    UI_radial_SpiffUI_Accessories = "РђРєСЃРµСЃСЃСѓР°СЂС‹",
-    UI_radial_SpiffUI_Hotbar = "РҐРѕС‚Р±Р°СЂ",
-    UI_radial_SpiffUI_Transfer = "РџРµСЂРµРјРµСЃС‚РёС‚СЊ РЅР° ",
+    UI_radial_SpiffUI_Accessories = "Аксессуары",
+    UI_radial_SpiffUI_Hotbar = "Хотбар",
+    UI_radial_SpiffUI_Transfer = "Переместить на ",
 
-    UI_optionscreen_binding_SpiffUIPillWheel = "РўР°Р±Р»РµС‚РєРё РІ РјРµРЅСЋ",
-    UI_optionscreen_binding_SpiffUIDrinkWheel = "РќР°РїРёС‚РєРё РІ РјРµРЅСЋ",
-    UI_optionscreen_binding_SpiffUIEatWheel = "Р•РґР° РІ РјРµРЅСЋ",
-    UI_optionscreen_binding_SpiffUISmokeWheel = "РљСѓСЂРµРЅРёРµ РІ РјРµРЅСЋ",
-    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "РљСЂР°С„С‚ РјРѕРґР° Smoke РІ РјРµРЅСЋ",
-    UI_optionscreen_binding_SpiffUICraftWheel = "РРЅС‚РµСЂС„РµР№СЃ РєСЂР°С„С‚Р°/СЂР°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ",
-    UI_optionscreen_binding_SpiffUIEquipmentWheel = "РџРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РёРЅРІРµРЅС‚Р°СЂСЏ/Р Р°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ",
-    UI_optionscreen_binding_SpiffUIRepairWheel = "Р РµРјРѕРЅС‚ РІ СЂР°РґРёР°Р»СЊРЅРѕРј РјРµРЅСЋ",
-    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "РљСЂР°С„С‚ РґР»СЏ РїРµСЂРІРѕР№ РїРѕРјРѕС‰Рё",
-    UI_optionscreen_binding_SpiffUIOneWheel = "SpiffUI Р Р°РґРёР°Р»СЊРЅРѕРµ РјРµРЅСЋ",
+    UI_optionscreen_binding_SpiffUIPillWheel = "Таблетки в меню",
+    UI_optionscreen_binding_SpiffUIDrinkWheel = "Напитки в меню",
+    UI_optionscreen_binding_SpiffUIEatWheel = "Еда в меню",
+    UI_optionscreen_binding_SpiffUISmokeWheel = "Курение в меню",
+    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Крафт мода Smoke в меню",
+    UI_optionscreen_binding_SpiffUICraftWheel = "Интерфейс крафта/радиальное меню",
+    UI_optionscreen_binding_SpiffUIEquipmentWheel = "Переключатель инвентаря/Радиальное меню",
+    UI_optionscreen_binding_SpiffUIRepairWheel = "Ремонт в радиальном меню",
+    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "Крафт для первой помощи",
+    UI_optionscreen_binding_SpiffUIOneWheel = "SpiffUI Радиальное меню",
 
-    UI_character_SpiffUI_noLighter = "РњРЅРµ РЅСѓР¶РЅР° Р·Р°Р¶РёРіР°Р»РєР°.",
-    UI_character_SpiffUI_noSmokes = "РќРµС‡РµРіРѕ РєСѓСЂРёС‚СЊ.",
+    UI_character_SpiffUI_noLighter = "Мне нужна зажигалка.",
+    UI_character_SpiffUI_noSmokes = "Нечего курить.",
 
-    UI_character_SpiffUI_noCraft = "РљСЂР°С„С‚РёС‚СЊ РЅРµС‡РµРіРѕ.",
+    UI_character_SpiffUI_noCraft = "Крафтить нечего.",
 
-    UI_character_SpiffUI_noEquip = "РЇ Р“РѕР»С‹Р№!",
+    UI_character_SpiffUI_noEquip = "Я Голый!",
 
-    UI_character_SpiffUI_notHungry = "РЇ РЅРµ РіРѕР»РѕРґРµРЅ.",
-    UI_character_SpiffUI_noFood = "РќРµС‚ РµРґС‹, С‡С‚РѕР±С‹ РїРѕРµСЃС‚СЊ.",
+    UI_character_SpiffUI_notHungry = "Я не голоден.",
+    UI_character_SpiffUI_noFood = "Нет еды, чтобы поесть.",
 
-    UI_character_SpiffUI_notThirsty = "РЇ РЅРµ С…РѕС‡Сѓ РїРёС‚СЊ.",
-    UI_character_SpiffUI_noDrinks = "РџРёС‚СЊ РЅРµС‡РµРіРѕ.",
+    UI_character_SpiffUI_notThirsty = "Я не хочу пить.",
+    UI_character_SpiffUI_noDrinks = "Пить нечего.",
 
-    UI_character_SpiffUI_noRepair = "Р РµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ РЅРµС‡РµРіРѕ.",
-    UI_character_SpiffUI_noRepairItems = "РЇ РЅРµ РјРѕРіСѓ РѕС‚СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ СЌС‚Рѕ.",
+    UI_character_SpiffUI_noRepair = "Ремонтировать нечего.",
+    UI_character_SpiffUI_noRepairItems = "Я не могу отремонтировать это.",
 
-    UI_character_SpiffUI_noPillsQuick = "РЈ РјРµРЅСЏ РЅРµС‚ ",
-    UI_character_SpiffUI_noPills = "РќРµС‚ С‚Р°Р±Р»РµС‚РѕРє",
-    UI_character_SpiffUI_noPillsNeed = "РЇ РЅРµ РІ РЅР°СЃС‚СЂРѕРµРЅРёРё.",
+    UI_character_SpiffUI_noPillsQuick = "У меня нет ",
+    UI_character_SpiffUI_noPills = "Нет таблеток",
+    UI_character_SpiffUI_noPillsNeed = "Я не в настроении."
 }

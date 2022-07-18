@@ -180,7 +180,7 @@ local function getLighter(pack)
     end)
 end
 
-function SpiffUISmokeRadial:build()
+function SpiffUISmokeRadial:start()
     -- A lighter is required to be on you
     local lighter = getLighter(self.player:getInventory())
     
@@ -207,11 +207,14 @@ function SpiffUISmokeRadial:build()
     -- Build Smokeables
     for _,j in pairs(items) do
         self:AddCommand(SpiffUISmokeRadialCommand:new(self, j, lighter))
+        self.centerImg[self.page] = InventoryItemFactory.CreateItem("Base.Cigarettes"):getTexture()
+        self.btmText[self.page] = getText("UI_SpiffUI_Radial_Smoke")
+        self.cImgChange[self.page] = true
     end
 end
 
-function SpiffUISmokeRadial:new(player)
-    return spiff.radialmenu.new(self, player)
+function SpiffUISmokeRadial:new(player, prev)
+    return spiff.radialmenu.new(self, player, prev)
 end
 
 local function SmokeDown(player)
