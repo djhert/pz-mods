@@ -1,6 +1,6 @@
 ------------------------------------------
 -- SpiffUI Radials
----- ISFirearmRadialMenu getWeapon hack
+---- ISFirearmRadialMenu SpiffUI
 ------------------------------------------
 SpiffUI = SpiffUI or {}
 
@@ -30,6 +30,12 @@ function ISFirearmRadialMenu:display()
         local o = spiff.prevCmd:new(self, getText("UI_radial_SpiffUI_Previous"), getTexture("media/spifcons/prevpage.png"))
         o:fillMenu()       
     end
+
+    local weapon = self:getWeapon()
+	if not weapon then return end
+    local menu = getPlayerRadialMenu(self.playerNum)
+    menu:setRadialImage(weapon:getTexture())
+    menu:setRadialText(weapon:getName())
 
 	_ISFirearmRadialMenu_display(self)
 end

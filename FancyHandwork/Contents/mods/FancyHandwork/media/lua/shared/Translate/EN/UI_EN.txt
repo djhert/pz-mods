@@ -1,0 +1,9 @@
+UI_EN = {
+    UI_Init_FancyHandwork = "Hello: Fancy Handwork!",
+    UI_optionscreen_binding_FancyHandwork = "Fancy Handwork",
+    UI_optionscreen_binding_FHModifier = "Modifier Key",
+    UI_optionscreen_binding_FHSwapKey = "Swap Items (just key)",
+    UI_optionscreen_binding_FHSwapKeyMod = "Swap Items (mod + key)",
+    UI_optionscreen_binding_FHDebugKey = "Debug Key (Only used in Debug Mode)",
+    UI_ModOptions_FHfixLHandRotation = "Apply Animations"
+}

@@ -1,0 +1,24 @@
+UI_EN = {
+    -- SpiffUI
+    UI_Hello_SpiffUI = "Hello SpiffUI!",
+    UI_Name_SpiffUI = "SpiffUI",
+    UI_optionscreen_binding_SpiffUI = "SpiffUI",
+
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Set SpiffUI Recommended Keybinds",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Set SpiffUI Keybinds <LINE><LINE><LEFT><SIZE:small> Sets the following Keybinds: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  to:  [%2] ",
+
+    UI_ModOptions_SpiffUI_runAllResets = "Run All SpiffUI Resets",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "Only works In-Game!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> SpiffUI Reset <LINE><LINE><LEFT><SIZE:small> The following will be reset: <LINE>",
+
+    -- SpiffUI - Themes
+    UI_Init_SpiffUI_Themes = "Hello SpiffUI Themes!",
+    UI_Name_SpiffUI_Themes = "SpiffUI Themes",
+
+    UI_ModOptions_SpiffUIThemes_Enable = "Enable Themes",
+    UI_ModOptions_SpiffUIThemes_Theme = "Current Theme",
+
+    UI_ModOptions_SpiffUIThemes_EnableToolTip = "Disables all Theme Rendering.  A full game restart is required.",
+    UI_ModOptions_SpiffUIThemes_ThemeToolTip = "Select theme to use.  A full game restart is required.",
+}

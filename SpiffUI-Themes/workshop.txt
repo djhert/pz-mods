@@ -1,0 +1,33 @@
+version=1
+id=2847303520
+title=SpiffUI - Themes
+description=[h1]Supports B41+. Works in Multiplayer[/h1]
+description=[h3]A new save is not required[/h3]
+description=
+description=[h2]Configuration[/h2]
+description=
+description=[url=https://steamcommunity.com/workshop/filedetails/?id=2169435993]ModOptions[/url] is required for futher configuration, but the mod will function without.
+description=
+description=[table]
+description=[tr]
+description=[th]Name[/th]
+description=[th]Default[/th]
+description=[th]Description[/th]
+description=[/tr]
+description=[tr]
+description=[td]Name[/td]
+description=[td]Default[/td]
+description=[td]Description[/td]
+description=[/tr]
+description=[tr]
+description=[td]Name[/td]
+description=[td]Default[/td]
+description=[td]Description[/td]
+description=[/tr]
+description=[/table]
+description=
+description=[h2]Translations[/h2]
+description=
+description=This mod is currently only in English.  If you would like to contribute a translation, please submit a pull request on [url=https://github.com/hlfstr/pz-mods]GitHub![/url]  I will happily give credit!
+tags=Build 41;Framework;Interface;Misc
+visibility=friendsOnly

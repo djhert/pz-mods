@@ -29,244 +29,62 @@ function SpiffUIOneRadialCommand:new(menu, name, texture, mode)
     return o
 end
 
-local tickWatch = ISUIElement:derive("tickWatch")
+-- local tickWatch = ISUIElement:derive("tickWatch")
 
-function tickWatch:render()
-    local hour = getGameTime():getHour()
-    minutes = getGameTime():getMinutes()
+-- function tickWatch:render()
+--     local hour = getGameTime():getHour()
+--     minutes = getGameTime():getMinutes()
 
-    hour = hour + (minutes/60)
+--     hour = hour + (minutes/60)
 
-    local endX = self.cenX + ( (self.hrLen) * (math.sin(2 * math.pi * hour / 12 ) ) )
-    local endY = self.cenY + ( (-self.hrLen) * (math.cos(2 * math.pi * hour / 12 ) ) )
+--     local endX = self.cenX + ( (self.hrLen) * (math.sin(2 * math.pi * hour / 12 ) ) )
+--     local endY = self.cenY + ( (-self.hrLen) * (math.cos(2 * math.pi * hour / 12 ) ) )
 
-    self:drawLine2(self.cenX, self.cenY, endX, endY, 1, 1, 1, 1)
+--     self:drawLine2(self.cenX, self.cenY, endX, endY, 1, 1, 1, 1)
 
-    endX = self.cenX + ( (self.minLen) * (math.sin(2 * math.pi * minutes / 60 ) ) )
-    endY = self.cenY + ( (-self.minLen) * (math.cos(2 * math.pi * minutes / 60 ) ) )
+--     endX = self.cenX + ( (self.minLen) * (math.sin(2 * math.pi * minutes / 60 ) ) )
+--     endY = self.cenY + ( (-self.minLen) * (math.cos(2 * math.pi * minutes / 60 ) ) )
 
-    self:drawLine2(self.cenX, self.cenY, endX, endY, 1, 1, 1, 1)
-end
+--     self:drawLine2(self.cenX, self.cenY, endX, endY, 1, 1, 1, 1)
+-- end
 
-function tickWatch:center()
-    local x = getPlayerScreenLeft(self.playerNum)
-	local y = getPlayerScreenTop(self.playerNum)
-	local w = getPlayerScreenWidth(self.playerNum)
-	local h = getPlayerScreenHeight(self.playerNum)
+-- function tickWatch:center()
+--     local x = getPlayerScreenLeft(self.playerNum)
+-- 	local y = getPlayerScreenTop(self.playerNum)
+-- 	local w = getPlayerScreenWidth(self.playerNum)
+-- 	local h = getPlayerScreenHeight(self.playerNum)
 
-    x = x + w / 2
-	y = y + h / 2
+--     x = x + w / 2
+-- 	y = y + h / 2
 
-    self:setX(x - self.rad / 2)
-    self:setY(y - self.rad / 2)
+--     self:setX(x - self.rad / 2)
+--     self:setY(y - self.rad / 2)
 
-    self.cenX = x
-    self.cenY = y
-end
+--     self.cenX = x
+--     self.cenY = y
+-- end
 
-function tickWatch:new(playerNum, radius, clock, menu)
-    local o = ISUIElement.new(self, 0, 0, radius, radius/3)
-    o:initialise()
+-- function tickWatch:new(playerNum, radius, clock, menu)
+--     local o = ISUIElement.new(self, 0, 0, radius, radius/3)
+--     o:initialise()
 
-    o.clock = clock
-    o.rad = radius
+--     o.clock = clock
+--     o.rad = radius
 
-    o.playerNum = playerNum
+--     o.playerNum = playerNum
 
-    o.imgW = o.rad
-    o.imgH= o.rad
+--     o.imgW = o.rad
+--     o.imgH= o.rad
 
-    o.hrLen = o.rad*0.5
-    o.minLen = o.rad*0.8
+--     o.hrLen = o.rad*0.5
+--     o.minLen = o.rad*0.8
 
-    self.menu = menu
+--     self.menu = menu
 
-    o:center()
+--     o:center()
 
-    return o
-end
-
-local timeImg = ISUIElement:derive("timeImg")
-
-function timeImg:render()
-    local time = getGameTime():getHour()
-    local h1 = 0
-    local h2 = 0
-    if time > 9 then
-        h1 = math.floor(time/10)
-    end
-    h2 = time - (h1*10)
-
-    self:drawTextureScaledAspect(self.menu.icons[h1], self.X[1], 0, self.secW, self.imgH, 1,1,1,1)
-    self:drawTextureScaledAspect(self.menu.icons[h2], self.X[2], 0, self.secW, self.imgH, 1,1,1,1)
-
-    self:drawTextureScaledAspect(self.menu.icons["mid"], self.X[3], 0, self.midW, self.imgH, 1,1,1,1)
-
-    time = getGameTime():getMinutes()
-    h1 = 0
-    h2 = 0
-    if time > 9 then
-        h1 = math.floor(time/10)
-    end
-    h2 = time - (h1*10)
-
-    self:drawTextureScaledAspect(self.menu.icons[h1], self.X[4], 0, self.secW, self.imgH, 1,1,1,1)
-    self:drawTextureScaledAspect(self.menu.icons[h2], self.X[5], 0, self.secW, self.imgH, 1,1,1,1)
-end
-
-function timeImg:center()
-    local x = getPlayerScreenLeft(self.playerNum)
-	local y = getPlayerScreenTop(self.playerNum)
-	local w = getPlayerScreenWidth(self.playerNum)
-	local h = getPlayerScreenHeight(self.playerNum)
-
-    x = x + w / 2
-	y = y + h / 2
-
-    self:setX(x - self.imgW / 2)
-    self:setY(y - self.rad / 2)
-
-    self.cenX = x
-    self.cenY = y
-end
-
-function timeImg:new(playerNum, radius, clock, menu)
-    local o = ISUIElement.new(self, 0, 0, radius, radius/3)
-    o:initialise()
-
-    o.clock = clock
-    o.rad = radius
-
-    o.playerNum = playerNum
-
-    o.imgW = o.rad
-    o.imgH= o.rad/3
-    o.secW = o.rad/4
-    o.midW = o.rad/8
-
-    o.X = {
-        [1] = 0,
-        [2] = o.secW,
-        [3] = o.secW + o.secW,
-        [4] = o.secW + o.secW + o.midW,
-        [5] = o.secW + o.secW + o.midW + o.secW
-    }
-
-    o.imgW = o.X[5] + o.secW
-
-    self.menu = menu
-
-    o:center()
-
-    return o
-end
-
-local dateImg = ISUIElement:derive("dateImg")
-
-local function round(num)
-    return math.floor(num * 10) / 10;
-end
-
-function dateImg:render()
-    local time = getGameTime():getMonth()+1
-    local h1 = 0
-    local h2 = 0
-    if time > 9 then
-        h1 = math.floor(time/10)
-    end
-    h2 = time - (h1*10)
-
-    self:drawTextureScaledAspect(self.menu.icons[h1], self.X[1], 0, self.secW, self.imgH, 1,1,1,1)
-    self:drawTextureScaledAspect(self.menu.icons[h2], self.X[2], 0, self.secW, self.imgH, 1,1,1,1)
-
-    self:drawTextureScaledAspect(self.menu.icons["date"], self.X[3], 0, self.secW, self.imgH, 1,1,1,1)
-
-    time = getGameTime():getDay()+1
-    h1 = 0
-    h2 = 0
-    if time > 9 then
-        h1 = math.floor(time/10)
-    end
-    h2 = time - (h1*10)
-
-    self:drawTextureScaledAspect(self.menu.icons[h1], self.X[4], 0, self.secW, self.imgH, 1,1,1,1)
-    self:drawTextureScaledAspect(self.menu.icons[h2], self.X[5], 0, self.secW, self.imgH, 1,1,1,1)
-
-    -------------------------------------
-    local temp = round(self.climate:getAirTemperatureForCharacter(self.player))    
-
-    time = math.floor(temp)
-    h1 = 0
-    h2 = 0
-    if time > 9 then
-        h1 = math.floor(time/10)
-    end
-    h2 = time - (h1*10)
-
-    self:drawTextureScaledAspect(self.menu.icons[h1], self.X[6], 0, self.secW, self.imgH, 1,1,1,1)
-    self:drawTextureScaledAspect(self.menu.icons[h2], self.X[7], 0, self.secW, self.imgH, 1,1,1,1)
-
-    self:drawTextureScaledAspect(self.menu.icons["dot"], self.X[8], 5, self.midW, self.imgH, 1,1,1,1)
-
-    h1 = math.floor((temp - time) * 10)
-
-    self:drawTextureScaledAspect(self.menu.icons[h1], self.X[9], 0, self.secW, self.imgH, 1,1,1,1)
-
-    self:drawTextureScaledAspect(self.menu.icons["C"], self.X[10], 0, self.secW, self.imgH, 1,1,1,1)
-end
-
-function dateImg:center()
-    local x = getPlayerScreenLeft(self.playerNum)
-	local y = getPlayerScreenTop(self.playerNum)
-	local w = getPlayerScreenWidth(self.playerNum)
-	local h = getPlayerScreenHeight(self.playerNum)
-
-    x = x + w / 2
-	y = y + h / 2
-
-    self:setX(x - self.imgW / 2)
-    self:setY((y - self.rad / 2) + (self.rad * 0.4))
-end
-
-function dateImg:new(playerNum, player, radius, clock, menu)
-    local o = ISUIElement.new(self, 0, 0, radius, radius/3)
-    o:initialise()
-
-    o.clock = clock
-
-    o.climate = getClimateManager()
-    o.rad = radius
-
-    o.playerNum = playerNum
-    o.player = player
-
-    o.imgW = o.rad
-    o.imgH= o.rad/6
-    o.secW = (o.rad/8)
-    o.midW = (o.rad/10)
-
-    o.X ={
-        [1] = 0,
-        [2] = o.secW,
-        [3] = 2*o.secW,
-        [4] = 3*o.secW,
-        [5] = 4*o.secW,
-
-        [6] = 6*o.secW,
-        [7] = 7*o.secW,
-        [8] = 8*o.secW-2,
-        [9] = 8*o.secW+(o.midW/2)+2,
-        [10] = 9*o.secW+(o.midW/2)+2,
-    }
-
-    o.imgW = 10*o.secW+(o.midW/2)
-
-    self.menu = menu
-
-    o:center()
-
-    return o
-end
+--     return o
+-- end
 
 local function getBestClock(player)
     local watch = nil
@@ -295,25 +113,31 @@ local function getBestClock(player)
     return watch
 end
 
+function SpiffUIOneRadial:show()
+    spiff.radialmenu.show(self)
+    self.rmenu:setClock(getBestClock(self.player))
+end
+
 function SpiffUIOneRadial:start()
 
-    self.clock = getBestClock(self.player)
-    if self.clock then
-        self.cFace = nil
-        if spiff.config.experimental and (not self.clock:isDigital() or instanceof(self.clock, "AlarmClock")) then
-            -- hand clock or non-digital watch
-            self.cFace = tickWatch:new(self.playerNum, self.rmenu.innerRadius, self.clock, self)
-        else
-            self.cFace = timeImg:new(self.playerNum, self.rmenu.innerRadius, self.clock, self)
-        end
+    --self.clock = 
+    
+    -- if self.clock then
+    --     self.cFace = nil
+    --     if spiff.config.experimental and (not self.clock:isDigital() or instanceof(self.clock, "AlarmClock")) then
+    --         -- hand clock or non-digital watch
+    --         self.cFace = tickWatch:new(self.playerNum, self.rmenu.innerRadius, self.clock, self)
+    --     else
+    --         self.cFace = timeImg:new(self.playerNum, self.rmenu.innerRadius, self.clock, self)
+    --     end
         
-        self:addChild(self.cFace)
-        -- show date/temp
-        if self.clock:isDigital() and instanceof(self.clock, "AlarmClockClothing") then
-            self.dFace = dateImg:new(self.playerNum, self.player, self.rmenu.innerRadius, self.clock, self)
-            self:addChild(self.dFace)
-        end
-    end
+    --     self:addChild(self.cFace)
+    --     -- show date/temp
+    --     if self.clock:isDigital() and instanceof(self.clock, "AlarmClockClothing") then
+    --         self.dFace = dateImg:new(self.playerNum, self.player, self.rmenu.innerRadius, self.clock, self)
+    --         self:addChild(self.dFace)
+    --     end
+    -- end
 
     -- Crafting
     self:AddCommand(SpiffUIOneRadialCommand:new(self, getText("UI_SpiffUI_Radial_Crafting"), getTexture("media/spifcons/crafting.png"), 0))
@@ -345,7 +169,7 @@ function SpiffUIOneRadial:start()
         self:AddCommand(SpiffUIOneRadialCommand:new(self, getText("UI_SpiffUI_Radial_SmokeCraft"), icon, 7))
     end
 
-    if spiff.config.showSmokingRadial then
+    if spiff.config.showSmokeRadial then
         -- Smoke
         self:AddCommand(SpiffUIOneRadialCommand:new(self, getText("UI_SpiffUI_Radial_Smoke"), InventoryItemFactory.CreateItem("Base.Cigarettes"):getTexture(), 8))
     end
@@ -356,45 +180,6 @@ function SpiffUIOneRadial:start()
 
     if UIManager.getSpeedControls() and not isClient() then
         self:AddCommand(SpiffUIOneRadialCommand:new(self, getText("UI_SpiffUI_Radial_GameSpeed"), getTexture("media/ui/Time_Wait_Off.png"), 10))
-    end
-end
-
-function SpiffUIOneRadial:render()
-    local index = -1 
-    if self.cIndex then -- force show
-        index = -1
-    elseif JoypadState.players[self.playerNum+1] then
-        index = self.rmenu.javaObject:getSliceIndexFromJoypad(self.rmenu.joyfocus.id)
-    else
-        index = self.rmenu.javaObject:getSliceIndexFromMouse(self.rmenu:getMouseX(), self.rmenu:getMouseY())
-    end
-
-    self.cmdText = nil
-
-    if index > -1 then
-        if self.rmenu:getSliceCommand(index+1) and self.rmenu:getSliceCommand(index+1)[2] then
-            self.cmdText = SpiffUI.textwrap(self.rmenu:getSliceCommand(index+1)[2].text,20)
-        end
-    end
-
-    self:center()
-
-    if index > -1 then
-        if self.cmdText then
-            -- Draw cmdText at bottom
-            self:drawText(self.cmdText, self.cTX, self.bTY, 1,1,1,1, UIFont.Medium)
-        end
-    end
-
-    if self.clock and self.clock:isAlarmSet() then
-        local sz = self.rmenu.innerRadius/3
-        local y = self.cFace:getY() - (sz*1.15)
-        local x = self.cenX - sz/2
-        if self.clock:isRinging() then
-            self:drawTextureScaledAspect(self.icons["enable"], x, y, sz, sz, 1,1,1,1)
-        else
-            self:drawTextureScaledAspect(self.icons["silence"], x, y, sz, sz, 1,1,1,1)
-        end
     end
 end
 

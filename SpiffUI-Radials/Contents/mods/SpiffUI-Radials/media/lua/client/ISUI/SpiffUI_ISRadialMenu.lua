@@ -285,9 +285,14 @@ function ISRadialMenu:getSliceTooltipMouse(x, y)
 end
 
 function ISRadialMenu:getSliceText(sliceIndex)
-	if sliceIndex < 1 or sliceIndex > #self.slices then return "" end
+	if sliceIndex < 1 or sliceIndex > #self.slices then return end
 	return self.slices[sliceIndex].text
 end
+
+function ISRadialMenu:getSliceTexture(sliceIndex)                                                                                                                                                                                                                                                                                                                                                                                            
+	if sliceIndex < 1 or sliceIndex > #self.slices then return end                                                                                                                                                                                                                                                                                                                                                                             
+	return self.slices[sliceIndex].texture                                                                                                                                                                                                                                                                                                                                                                                                     
+  end 
 
 function ISRadialMenu:showTooltip(item)
 	if item and spiff.config.showTooltips then
@@ -403,6 +408,7 @@ end
 local _ISRadialMenu_undisplay = ISRadialMenu.undisplay
 function ISRadialMenu:undisplay()
 	_ISRadialMenu_undisplay(self)
+
 	if self.toolRender and self.toolRender:getIsVisible() then
 		self.toolRender:removeFromUIManager()
 		self.toolRender:setVisible(false)
@@ -419,13 +425,70 @@ function ISRadialMenu:undisplay()
 		self.activeMenu:undisplay()
 		self.activeMenu = nil
 	end
+	self.clock = nil
 end
 
-function ISRadialMenu:RadialTick()
-	if self:isReallyVisible() then
-		if JoypadState.players[self.playerNum+1] then
-			self:showTooltip(self:getSliceTooltipJoyPad())
-		end
+local _ISRadialMenu_addSlice = ISRadialMenu.addSlice
+function ISRadialMenu:addSlice(text, texture, command, arg1, arg2, arg3, arg4, arg5, arg6)
+	local slice = {}
+	slice.text = text
+	slice.texture = texture
+	slice.command = { command, arg1, arg2, arg3, arg4, arg5, arg6 }
+	table.insert(self.slices, slice)
+	-- we don't actually wan't to pass the string in here anymore.
+	if self.javaObject then
+		self.javaObject:addSlice(nil, texture)
+	end
+end
+
+function ISRadialMenu:setRadialText(text)
+	self.radText = text
+end
+
+function ISRadialMenu:setRadialImage(img)
+	self.radImg = img
+end
+
+function ISRadialMenu:setImgChange(state)
+	self.radImgChange = state
+end
+
+function ISRadialMenu:getClock()
+	return self.clock
+end
+
+function ISRadialMenu:setClock(clock, clockSpiff)
+	self.clock = clock
+end
+
+local SUIRadialMenuOverlay = require("SUI/SUI_RadialMenuOverlay")
+
+local _ISRadialMenu_instantiate = ISRadialMenu.instantiate
+function ISRadialMenu:instantiate()
+	_ISRadialMenu_instantiate(self)
+	if not self.spiff then
+		self.spiff = SUIRadialMenuOverlay:new(self)
+	end
+end
+
+-- Apparently, I am unable to add a child to the RadialMenu.  I think its something to do with it being part Java object?
+---- So, instead here is a little hack to bring that parent/child relationship
+function ISRadialMenu:addToUIManager()
+	ISUIElement.addToUIManager(self)
+	if self.spiff then
+		self.spiff:display()
+	end
+end
+
+function ISRadialMenu:removeFromUIManager()
+	ISUIElement.removeFromUIManager(self)
+
+	self.radText = nil
+	self.radImg = nil
+	self.radImgChange = true
+
+	if self.spiff then
+		self.spiff:undisplay()
 	end
 end
 
@@ -433,6 +496,10 @@ local _ISRadialMenu_new = ISRadialMenu.new
 function ISRadialMenu:new(...)
 	local o = _ISRadialMenu_new(self, ...)
 	o:makeToolTip()
+
+	o.radText = nil
+	o.radImg = nil
+	o.radImgChange = true
+
 	return o
 end
-

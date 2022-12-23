@@ -99,7 +99,7 @@ local function getItems(packs, player)
             -- the only real difference between food and drinks is if there is a custom menu option/animation it seems.
             return item:isWaterSource()
                     or (instanceof(item, "Food") and not player:isKnownPoison(item) and not item:getScriptItem():isCantEat()) 
-                    and (item:getThirstChange() < 0 and item:getCustomMenuOption() == getText("ContextMenu_Drink"))
+                    and (item:getCustomMenuOption() == getText("ContextMenu_Drink"))
         end)
         if ps and ps:size() > 0 then
             for i = 0, ps:size() - 1 do
@@ -167,7 +167,7 @@ function SpiffUIDrinkRadial:start()
             hasCmd = true
         end
         self.centerImg[self.page] = InventoryItemFactory.CreateItem("Base.WaterBottleFull"):getTexture()
-        self.btmText[self.page] = getText("UI_SpiffUI_Radial_Drink")
+        self.btmText[self.page] = "<RGB:1,0,0> "..getText("UI_SpiffUI_Radial_Drink")
         self.cImgChange[self.page] = true
     end
 

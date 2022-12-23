@@ -344,7 +344,7 @@ function SpiffUIEquipmentRadial:itemOptions(item)
     if not item then return end
 
     -- Get Hotbar & loot
-    local hotbar = getPlayerHotbar(self.player:getPlayerNum())
+    local hotbar = getPlayerHotbar(self.playerNum)
     local loot = getPlayerLoot(self.playerNum)
 
     self.btmText[self.page] = SpiffUI.textwrap(item:getName(), 20) -- some names are just too long :/

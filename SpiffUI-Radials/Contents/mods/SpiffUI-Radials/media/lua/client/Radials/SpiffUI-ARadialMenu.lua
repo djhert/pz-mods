@@ -50,7 +50,7 @@ end
 
 function SpiffUIRadialCommand:fillMenu()
     if self.texture then
-        self.rmenu:addSlice("", self.texture, self.invoke, self)
+        self.rmenu:addSlice(self.text, self.texture, self.invoke, self)
     else -- add a blank
         self.rmenu:addSlice(nil, nil, nil)
     end
@@ -159,14 +159,22 @@ function SpiffUIRadialMenu:show()
     end
 
     if count > 0 then
+        if self.btmText[self.page] then
+            self.rmenu:setRadialText(self.btmText[self.page])
+        end
+        if self.centerImg[self.page] then
+            self.rmenu:setRadialImage(self.centerImg[self.page])
+        end
+
+        if self.cImgChange[self.page] ~= nil then
+            self.rmenu:setImgChange(self.cImgChange[self.page])
+        end
+
         self.rmenu:center()
-        self:center()
         self.rmenu:addToUIManager()
-        self:addToUIManager()
         self.rmenu:setVisible(true)
-        self:setVisible(true)
-        self:bringToTop()
         self.rmenu.activeMenu = self
+
         SpiffUI.action.wasVisible = true
         if JoypadState.players[self.playerNum+1] then
             self.rmenu:setHideWhenButtonReleased(Joypad.DPadUp)
@@ -179,113 +187,7 @@ function SpiffUIRadialMenu:show()
     end
 end
 
-function SpiffUIRadialMenu:center()
-    local x = getPlayerScreenLeft(self.playerNum)
-	local y = getPlayerScreenTop(self.playerNum)
-	local w = getPlayerScreenWidth(self.playerNum)
-	local h = getPlayerScreenHeight(self.playerNum)
-
-    x = x + w / 2
-	y = y + h / 2
-
-    if self.cmdText then
-        local cH = getTextManager():getFontHeight(UIFont.Medium)
-        local cW = getTextManager():MeasureStringX(UIFont.Medium, self.cmdText)
-
-        self.cTX = (x - cW / 2)
-        self.cTY = (y - cH / 2)
-        self.bTY = (y - cH / 2) + (cH * 2)
-    end
-
-    if self.btmText[self.page] then
-        local bh = getTextManager():getFontHeight(UIFont.Medium)
-        local bw = getTextManager():MeasureStringX(UIFont.Medium, self.btmText[self.page])
-
-        self.bTX = (x - bw / 2)
-        self.bTY = (y - bh / 2) + (bh * 2)
-    end
-
-    self.imgH = self.rmenu.innerRadius/2
-    self.imgW = self.imgH
-
-    self.imgX = (x - self.imgW / 2)
-    self.imgY = (y - self.imgH / 2)
-
-    self.cenX = x
-    self.cenY = y
-end
-
-function SpiffUIRadialMenu:render()
-    local index = -1 
-    -- This is a better way to handle this. :D
-    if self.cIndex then -- force show
-        index = -1
-    elseif JoypadState.players[self.playerNum+1] then
-        index = self.rmenu.javaObject:getSliceIndexFromJoypad(self.rmenu.joyfocus.id)
-    else
-        index = self.rmenu.javaObject:getSliceIndexFromMouse(self.rmenu:getMouseX(), self.rmenu:getMouseY())
-    end
-
-    self.cmdText = nil
-    self.cmdImg = nil
-
-    if index > -1 then
-        if self.rmenu:getSliceCommand(index+1) and self.rmenu:getSliceCommand(index+1)[2] then
-            self.cmdText = SpiffUI.textwrap(self.rmenu:getSliceCommand(index+1)[2].text,20)
-            self.cmdImg = self.rmenu:getSliceCommand(index+1)[2].texture
-        end
-    end
-    
-    self:center()
-
-    if index == -1 then
-        if self.centerImg[self.page] then
-            self:drawTextureScaledAspect(self.centerImg[self.page], self.imgX, self.imgY, self.imgW, self.imgH, 1, 1, 1, 1)
-        end
-        if self.btmText[self.page] then
-            self:drawText(self.btmText[self.page], self.bTX, self.bTY, 1,1,1,1, UIFont.Medium)
-        end
-    else
-        if self.cImgChange[self.page] then
-            if self.cmdImg then
-                self:drawTextureScaledAspect(self.cmdImg, self.imgX, self.imgY, self.imgW, self.imgH, 1, 1, 1, 1)
-            else
-                if self.centerImg[self.page] then
-                    self:drawTextureScaledAspect(self.centerImg[self.page], self.imgX, self.imgY, self.imgW, self.imgH, 1, 1, 1, 1)
-                end
-            end
-        else
-            if self.centerImg[self.page] then 
-                self:drawTextureScaledAspect(self.centerImg[self.page], self.imgX, self.imgY, self.imgW, self.imgH, 1, 1, 1, 1)
-            end
-        end
-
-        if self.cmdText then
-            if self.centerImg[self.page] or self.cImgChange[self.page] then
-                -- Draw cmdText at bottom
-                self:drawText(self.cmdText, self.cTX, self.bTY, 1,1,1,1, UIFont.Medium)
-            else
-                if self.btmText[self.page] then
-                    -- Draw btmText
-                    self:drawText(self.btmText[self.page], self.bTX, self.bTY, 1,1,1,1, UIFont.Medium)
-                end
-                -- Draw cmdText at middle
-                self:drawText(self.cmdText, self.cTX, self.cTY, 1,1,1,1, UIFont.Medium)
-            end
-        else
-            if self.btmText[self.page] then
-                self:drawText(self.btmText[self.page], self.bTX, self.bTY, 1,1,1,1, UIFont.Medium)
-            end
-        end
-
-        if JoypadState.players[self.playerNum+1] then
-            self.rmenu:showTooltip(self.rmenu:getSliceTooltipJoyPad())
-        end
-    end
-end
-
 function SpiffUIRadialMenu:undisplay()
-    self:removeFromUIManager()
 end
 
 function SpiffUIRadialMenu:AddCommand(command)
@@ -322,10 +224,10 @@ function SpiffUIRadialMenu:new(player, prev, centerImg, btmText)
     o.prevTex = getTexture("media/spifcons/prevpage.png")
 
     o.centerImg = {
-        [o.page] = centerImg
+        [1] = centerImg
     }
     o.btmText = {
-        [o.page] = btmText
+        [1] = btmText
     }
 
     o.cmdText = nil

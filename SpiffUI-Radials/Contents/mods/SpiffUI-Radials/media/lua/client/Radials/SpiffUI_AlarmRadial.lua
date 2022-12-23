@@ -38,16 +38,16 @@ function SpiffUIAlarmRadialCommand:new(menu, mode, alarm)
     local tex
     local label = ""
     if mode == 1 then
-        tex = menu.icons["silence"]
+        tex = menu.aicons["silence"]
         label = getText("UI_alarm_SpiffUI_Silence")
     elseif mode == 2 then
-        tex = menu.icons["enable"]
+        tex = menu.aicons["enable"]
         label = getText("UI_alarm_SpiffUI_Enable")
     elseif mode == 3 then
         tex = alarm:getTexture()
         label = getText("UI_alarm_SpiffUI_Reset")
     elseif mode == 4 then
-        tex = menu.icons["stop"]
+        tex = menu.aicons["stop"]
         label = getText("ContextMenu_StopAlarm")
     end
     local o = spiff.radialcommand.new(self, menu, label, tex, nil)
@@ -64,7 +64,7 @@ function SpiffUIAlarmRadialCommandHour:Action()
 end
 
 function SpiffUIAlarmRadialCommandHour:new(menu, hour)
-    local o = spiff.radialcommand.new(self, menu, "", menu.icons[hour], nil)
+    local o = spiff.radialcommand.new(self, menu, getText("UI_alarm_SpiffUI_SetHourF", string.format("%02d", hour), getText("UI_alarm_SpiffUI_MM")), menu.aicons[hour], nil)
     o.hour = hour
     return o
 end
@@ -81,13 +81,18 @@ function SpiffUIAlarmRadialCommandMinute:Action()
     self.menu:start()
 end
 
-function SpiffUIAlarmRadialCommandMinute:new(menu, minute)
-    local o = spiff.radialcommand.new(self, menu, "", menu.icons[minute], nil)
+function SpiffUIAlarmRadialCommandMinute:new(menu, minute, hText)
+    local o = spiff.radialcommand.new(self, menu, getText("UI_alarm_SpiffUI_SetMinuteF", hText, string.format("%02d", minute)), menu.aicons[minute], nil)
     o.minute = minute
     return o
 end
 
 ------------------------------------------
+
+function SpiffUIAlarmRadial:show()
+    spiff.radialmenu.show(self)
+    self.rmenu:setClock(self.alarm)
+end
 
 function SpiffUIAlarmRadial:start()
     self:prepareCmds()
@@ -107,7 +112,6 @@ function SpiffUIAlarmRadial:start()
     end
 
     self.btmText[self.page] = getText("UI_alarm_SpiffUI_CurrentF", hText, mText)
-    self.btmText[self.page] = self.btmText[self.page]:gsub('\\n', '\n')
 
     if self.alarm:isRinging() then
         self:AddCommand(SpiffUIAlarmRadialCommand:new(self,4,self.alarm))
@@ -123,7 +127,7 @@ function SpiffUIAlarmRadial:hourRadial()
     self:prepareCmds()
 
     self.btmText[self.page] = getText("UI_alarm_SpiffUI_SetHourF", getText("UI_alarm_SpiffUI_HH"), getText("UI_alarm_SpiffUI_MM"))
-    self.btmText[self.page] = self.btmText[self.page]:gsub('\\n', '\n')
+    self.cImgChange[self.page] = false
 
     for i = 0, 23 do
         table.insert(self.commands[self.page], SpiffUIAlarmRadialCommandHour:new(self, i))
@@ -143,24 +147,13 @@ function SpiffUIAlarmRadial:minuteRadial()
     end
 
     self.btmText[self.page] = getText("UI_alarm_SpiffUI_SetMinuteF", hText, getText("UI_alarm_SpiffUI_MM"))
-    self.btmText[self.page] = self.btmText[self.page]:gsub('\\n', '\n')
+    self.cImgChange[self.page] = false
 
     for i = 0, 5 do
-        table.insert(self.commands[self.page], SpiffUIAlarmRadialCommandMinute:new(self, i*10))
+        table.insert(self.commands[self.page], SpiffUIAlarmRadialCommandMinute:new(self, i*10, hText))
     end
 
     self:show()
-end
-
-function SpiffUIAlarmRadial:initialise()
-    if self.init then
-        -- This is called by "onSetAlarm"
-        -- We'll just override this to show the radial instead
-        self:display()
-    else
-        ISUIElement.initialise(self)
-        self.init = true
-    end
 end
 
 function SpiffUIAlarmRadial:new(player, alarm, prev)
@@ -170,7 +163,7 @@ function SpiffUIAlarmRadial:new(player, alarm, prev)
     o.minute = o.alarm:getMinute()
 
     -- Alarm icons
-    o.icons = {
+    o.aicons = {
         [30] = getTexture("media/spifcons/alarm/30.png"),
         [40] = getTexture("media/spifcons/alarm/40.png"),
         [50] = getTexture("media/spifcons/alarm/50.png"),
@@ -180,15 +173,39 @@ function SpiffUIAlarmRadial:new(player, alarm, prev)
     }
     -- Do the rest
     for i=0,23 do
-        o.icons[i] =  getTexture("media/spifcons/alarm/" .. string.format("%02d", i) .. ".png")
+        o.aicons[i] =  getTexture("media/spifcons/alarm/" .. string.format("%02d", i) .. ".png")
     end
+
+    o.icons = {
+        ["mid"] = getTexture("media/spifcons/clock/mid.png"),
+        ["silence"] = getTexture("media/ui/ClockAssets/ClockAlarmLargeSet.png"),
+        ["enable"] = getTexture("media/ui/ClockAssets/ClockAlarmLargeSound.png"),
+    }
+    for i=0,9 do
+        o.icons[i] =  getTexture(string.format("media/spifcons/clock/%d.png", i))
+    end
+
 
     return o
 end
 
 -- later when i get the inventory to dismiss/reappear for controllers. i've delayed release enough for now
--- local _ISAlarmClockDialog_new = ISAlarmClockDialog.new
--- function ISAlarmClockDialog:new(x, y, width, height, player, alarm)
---     --return _ISAlarmClockDialog_new(self, x, y, width, height, player, alarm)
---     return SpiffUIAlarmRadial:new(getSpecificPlayer(player), alarm)
--- end
+local _ISAlarmClockDialog_new = ISAlarmClockDialog.new
+function ISAlarmClockDialog:new(x, y, width, height, player, alarm)
+    if JoypadState.players[player+1] then
+        return _ISAlarmClockDialog_new(self, x, y, width, height, player, alarm)
+    else
+        return SpiffUIAlarmRadial:new(getSpecificPlayer(player), alarm)
+    end
+end
+
+function SpiffUIAlarmRadial:initialise()
+    if self.init then
+        -- This is called again by "onSetAlarm"
+        -- We'll just override this to show the radial instead
+        self:display()
+    else
+        ISUIElement.initialise(self)
+        self.init = true
+    end
+end

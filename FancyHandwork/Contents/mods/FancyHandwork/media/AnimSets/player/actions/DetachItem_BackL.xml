@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="AttachItem_BackL.xml">
+	<m_Name>DetachItem_BackL</m_Name>
+	<m_AnimName>Bob_Equip_Rifle_Back_OutL</m_AnimName>
+	<m_Conditions>
+		<m_StringValue>DetachItem</m_StringValue>
+	</m_Conditions>
+	<m_Conditions />
+	<m_Conditions />
+	<m_Events>
+		<m_EventName>detachConnect</m_EventName>
+	</m_Events>
+</animNode>

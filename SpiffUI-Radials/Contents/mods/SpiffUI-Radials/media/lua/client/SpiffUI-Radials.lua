@@ -402,8 +402,8 @@ local function SpiffUIBoot()
                     OnApplyMainMenu = apply,
                     OnApplyInGame = apply
                 },
-                showSmokingRadial = {                 
-                    name = "UI_ModOptions_SpiffUI_showSmokingRadial",
+                showSmokeRadial = {                 
+                    name = "UI_ModOptions_SpiffUI_showSmokeRadial",
                     default = true,
                     OnApplyMainMenu = apply,
                     OnApplyInGame = apply

@@ -1,0 +1,11 @@
+name=SpiffUI-Themes
+id=SUI_Theme
+authors=dhert
+
+description=An overhaul for the Project Zomboid UI to apply custom coloring
+description=
+
+pzversion=41
+tags=Interface;Framework;Misc
+
+poster=poster.png

@@ -131,15 +131,13 @@ UI_EN = {
     -- These next few include formatting so that the text lines up more or less.
     ---- EX: Current Alarm
     ----         HH:MM
-    -- I can't do this with richtext, and there's only one label (for simplicity) so brute force it is
-    -- Sorry to all translators for any tweaks or weirdness you may have to do
 
     -- Hour:Minutes or HH:MM if no alarm
-    UI_alarm_SpiffUI_CurrentF = "Current Alarm \n          %1:%2", 
+    UI_alarm_SpiffUI_CurrentF = "Current Alarm <br> %1:%2", 
     -- HH:MM
-    UI_alarm_SpiffUI_SetHourF = "SET HOUR \n    %1:%2", 
+    UI_alarm_SpiffUI_SetHourF = "SET HOUR <br> %1:%2", 
     -- Hour:MM
-    UI_alarm_SpiffUI_SetMinuteF = "SET MINUTE \n      %1:%2",
+    UI_alarm_SpiffUI_SetMinuteF = "SET MINUTE <br> %1:%2",
 
     UI_equip_SpiffUI_FirearmRadial = "Firearm Radial",
 
@@ -170,5 +168,7 @@ UI_EN = {
     UI_ModOptions_SpiffUI_equipShowTransfer = "Show Transfer Action (Equipment)",
 
     UI_ModOptions_SpiffUI_showSmokeCraftRadial = "Show Smoke Craft Radial (SpiffUI)",
-    UI_ModOptions_SpiffUI_showSmokingRadial = "Show Smoking Radial (SpiffUI)"
+    UI_ModOptions_SpiffUI_showSmokeRadial = "Show Smoking Radial (SpiffUI)",
+
+    UI_SpiffUI_EmoteWheel = "Emotes"
 }
