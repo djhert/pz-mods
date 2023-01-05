@@ -1,0 +1,9 @@
+UI_TH = {
+    UI_Init_FancyHandwork = "Fancy Handwork ยินดีต้อนรับ!",
+    UI_optionscreen_binding_FancyHandwork = "Fancy Handwork",
+    UI_optionscreen_binding_FHModifier = "ปุ่มดัดแปร",
+    UI_optionscreen_binding_FHSwapKey = "สลับไอเท็ม (ปุ่มตัวพิมพ์เท่านั้น)",
+    UI_optionscreen_binding_FHSwapKeyMod = "สลับไอเท็ม (ปุ่มดัดแปร + ปุ่มตัวพิมพ์)",
+    UI_optionscreen_binding_FHDebugKey = "ปุ่มดีบั๊ก (ใช้เฉพาะในโหมดดีบั๊ก)",
+    UI_ModOptions_FHfixLHandRotation = "ใช้งานแอนิเมชัน"
+}
