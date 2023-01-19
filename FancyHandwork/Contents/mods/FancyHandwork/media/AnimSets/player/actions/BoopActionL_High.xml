@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="BoopActionL.xml">
+	<m_Name>FH_BoopL_High</m_Name>
+	<m_AnimName>Bob_FH_Boop_High</m_AnimName>
+	<m_Conditions />
+	<m_Conditions>
+		<m_Name>BoopPosition</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>High</m_StringValue>
+	</m_Conditions>
+    <m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+</animNode>

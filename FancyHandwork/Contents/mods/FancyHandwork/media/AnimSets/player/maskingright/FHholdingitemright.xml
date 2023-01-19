@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animNode>
+	<m_Name>FHholdingitemright</m_Name>
+	<m_AnimName>Bob_FH_Item</m_AnimName>
+	<m_Priority>10</m_Priority>
+	<m_deferredBoneAxis>Y</m_deferredBoneAxis>
+	<m_SyncTrackingEnabled>false</m_SyncTrackingEnabled>
+	<m_SpeedScale>0.80</m_SpeedScale>
+	<m_BlendTime>0.20</m_BlendTime>
+	<m_Conditions>
+		<m_Name>RightHandMask</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>holdingitemright</m_StringValue>
+	</m_Conditions>
+	<m_Conditions>
+		<m_Name>FHDoingAction</m_Name>
+		<m_Type>BOOL</m_Type>
+		<m_BoolValue>false</m_BoolValue>
+	</m_Conditions>
+	<m_Conditions>
+		<m_Name>AttackAnim</m_Name>
+		<m_Type>BOOL</m_Type>
+		<m_BoolValue>false</m_BoolValue>
+	</m_Conditions>
+	<m_SubStateBoneWeights>
+		<boneName>Bip01_R_Finger0</boneName>
+	</m_SubStateBoneWeights>
+	<m_SubStateBoneWeights>
+		<boneName>Bip01_R_Finger1</boneName>
+	</m_SubStateBoneWeights>
+	<m_SubStateBoneWeights>
+		<boneName>Bip01_Prop1</boneName>
+	</m_SubStateBoneWeights>
+</animNode>

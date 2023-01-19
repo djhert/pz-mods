@@ -5,27 +5,36 @@
         <m_Priority>10</m_Priority>
         <m_deferredBoneAxis>Y</m_deferredBoneAxis>
         <m_SyncTrackingEnabled>false</m_SyncTrackingEnabled>
-        <m_SpeedScale>0.48</m_SpeedScale>
+        <m_SpeedScale>0.80</m_SpeedScale>
         <m_BlendTime>0.20</m_BlendTime>
         <m_Conditions>
                 <m_Name>LeftHandMask</m_Name>
                 <m_Type>STRING</m_Type>
                 <m_StringValue>holdingitemleft</m_StringValue>
         </m_Conditions>
+        <m_Conditions>
+                <m_Name>FHDoingAction</m_Name>
+                <m_Type>BOOL</m_Type>
+                <m_BoolValue>false</m_BoolValue>
+        </m_Conditions>
         <m_Transitions>
 		<m_Target>FHaimgunleft_item</m_Target>
+		<m_AnimName>Bob_FH_Item</m_AnimName>
+		<m_blendInTime>0.0</m_blendInTime>
+		<m_blendOutTime>0.0</m_blendOutTime>
+		<m_speedScale>10.0</m_speedScale>
+	</m_Transitions>
+        <m_Transitions>
+		<m_Target>FHaimgunleft_item_exp</m_Target>
 		<m_AnimName>Bob_HgunIdleToAim_Item</m_AnimName>
-		<m_blendInTime>0.5</m_blendInTime>
+		<m_blendInTime>0.2</m_blendInTime>
 		<m_blendOutTime>0.2</m_blendOutTime>
-		<m_speedScale>1.5</m_speedScale>
+		<m_speedScale>2.0</m_speedScale>
 	</m_Transitions>
         <m_SubStateBoneWeights>
 		<boneName>Bip01</boneName>
 		<weight>0.00</weight>
 	</m_SubStateBoneWeights>
-        <m_SubStateBoneWeights>
-                <boneName>Bip01_L_Hand</boneName>
-        </m_SubStateBoneWeights>
         <m_SubStateBoneWeights>
                 <boneName>Bip01_L_Finger0</boneName>
         </m_SubStateBoneWeights>

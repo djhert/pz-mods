@@ -1,0 +1,29 @@
+Sandbox_EN = {
+    Sandbox_FancyHandwork = "Fancy Handwork",
+
+    Sandbox_FancyHandwork_ExperiencedAim = "Firearm aim animation change level",
+    Sandbox_FancyHandwork_ExperiencedAim_tooltip = "Player Firearm Level to change to Tactical Aiming animation. <LINE> Set to 0 to always use this.  Set to 11 to never.",
+           
+    Sandbox_FancyHandwork_DisableTurn = "Forced turn to object behavior",
+    Sandbox_FancyHandwork_DisableTurn_tooltip = "Controls when your character is forced to turn to objects when performing the World Interaction",
+
+    Sandbox_FancyHandwork_DT_option1 = "Never do forced turn",
+    Sandbox_FancyHandwork_DT_option2 = "Do forced turn after turn delay",
+    Sandbox_FancyHandwork_DT_option3 = "Always do forced turn",
+
+    Sandbox_FancyHandwork_TurnDelaySec = "Forced turn delay",
+    Sandbox_FancyHandwork_TurnDelaySec_tooltip = "When the character is not moving, they will turn to face an object they are interacting with after this many seconds. <LINE> Requires Turn Delay to be enabled.",
+
+    Sandbox_FancyHandwork_TurnBehavior = "Rear Action Animation Behavior",
+    Sandbox_FancyHandwork_TurnBehavior_tooltip = "Choose how often characters play the Rear Animations instead of Turning. <LINE> Notes: Character will still turn to objects that do not have a rear animation unless forced turn is disabled. <LINE> Turn delay or disabled turns must be selected to show rear animations. 'Always do forced turn' prevents rear animations.",
+
+    Sandbox_FancyHandwork_TB_option1 = "Never do rear animations",
+    Sandbox_FancyHandwork_TB_option2 = "Do rear animations until turn delay",
+    Sandbox_FancyHandwork_TB_option3 = "Always do rear animations",
+
+    Sandbox_FancyHandwork_HideDoorProgressBar = "Hide Vehicle Door Action Progress Bar",
+    Sandbox_FancyHandwork_HideDoorProgressBar_tooltip = "Hides the progress bar when a character is opening or closing a door, and when entering or exiting a vehicle.",
+
+    Sandbox_FancyHandwork_HideVehicleWalkProgressBar = "Hide Vehicle 'Walk To' Action Progress Bar",
+    Sandbox_FancyHandwork_HideVehicleWalkProgressBar_tooltip = "Hides the progress bar when a character is walking to a location to interact with a vehicle.",
+}

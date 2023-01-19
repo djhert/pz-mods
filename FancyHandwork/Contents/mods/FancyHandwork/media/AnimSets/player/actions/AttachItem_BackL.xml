@@ -68,6 +68,22 @@
 		<boneName>Bip01_R_Hand</boneName>
 		<weight>0.50</weight>
 	</m_SubStateBoneWeights>
+	<m_SubStateBoneWeights>
+		<boneName>Bip01_R_Finger0</boneName>
+		<weight>0.50</weight>
+	</m_SubStateBoneWeights>
+	<m_SubStateBoneWeights>
+		<boneName>Bip01_R_Finger0Nub</boneName>
+		<weight>0.50</weight>
+	</m_SubStateBoneWeights>
+	<m_SubStateBoneWeights>
+		<boneName>Bip01_R_Finger1</boneName>
+		<weight>0.50</weight>
+	</m_SubStateBoneWeights>
+	<m_SubStateBoneWeights>
+		<boneName>Bip01_R_Finger1Nub</boneName>
+		<weight>0.50</weight>
+	</m_SubStateBoneWeights>
 	<m_Events>
 		<m_EventName>attachConnect</m_EventName>
 		<m_TimePc>0.5</m_TimePc>

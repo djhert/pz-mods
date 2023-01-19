@@ -1,0 +1,32 @@
+VERSION = 1,
+option FancyHandwork.ExperiencedAim {
+        type = integer, min = 0, max = 11, default = 3,
+        page = FancyHandwork, translation = FancyHandwork_ExperiencedAim,
+}
+
+option FancyHandwork.TurnDelaySec {
+        type = double, min = 0.01, max = 60.0, default = 1.0,
+        page = FancyHandwork, translation = FancyHandwork_TurnDelaySec,
+}
+
+option FancyHandwork.DisableTurn {
+        type = enum, numValues = 3, default = 2,
+        page = FancyHandwork, translation = FancyHandwork_DisableTurn,
+        valueTranslation = FancyHandwork_DT,
+}
+
+option FancyHandwork.TurnBehavior {
+        type = enum, numValues = 3, default = 2,
+        page = FancyHandwork, translation = FancyHandwork_TurnBehavior,
+        valueTranslation = FancyHandwork_TB,
+}
+
+option FancyHandwork.HideDoorProgressBar {
+        type = boolean, default = false,
+        page = FancyHandwork, translation = FancyHandwork_HideDoorProgressBar,
+}
+
+option FancyHandwork.HideVehicleWalkProgressBar {
+        type = boolean, default = false,
+        page = FancyHandwork, translation = FancyHandwork_HideVehicleWalkProgressBar,
+}

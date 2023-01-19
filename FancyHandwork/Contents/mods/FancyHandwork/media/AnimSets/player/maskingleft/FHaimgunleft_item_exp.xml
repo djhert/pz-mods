@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="FHholdingitemleft.xml">
+    <m_Name>FHaimgunleft_item_exp</m_Name>
+    <m_AnimName>Bob_HgunAim_Item</m_AnimName>
+	<m_Conditions />
+	<m_Conditions />
+	<m_Conditions>
+		<m_Name>Aim</m_Name>
+		<m_Type>BOOL</m_Type>
+		<m_BoolValue>true</m_BoolValue>
+	</m_Conditions>
+	<m_Conditions>
+        <m_Name>Weapon</m_Name>
+        <m_Type>STRING</m_Type>
+    	<m_StringValue>handgun</m_StringValue>
+    </m_Conditions>
+	<m_Conditions>
+        <m_Name>FHExp</m_Name>
+        <m_Type>BOOL</m_Type>
+    	<m_BoolValue>true</m_BoolValue>
+    </m_Conditions>
+    <m_Transitions>
+		<m_Target>FHholdingitemleft</m_Target>
+		<m_AnimName>Bob_HgunAimToIdle_Item</m_AnimName>
+		<m_blendInTime>0.8</m_blendInTime>
+		<m_blendOutTime>0.2</m_blendOutTime>
+		<m_speedScale>1.5</m_speedScale>
+	</m_Transitions>
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights />
+	<m_SubStateBoneWeights>
+		<boneName>Bip01_L_Hand</boneName>
+	</m_SubStateBoneWeights>
+</animNode>

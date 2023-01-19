@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animNode>
+	<m_Name>FHAddToRecipe</m_Name>
+	<m_AnimName>Bob_FH_AddToPan</m_AnimName>
+	<m_Looped>true</m_Looped>
+	<m_UpperOnly>false</m_UpperOnly>
+	<m_SyncTrackingEnabled>false</m_SyncTrackingEnabled>
+	<m_EarlyBlendOut>false</m_EarlyBlendOut>
+	<m_SpeedScale>0.80</m_SpeedScale>
+	<m_BlendTime>0.30</m_BlendTime>
+	<m_Scalar></m_Scalar>
+	<m_Scalar2></m_Scalar2>
+	<m_Conditions>
+		<m_Name>PerformingAction</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>AddToPan</m_StringValue>
+	</m_Conditions>
+</animNode>
