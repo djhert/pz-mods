@@ -5,4 +5,5 @@ UI_TH = {
     UI_optionscreen_binding_CARMMK = "แสดงเมนูแฉกรัศมีสำหรับเสื้อผ้า",
     UI_ModOptions_CARMfilter = "ปิดใช้งานตัวกรองเสื้อผ้า (แสดงกระเป๋า นาฬิกา ฯลฯ)",
     UI_ModOptions_CARMdelay = "แสดงเมนูแฉกรัศมีทันทีเมื่อกดปุ่ม"
+    UI_ModOptions_CARMtoSpiff = "เพิ่มเมนูแฉกรัศมีสำหรับเสื้อผ้าไปยังเมนูแฉกรัศมี SpiffUI"
 }
