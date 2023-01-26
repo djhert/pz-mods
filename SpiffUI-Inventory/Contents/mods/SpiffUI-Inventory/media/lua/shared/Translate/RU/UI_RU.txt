@@ -1,31 +1,30 @@
 UI_RU = {
-  
-    -- SpiffUI
+ -- SpiffUI
     UI_Hello_SpiffUI = "Hello SpiffUI!",
     UI_Name_SpiffUI = "SpiffUI",
     UI_optionscreen_binding_SpiffUI = "SpiffUI"
 
-    UI_ModOptions_SpiffUI_applyNewKeybinds = "РЈСЃС‚Р°РЅРѕРІРёС‚Рµ СЂРµРєРѕРјРµРЅРґСѓРµРјС‹Рµ СЃРѕС‡РµС‚Р°РЅРёСЏ РєР»Р°РІРёС€ SpiffUI",
-    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёРІСЏР·РєРё РєР»Р°РІРёС€ SpiffUI <LINE><LINE><LEFT><SIZE:small> РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЃР»РµРґСѓСЋС‰РёРµ СЃРѕС‡РµС‚Р°РЅРёСЏ РєР»Р°РІРёС€: <LINE>",
-    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  РґР»СЏ:  [%2] ",
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Установите рекомендуемые сочетания клавиш SpiffUI",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Установить привязки клавиш SpiffUI <LINE><LINE><LEFT><SIZE:small> Устанавливает следующие сочетания клавиш: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  для:  [%2] ",
 
-    UI_ModOptions_SpiffUI_runAllResets = "Р—Р°РїСѓСЃС‚РёС‚СЊ РїРѕР»РЅС‹Р№ СЃР±СЂРѕСЃ SpiffUI",
-    UI_ModOptions_SpiffUI_tooltip_runResets = "Р Р°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РІ РёРіСЂРµ!",
-    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> РЎР±СЂРѕСЃ SpiffUI <LINE><LINE><LEFT><SIZE:small> Р‘СѓРґСѓС‚ СЃР±СЂРѕС€РµРЅС‹: <LINE>",
+    UI_ModOptions_SpiffUI_runAllResets = "Запустить полный сброс SpiffUI",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "Работает только в игре!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> Сброс SpiffUI <LINE><LINE><LEFT><SIZE:small> Будут сброшены: <LINE>",
 
 
     -- SpiffUI -- Inventory
-    UI_Hello_SpiffUI_Inv = "Hello SpiffUI - РРЅРІРµРЅС‚Р°СЂСЊ!",
+    UI_Hello_SpiffUI_Inv = "Hello SpiffUI - Инвентарь!",
 
-    UI_Name_SpiffUI_Inv = "SpiffUI -  РРЅРІРµРЅС‚Р°СЂСЊ",
+    UI_Name_SpiffUI_Inv = "SpiffUI -  Инвентарь",
 
-    UI_ModOptions_SpiffUI_Inv_enable = "Р’РєР»СЋС‡РёС‚СЊ РёРЅРІРµРЅС‚Р°СЂСЊ SpiffUI",
-    UI_ModOptions_SpiffUI_Inv_tooltip_enable = "РџСЂРёРјРµС‡Р°РЅРёРµ. Р’ РёРіСЂРµ С‚СЂРµР±СѓРµС‚СЃСЏ РїРµСЂРµР·Р°РіСЂСѓР·РєР°!",
+    UI_ModOptions_SpiffUI_Inv_enable = "Включить инвентарь SpiffUI",
+    UI_ModOptions_SpiffUI_Inv_tooltip_enable = "Примечание. В игре требуется перезагрузка!",
 
-    UI_ModOptions_SpiffUI_Inv_hideInv = "РЎРєСЂС‹С‚СЊ РєРЅРѕРїРєСѓ РёРЅРІРµРЅС‚Р°СЂСЏ",
+    UI_ModOptions_SpiffUI_Inv_hideInv = "Скрыть кнопку инвентаря",
 
-    UI_ModOptions_SpiffUI_Inv_mouseHide = "РўРѕР»СЊРєРѕ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЃРєСЂС‹С‚РёРµ РїРѕ С‰РµР»С‡РєСѓ РјС‹С€Рё",
+    UI_ModOptions_SpiffUI_Inv_mouseHide = "Только автоматическое скрытие по щелчку мыши",
 
-    UI_optionscreen_binding_SpiffUI_Inv = "РџРµСЂРµРєР»СЋС‡РёС‚СЊ РёРЅРІРµРЅС‚Р°СЂСЊ",
+    UI_optionscreen_binding_SpiffUI_Inv = "Переключить инвентарь"
 
 }

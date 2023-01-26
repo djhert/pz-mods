@@ -25,7 +25,7 @@
 
 ------------------------------------------
 -- Set the SpiffUI lib version 
-local SPIFFUI_VERSION = 2 --<<< DO NOT CHANGE UNLESS YOU KNOW WHAT YOU'RE DOING
+local SPIFFUI_VERSION = 3 --<<< DO NOT CHANGE UNLESS YOU KNOW WHAT YOU'RE DOING
 if SpiffUI then 
     if SpiffUI.Version >= SPIFFUI_VERSION then
         return -- Don't do anything else
@@ -147,10 +147,6 @@ SpiffUI.preCheck = function()
         return nil
     end
 
-    if UIManager.getSpeedControls() and (UIManager.getSpeedControls():getCurrentGameSpeed() == 0) then
-        return nil
-    end
-
     return player
 end
 
@@ -158,6 +154,7 @@ local function keyDown(key)
     --print("Pressed: " .. getKeyName(key) .. " | " .. key)
     local player = SpiffUI.preCheck(key)
     if not player then return end
+
     for _,bind in ipairs(SpiffUI.KeyBinds) do
         if key == getCore():getKey(bind.name) then
             if bind.Down then
@@ -165,7 +162,9 @@ local function keyDown(key)
                 if bind.qBlock and queue and #queue.queue > 0 then
                     return
                 end
-                bind.Down(player)
+                if bind.allowPause or not (UIManager.getSpeedControls() and (UIManager.getSpeedControls():getCurrentGameSpeed() == 0)) then
+                    bind.Down(player)
+                end
             end
             break
         end
@@ -183,7 +182,9 @@ local function keyHold(key)
                 if bind.qBlock and queue and #queue.queue > 0 then
                     return
                 end
-                bind.Hold(player)
+                if bind.allowPause or not (UIManager.getSpeedControls() and (UIManager.getSpeedControls():getCurrentGameSpeed() == 0)) then
+                    bind.Hold(player)
+                end
             end
             break
         end
@@ -201,7 +202,9 @@ local function keyRelease(key)
                 if bind.qBlock and queue and #queue.queue > 0 then
                     return
                 end
-                bind.Up(player)
+                if bind.allowPause or not (UIManager.getSpeedControls() and (UIManager.getSpeedControls():getCurrentGameSpeed() == 0)) then
+                    bind.Up(player)
+                end
             end
             break
         end
@@ -231,7 +234,7 @@ SpiffUI.onKeyDown = function(player)
     if SpiffUI.action.ready then
         -- Hide Radial Menu on Press if applicable
         if radialMenu:isReallyVisible() and getCore():getOptionRadialMenuKeyToggle() then
-            radialMenu:removeFromUIManager()
+            radialMenu:undisplay()
             setJoypadFocus(player:getPlayerNum(), nil)
             SpiffUI.action.wasVisible = false
             SpiffUI.action.ready = true
@@ -266,6 +269,7 @@ end
 SpiffUI.equippedItem = {
     ["Inventory"] = true,
     ["Health"] = true,
+    ["QOLEquip"] = true,
     ["Craft"] = true,
     ["Movable"] = true,
     ["Search"] = true,
@@ -280,6 +284,8 @@ function SpiffUI:updateEquippedItem()
     -- Redo the ISEquippedItem tree based on what we set
     local player = getPlayerData(0)
     local y = player.equipped.invBtn:getY()
+    -- Add support for the QOL Equipment mod's icon
+    SpiffUI.equippedItem["QOLEquip"] = (SETTINGS_QOLMT and SETTINGS_QOLMT.options and SETTINGS_QOLMT.options.useIcon) or false
     for i,v in pairs(SpiffUI.equippedItem) do
         if i == "Inventory" then
             player.equipped.invBtn:setVisible(v)
@@ -291,6 +297,13 @@ function SpiffUI:updateEquippedItem()
             player.equipped.healthBtn:setY(y)
             if v then
                 y = player.equipped.healthBtn:getY() + player.equipped.heartIcon:getHeightOrig() + 5
+            end
+        -- Add support for the QOL Equipment mod's icon
+        elseif i == "QOLEquip" and player.equipped.equipButton then
+            player.equipped.equipButton:setVisible(v)
+            player.equipped.equipButton:setY(y)
+            if v then
+                y = player.equipped.equipButton:getY() + player.equipped.equipmentIconOFF:getHeightOrig() + 5
             end
         elseif i == "Craft" then
             player.equipped.craftingBtn:setVisible(v)
@@ -374,6 +387,11 @@ function SpiffUI:ModOptions()
         local function apply(data)
             local options = data.settings.options
             -- Set options
+            if isDebugEnabled() then
+                SpiffUI.config.debug = options.debug
+            else
+                SpiffUI.config.debug = false
+            end
         end
 
         local SPIFFCONFIG = {
@@ -392,6 +410,15 @@ function SpiffUI:ModOptions()
             mod_shortname = "SpiffUI",
             mod_fullname = getText("UI_Name_SpiffUI")
         }
+
+        if isDebugEnabled() then
+            SPIFFCONFIG.options_data.debug = {
+                name = "Enable Debug",
+                default = false,
+                OnApplyMainMenu = apply,
+                OnApplyInGame = apply
+            }
+        end
 
         local optionsInstance = ModOptions:getInstance(SPIFFCONFIG)
         ModOptions:loadFile()
@@ -587,6 +614,39 @@ SpiffUI.settingsModal = function(w, h, text, key, callback)
         MainOptions.joyfocus.focus = key.modal
         updateJoypadFocus(key.joyfocus)
     end
+end
+
+-- Adapted from: https://www.rosettacode.org/wiki/Word_wrap#Lua
+SpiffUI.textwrap = function(text, linewidth)
+    local function splittokens(s)
+        local res = {}
+        for w in s:gmatch("%S+") do
+            res[#res+1] = w
+        end
+        return res
+    end
+
+    if not linewidth then
+        linewidth = 75
+    end
+ 
+    local spaceleft = linewidth
+    local res = {}
+    local line = {}
+ 
+    for _, word in ipairs(splittokens(text)) do
+        if #word + 1 > spaceleft then
+            table.insert(res, table.concat(line, ' '))
+            line = {word}
+            spaceleft = linewidth - #word
+        else
+            table.insert(line, word)
+            spaceleft = spaceleft - (#word + 1)
+        end
+    end
+ 
+    table.insert(res, table.concat(line, ' '))
+    return table.concat(res, '\n')
 end
 
 ------------------------------------------

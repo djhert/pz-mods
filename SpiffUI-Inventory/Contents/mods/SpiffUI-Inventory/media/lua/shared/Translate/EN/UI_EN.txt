@@ -18,12 +18,39 @@ UI_EN = {
 
     UI_Name_SpiffUI_Inv = "SpiffUI - Inventory",
 
-    UI_ModOptions_SpiffUI_Inv_enable = "Enable SpiffUI Inventory",
-    UI_ModOptions_SpiffUI_Inv_tooltip_enable = "Note: A Restart is Required if In-Game!",
+    UI_ModOptions_SpiffUI_Inv_enable = "Enable SpiffUI Inventory Rules",
+    UI_ModOptions_SpiffUI_Inv_tooltip_enable = "Locks the inventory in a fixed location and width at the top of the screen, can be resized vertically.<LINE>Enables better automatic hiding for the Loot Panel when using a mouse.  Press the "Inventory" Button to lock open the inventory, and press again to close. <LINE>Note: A Restart is Required if toggled In-Game!",
 
-    UI_ModOptions_SpiffUI_Inv_hideInv = "Hide Inventory Button",
+    UI_ModOptions_SpiffUI_Inv_hideInv = "Hide Inventory Button in left side menu",
 
-    UI_ModOptions_SpiffUI_Inv_mouseHide = "Only hide on Mouse Click",
+    UI_ModOptions_SpiffUI_Inv_mouseHide = "Only hide Inventory on external Mouse Click",
 
-    UI_optionscreen_binding_SpiffUI_Inv = "Toggle Inventory"
+    UI_optionscreen_binding_SpiffUI_Inv = "Toggle Inventory",
+
+    UI_ModOptions_SpiffUI_Inv_invVisible = "Display Collapsed Inventory and Loot Panels",
+    UI_ModOptions_SpiffUI_Inv_invVisibleTT = "On collapse of the windows the Headers will continue to be present",
+
+    UI_ModOptions_SpiffUI_Inv_lootinv = "Display available items in loot containers in one pack",
+    UI_ModOptions_SpiffUI_Inv_lootinv_tt = "Button is shown below the Floor in the Loot Panel, and contains all items from all inventories above it. Items can be transferred from, but not to this inventory.",
+    UI_ModOptions_SpiffUI_Inv_sepzeds = "Merge Corpses into one icon",
+    UI_ModOptions_SpiffUI_Inv_sepzeds_tt = "Available Corpses will be merged into a single container that has all items and placed at the bottom. Included items here are excluded from the loot container. Items transferred TO this inventory go to the first available corpse.",
+
+    UI_ModOptions_SpiffUI_Inv_selfinv = "Display all items in player's inventories in one pack",
+    UI_ModOptions_SpiffUI_Inv_selfinv_tt = "Button is shown at the bottom of the player's Inventory Window, and contains all inventory items EXCEPT equipped and items on the hotbar.",
+
+    UI_ModOptions_SpiffUI_Inv_buttonShow = "Always Show SpiffUI Inventory Buttons",
+    UI_ModOptions_SpiffUI_Inv_buttonShow_tt = "When disabled, the Corpse and SpiffUI Container Buttons hide when no items are available unless the container is already open",
+
+    UI_ModOptions_SpiffUI_EquipButton = "Enable Equipment Button",
+    UI_ModOptions_SpiffUI_EquipButton_tt = "Adds button to manage your player's equipment to the Inventory. <LINE>NOTE: Requires Restart to enable if in game. Recommended to Restart to disable if in game.",
+    UI_ModOptions_SpiffUI_HideEquip = "Hide Equipment and Hotbar Items in General Inventory",
+    UI_ModOptions_SpiffUI_HideEquip_tt = "Hides equipment from the inventory. <LINE>NOTE: You must have the Equipment Button enabled, or another Equipment Manager to manage equipment.",
+    
+    UI_ModOptions_SpiffUI_KeyRing = "Auto add Keys to available KeyRing",
+    UI_ModOptions_SpiffUI_KeyRing_tt = "Merges keys to the first available keyring when transferring to the player.",
+    
+    UI_SpiffUI_Inv_bodies = "All Zombie Corpses",
+    UI_SpiffUI_Inv_containers = "All Containers",
+    UI_SpffUI_Inv_selfpack = "%1 %2's Megapack",
+    UI_SpffUI_Inv_equippack = "%1 %2's Equipment"
 }

@@ -1,0 +1,10 @@
+module SpiffUI {
+    item Bag {
+        WeightReduction      = 0,
+        Weight               = 0,
+        Type                 = Container,
+        Capacity             = 0,
+        DisplayName          = SpiffUI Bag,
+        Icon                 = DoctorBag
+    }
+}

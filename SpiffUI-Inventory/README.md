@@ -65,6 +65,8 @@ If ModOptions is installed (Recommended) SpiffUI will appear as a category.  Thi
 
 English
 
+Russian - fourteensix
+
 Spanish - [ElDoktor](https://github.com/fcastro97)
 
 Thai - [radiusgreenhill](https://github.com/radiusgreenhill)
