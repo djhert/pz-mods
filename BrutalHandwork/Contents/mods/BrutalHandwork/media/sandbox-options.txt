@@ -1,0 +1,21 @@
+VERSION = 1,
+option BrutalHandwork.DualWieldMelee
+{
+        type = boolean, default = false,
+        page = BrutalHandwork,
+        translation = BrutalHandwork_DualWieldMelee,
+}
+
+option BrutalHandwork.EnableUnarmed
+{
+        type = boolean, default = true,
+        page = BrutalHandwork,
+        translation = BrutalHandwork_EnableUnarmed,
+}
+
+option BrutalHandwork.AlwaysUnarmed
+{
+        type = boolean, default = false,
+        page = BrutalHandwork,
+        translation = BrutalHandwork_AlwaysUnarmed,
+}

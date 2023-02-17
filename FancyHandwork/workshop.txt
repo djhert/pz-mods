@@ -24,13 +24,13 @@ description=[*] [b]NEW:[/b] Wrench Repair Animation!
 description=[/list]
 description=
 description=[h2]Updates[/h2]
-description=Important information is updated on this page, but full information and release notes are available in the Discussions.  Please see the latest: 
+description=Important information is updated on this page, but full information and release notes are available in the Discussions.  Please see the latest: [url=https://steamcommunity.com/workshop/filedetails/discussion/2904920097/3762228679801751286/]Fancy Handwork - "It's Over 9,000!" Update[/url]
 description=
 description=[h2]IMPORTANT[/h2]
-description=If you receive an error about missing actions, or world interactions are simply not playing, you may need to restart Project Zomboid.  I have noticed that enabling this mod on an already-existing save and starting the game will result in the animations not being loaded until the game is restarted. This is a [b]BASE GAME[/b] issue!
+description=If you receive an error about missing actions, or world interactions are simply not playing, you may need to restart Project Zomboid.  I have noticed that enabling this mod for the first time on an already-existing save and starting the game will result in the new animations not being loaded until the game is restarted. This is a [b]BASE GAME[/b] issue, but should only happen the first time.
 description=
 description=If you receive an error following any update, please see: [url=https://theindiestone.com/forums/index.php?/topic/42925-how-to-fix-updated-mods-in-build-41-multiplayer/]How to fix updated mods in Build 41 Multiplayer[/url]
-description=This mod adds many additional animation and action files, which may change between releases.  I try to minimize this, but sometimes it is necessary.  Unfortunately, Steam sometimes doesn't like to update these correctly.
+description=This mod adds many additional animation and action files, which may change between releases.  I try to minimize this, but sometimes it is necessary.  Unfortunately, Steam sometimes doesn't like to update these correctly resulting in errors.
 description=
 description=[h2]Usage[/h2]
 description=When Attaching or Detaching an item on your Hotbar, you have a chance for the action to automatically be done with your left hand.
@@ -42,18 +42,17 @@ description=When you press the Modifier Key and a Hotbar slot, the item slotted 
 description=
 description=Pressing the Modifier and "E" will swap the items in your hands. (Configurable)
 description=
-description=Interacting with the world normally, such as opening and closing doors and curtains,flicking light switches, and more, all now have an Animation!
+description=Interacting with the world normally, such as opening and closing doors and curtains, flicking light switches, and more, all now have an Animation!
 description=
 description=Almost ALL TimedActions now have an Animation!  No longer will your character just stand there, waiting for a progress bar to fill up!
 description=
 description=[h3]Notes about World Interactions[/h3]
-description=If you are standing still you will turn and face the object you are interacting with if you are not already doing so. There is a Sandbox setting to control how long of a delay before you character is standing still.
-description=[b]NOTE:[/b] This is based on your selected Render Framerate.  As such, you may need to change this according to your current framerate.  A value of 60 is about 1 second at 60 FPS.  I will update this at some point.
+description=If you are standing still you will turn and face the object you are interacting with if you are not already doing so. There is a Sandbox setting to control how long of a delay before you character is standing still, or the forced turn can be disabled or required.
 description=
 description=When performing a World Interaction and moving your character will slow down slightly, and stop altogether in the case of opening a Garage Door, for a very brief moment.  I have no plans on this being a configurable option, and this is done intentionally.  It is a fantastic inclusion for immersion in my opinion, and in tight situations makes planning your movement all the more important.  After time, you will hardly notice it.
+description=[b]NEW 01/19/2023[/b] - The speed reduction has been reduced from 50% to 25%.  This should help prevent the player from being trapped, while still being a nice addition to immersion.
 description=
 description=[h2]Multiplayer[/h2]
-description=[b]NEW 01/07/2023 [/b] - New Animation Sync method is now being used!
 description=Animations should sync across multiplayer with little to no issues!
 description=
 description=[h2]Controllers[/h2]
@@ -70,6 +69,5 @@ description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=28097195
 description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2651128766]Body Remodel - FINGERS.[/url] by Akyet
 description=
 description=Source: [url=https://github.com/hlfstr/pz-mods]GitHub[/url]
-description=
 tags=Build 41;Realistic;Silly/Fun
 visibility=public

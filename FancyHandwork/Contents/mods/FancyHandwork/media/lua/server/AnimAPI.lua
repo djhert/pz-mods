@@ -1,6 +1,8 @@
 -- Animation Framework for Project Zomboid
 ---- Code inspired and modifed from "Tsarlib"
 
+-- next release, this will be removed!
+
 if not isClient() and not isServer() or AnimationFramework then return end
 AnimationFramework = true
 

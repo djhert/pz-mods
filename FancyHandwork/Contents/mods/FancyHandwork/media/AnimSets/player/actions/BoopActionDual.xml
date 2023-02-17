@@ -73,7 +73,7 @@
 	</m_SubStateBoneWeights>
 	<m_SubStateBoneWeights>
 		<boneName>Translation_Data</boneName>
-		<weight>0.4</weight>
+		<weight>0.25</weight>
 	</m_SubStateBoneWeights>
 	<m_Events>
 		<m_EventName>SetVariable</m_EventName>

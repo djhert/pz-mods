@@ -1,0 +1,15 @@
+Sandbox_EN = {
+    Sandbox_BrutalHandwork = "Brutal Handwork",
+
+    Sandbox_BrutalHandwork_DualWieldMelee = "Automatically alternate left and right attacks when dual-wielding melee weapons",
+    Sandbox_BrutalHandwork_DualWieldMelee_tooltip = "When a player is dual-wielding melee weapons, automatically alternate between left and right attacks. Disable to require the Modifier to be pressed for an offhand attack.",
+
+    Sandbox_BrutalHandwork_EnableUnarmed = "Enable Unarmed Attacks",
+    Sandbox_BrutalHandwork_EnableUnarmed_tooltip = "Even when a player is unarmed, they will be able to attack. By default, must be aiming and holding the Modifier key to punch.",
+
+    Sandbox_BrutalHandwork_AlwaysUnarmed = "Always raise fists when unarmed",
+    Sandbox_BrutalHandwork_AlwaysUnarmed_tooltip = "When a player is unarmed, always raise their fists when aiming for unarmed attacks.  Disable to require the Modifier to be held when aiming.",
+
+    Sandbox_BrutalHandwork_BaseAttackOverride = "EXPERIMENTAL: Main Attack Damage Override",
+    Sandbox_BrutalHandwork_BaseAttackOverride_tooltip = "Main Attacks use the damage calculation functions from BrutalHandwork instead of Vanilla. This forces consistency between the expected damage for both hand attacks. <LINE> WARNING: This option is currently experimental, but is likely to become the default and will be required for many additional options in the future.  It is stable, but may cause inconsistencies compared to vanilla as it is still being developed. PLEASE READ the mod's description for current limitations!",
+}

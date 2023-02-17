@@ -26,12 +26,29 @@ FancyHands.special = {
     ["Base.CorpseFemale"] = "holdingbody"
 }
 
+-- Use the animations from this mod instead!
+if getActivatedMods():contains('Skizots Visible Boxes and Garbage2') then
+    FancyHands.special = {}
+end
+
+-- We will begin to store compatibility objects here
+FancyHands.compat = {}
+-- if getActivatedMods():contains('Amputation2') then -- now included in TOC!
+--     FancyHands.compat.TOC = require('compat/FH_TOC')
+-- end
+if getActivatedMods():contains('BrutalHandwork') then
+    FancyHands.compat.brutal = true
+end
 ------------------------------------------
 -- Fancy Handwork Utilities
 ------------------------------------------
 
 function isFHModKeyDown()
     return isKeyDown(getCore():getKey('FHModifier'))
+end
+
+function isFHModBindDown(player)
+    return isFHModKeyDown() or (player and player:isLBPressed())
 end
 
 local FHswapItems = function(character)
@@ -159,6 +176,16 @@ local function fancy(player)
                 --player:clearVariable("LeftHandMask")
                 return
             end            
+        end
+        if FancyHands.compat.brutal then
+            local equipped = instanceof(primary, "HandWeapon") and primary:getCategories():contains("Unarmed")
+            -- we already established that primary and secondary are the same, so if primary is nil then so is secondary
+            -- or, this is a 2h fist weapon and therefore we should still get ready to punch
+            if (not primary and player:isAiming() and (SandboxVars.BrutalHandwork.EnableUnarmed and (SandboxVars.BrutalHandwork.AlwaysUnarmed or isFHModBindDown(player)))) or equipped then
+                player:clearVariable("LeftHandMask")
+                player:setVariable("RightHandMask", "bhunarmedaim")
+                return 
+            end
         end
         player:clearVariable("LeftHandMask")
         player:clearVariable("RightHandMask")

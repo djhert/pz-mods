@@ -94,18 +94,19 @@ end
 local _ISAddItemInRecipe_start = ISAddItemInRecipe.start
 function ISAddItemInRecipe:start()
     local base = nil
-    
-    if luautils.stringStarts(self.baseItem:getType(), "GridlePan") or luautils.stringStarts(self.baseItem:getType(), "GriddlePan") then
+    local baseType = self.baseItem:getType()
+    if string.find(baseType, "GridlePan") or string.find(baseType, "GriddlePan") then
         base = "GridlePan"
-    elseif luautils.stringStarts(self.baseItem:getType(), "WaterSaucepan") or luautils.stringStarts(self.baseItem:getType(), "Saucepan") then
+    elseif string.find(baseType, "Saucepan") then
         base = "SaucePan"
-    elseif luautils.stringStarts(self.baseItem:getType(), "WaterPot") or luautils.stringStarts(self.baseItem:getType(), "Pot") then
+    elseif string.find(baseType, "Pot") then
         base = "CookingPot"
-    elseif luautils.stringStarts(self.baseItem:getType(), "RoastingPan") or luautils.stringStarts(self.baseItem:getType(), "RoastingPan") then
+    elseif string.find(baseType, "RoastingPan") then
         base = "RoastingPan"
     else
         base = self.baseItem:getStaticModel() or "FryingPan"
     end
+
     self:setAnimVariable("BaseType", base)
 	self:setActionAnim("AddToPan")
     self:setOverrideHandModelsString(self.usedItem:getStaticModel(), base)
@@ -201,3 +202,36 @@ function ISWearClothing:new(...)
 
     return o
 end
+
+--- DON'T LOOK AT ME! :O 
+---- I'm trying to add some new animations for Transfer Actions, but wasn't able to get this completed before the next update.
+-- -- Fix for the Transfer action.
+-- --- Player will now only pick items off the ground when they are on the ground :)
+-- local _ISInventoryTransferAction_doActionAnim = ISInventoryTransferAction.doActionAnim
+-- function ISInventoryTransferAction:doActionAnim(cont)
+--     _ISInventoryTransferAction_doActionAnim(self, cont)
+--     if self.srcContainer:getType() == "floor" then
+--         local worldItem = self.item:getWorldItem()
+--         if worldItem then
+--             --worldItem:removeFromSquare()
+--             local anim = (self.item:getActualWeight() <= 1.0 and "FancyLoot") or nil
+--             local posAnim = (anim and "FH_Hand") or "LootPosition"
+--             local z = worldItem:getWorldPosZ() - self.character:getZ()
+--             local position
+--             if z > 0.1 then
+--                 position = (anim and ((ZombRand(3) == 1 and "left") or "right")) or "Mid"
+--             elseif z > 0.5 then
+--                 position = "High"
+--             end
+--             if position == "left" then
+--                 self.action:setOverrideHandModels(nil, self.item)
+--             else
+--                 self.action:setOverrideHandModels(self.item, nil)
+--             end
+--             if anim then
+--                 self:setActionAnim(anim)
+--             end
+--             self:setAnimVariable(posAnim, position)
+--         end
+--     end
+-- end

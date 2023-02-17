@@ -11,34 +11,13 @@
 		<m_Type>STRING</m_Type>
 		<m_StringValue>FH_Boop</m_StringValue>
 	</m_Conditions>
-    <m_SubStateBoneWeights>
-		<boneName>Bip01</boneName>
-		<weight>0.00</weight>
-	</m_SubStateBoneWeights>
 	<m_SubStateBoneWeights>
 		<boneName>Bip01_R_Clavicle</boneName>
 		<weight>0.80</weight>
+		<includeDescendants>false</includeDescendants>
 	</m_SubStateBoneWeights>
 	<m_SubStateBoneWeights>
 		<boneName>Bip01_R_UpperArm</boneName>
-	</m_SubStateBoneWeights>
-	<m_SubStateBoneWeights>
-		<boneName>Bip01_R_Forearm</boneName>
-	</m_SubStateBoneWeights>
-	<m_SubStateBoneWeights>
-		<boneName>Bip01_R_Hand</boneName>
-	</m_SubStateBoneWeights>
-	<m_SubStateBoneWeights>
-		<boneName>Bip01_R_Finger0</boneName>
-	</m_SubStateBoneWeights>
-	<m_SubStateBoneWeights>
-		<boneName>Bip01_R_Finger0Nub</boneName>
-	</m_SubStateBoneWeights>
-	<m_SubStateBoneWeights>
-		<boneName>Bip01_R_Finger1</boneName>
-	</m_SubStateBoneWeights>
-	<m_SubStateBoneWeights>
-		<boneName>Bip01_R_Finger1Nub</boneName>
 	</m_SubStateBoneWeights>
 	<m_SubStateBoneWeights>
 		<boneName>Bip01_Prop1</boneName>

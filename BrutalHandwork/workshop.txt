@@ -1,0 +1,9 @@
+version=1
+id=2934621024
+title=Brutal Handwork
+description=[h1]Supports B41+. Works in Multiplayer[/h1]
+description=[h3]A new save is not required[/h3]
+description=
+description=[img]https://i.imgur.com/p7Fv1Z6.gif[/img]
+tags=Build 41;Balance;Framework;Realistic
+visibility=private

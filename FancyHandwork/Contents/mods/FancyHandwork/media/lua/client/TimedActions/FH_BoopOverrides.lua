@@ -48,7 +48,7 @@ end
 
 local _ISOvenUITimedAction_perform = ISOvenUITimedAction.perform
 function ISOvenUITimedAction:perform()
-    ISTimedActionQueue.add(FHBoopAction:new(self.character, { item = self.object, extra = 0 }))
+    ISTimedActionQueue.add(FHBoopAction:new(self.character, { item = self.mcwave or self.stove, extra = 0 }))
     _ISOvenUITimedAction_perform(self)
 end
 
@@ -110,8 +110,10 @@ function ISInventoryPage:toggleStove()
 end
 
 local _ISRadioAction_perform = ISRadioAction.perform
-
 function ISRadioAction:perform()
-    ISTimedActionQueue.add(FHBoopAction:new(self.character, { item = self.device, extra = 0 }))
+    -- Fix for the infinite error when the device is in your inventory
+    if not (instanceof(self.device, "InventoryItem") and self.device:isInPlayerInventory()) and not self.character:isSeatedInVehicle() then
+        ISTimedActionQueue.add(FHBoopAction:new(self.character, { item = self.device, extra = 0 }))
+    end
     _ISRadioAction_perform(self)
 end

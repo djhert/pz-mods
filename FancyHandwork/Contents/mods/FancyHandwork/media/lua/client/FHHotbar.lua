@@ -12,7 +12,7 @@ local function doOverride()
 
     function ISHotbar:equipItem(item)
         -- Get Modifier
-        local mod = isFHModKeyDown()
+        local mod = isFHModBindDown(self.chr)
         local primary = self.chr:getPrimaryHandItem()
         local secondary = self.chr:getSecondaryHandItem()
         local equip = true

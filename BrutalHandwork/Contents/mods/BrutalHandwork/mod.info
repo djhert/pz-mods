@@ -1,0 +1,11 @@
+name=Brutal Handwork
+id=BrutalHandwork
+require=FancyHandwork
+authors=dhert
+
+description=An overhaul to combat to make your player more Brutal!
+
+pzversion=41
+tags=Realistic;Framework
+
+poster=poster.png
