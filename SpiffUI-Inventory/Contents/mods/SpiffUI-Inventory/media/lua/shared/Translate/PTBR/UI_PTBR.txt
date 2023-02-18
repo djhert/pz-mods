@@ -1,0 +1,56 @@
+UI_PTBR = {
+    -- SpiffUI
+    UI_Hello_SpiffUI = "Olá¡ SpiffUI!",
+    UI_Name_SpiffUI = "SpiffUI",
+    UI_optionscreen_binding_SpiffUI = "SpiffUI"
+
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Definir Teclas de Atalho Recomendadas SpiffUI",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Definir Teclas de Atalho SpiffUI <LINE><LINE><LEFT><SIZE:small> Definir as seguintes Teclas: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  para:  [%2] ",
+
+    UI_ModOptions_SpiffUI_runAllResets = "Redefinir Tudo SpiffUI",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "Funciona Apenas em Jogo!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> Redefinir SpiffUI <LINE><LINE><LEFT><SIZE:small> As seguintes serão redefinidas: <LINE>",
+
+
+    -- SpiffUI -- Inventory
+    UI_Hello_SpiffUI_Inv = "Olá SpiffUI - Inventário!",
+
+    UI_Name_SpiffUI_Inv = "SpiffUI - Inventário",
+
+    UI_ModOptions_SpiffUI_Inv_enable = "Ativar inventário SpiffUI",
+    UI_ModOptions_SpiffUI_Inv_tooltip_enable = "Trava o inventário em um local fixo na parte superior da tela, podendo ser redimensionado verticalmente.<LINE>Permite uma melhor ocultação automática para o Painel de Itens quando se usa um mouse.  Aperte o botão "Inventário" para abrir o inventário e pressione novamente para fechar. <LINE>Nota: Uma reinicialização é necessária se alternada no jogo!",
+
+    UI_ModOptions_SpiffUI_Inv_hideInv = "Ocultar inventário no botão do menu lateral esquerdo",
+
+    UI_ModOptions_SpiffUI_Inv_mouseHide = "Somente ocultar o Inventário ao clicar fora",
+
+    UI_optionscreen_binding_SpiffUI_Inv = "Alternar inventário",
+
+    UI_ModOptions_SpiffUI_Inv_invVisible = "Exibir abas colididas, do mesmo tipo, do inventário e itens ",
+    UI_ModOptions_SpiffUI_Inv_invVisibleTT = "Ao colidir as janelas , os cabeçalhos continuarão presentes",
+
+    UI_ModOptions_SpiffUI_Inv_lootinv = "Exibir itens disponíveis em recipientes de itens em uma aba",
+    UI_ModOptions_SpiffUI_Inv_lootinv_tt = "O botão é mostrado abaixo do símbolo de "Chão" no Painel de Itens e contém todos os itens de todos os inventários acima dele. Os itens podem ser retirados, mas não armazenados neste inventário..",
+    UI_ModOptions_SpiffUI_Inv_sepzeds = "Mesclar ícone de 'Cadáveres' em um.",
+    UI_ModOptions_SpiffUI_Inv_sepzeds_tt = "Os cadáveres disponíveis serão mesclados em um único 'Cadáver' que contém todos os itens, e será colocado na parte inferior abaixo do símbolo de "Chão". Os itens incluídos nele serão excluídos do recipiente de itens. Os itens transferidos para este inventário, vão para o primeiro cadáver disponível.",
+
+    UI_ModOptions_SpiffUI_Inv_selfinv = "Exibir todos os itens no inventário do jogador em uma aba",
+    UI_ModOptions_SpiffUI_Inv_selfinv_tt = "O botão é mostrado na parte inferior da aba de 'Inventário do jogador' e contém todos os itens do inventário, EXCETO os itens equipados e na barra de atalhos.",
+
+    UI_ModOptions_SpiffUI_Inv_buttonShow = "Mostrar sempre os botões de inventário do SpiffUI",
+    UI_ModOptions_SpiffUI_Inv_buttonShow_tt = "Quando desabilitados, os botões de inventário Corpse e SpiffUI, se escondem quando nenhum item está disponível, a menos que o inventário já esteja aberto",
+
+    UI_ModOptions_SpiffUI_EquipButton = "Ativar o botão do equipamento",
+    UI_ModOptions_SpiffUI_EquipButton_tt = "Adiciona um botão para gerenciar o Inventário de equipamentos do seu jogador. <LINE>NOTA: Requer Reiniciar para ativar se estiver no jogo.",
+    UI_ModOptions_SpiffUI_HideEquip = "Ocultar equipamentos e os itens da barra de acesso no inventário geral",
+    UI_ModOptions_SpiffUI_HideEquip_tt = "Oculta equipamentos do inventário. <LINE>NOTA: Você deve ter o botão do equipamento ativado ou outro gerenciador de equipamentos para gerenciar o equipamento.",
+    
+    UI_ModOptions_SpiffUI_KeyRing = "Adicionar chaves disponíveis automaticamente ao chaveiro, se disponível.",
+    UI_ModOptions_SpiffUI_KeyRing_tt = "Mescla chaves para o primeiro chaveiro disponível ao transferir para o jogador.",
+    
+    UI_SpiffUI_Inv_bodies = "Todos os cadáveres de zumbis",
+    UI_SpiffUI_Inv_containers = "Todos os recipientes",
+    UI_SpffUI_Inv_selfpack = "%1 %2's abas",
+    UI_SpffUI_Inv_equippack = "%1 %2's Equipamento"
+}
