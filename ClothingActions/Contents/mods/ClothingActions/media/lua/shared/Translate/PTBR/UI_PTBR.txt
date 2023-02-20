@@ -1,0 +1,9 @@
+UI_PTBR = {
+    UI_Init_ClothingActionsRM = "Bem-vindo ao Menu Radial de Ações de Vestuário!",
+    UI_optionscreen_binding_ClothingActionsRM = "Ações de Vestuário - Radial Menu",
+    UI_optionscreen_binding_CARM = "Mostrar Menu Radial de Ações de Vestuário",
+    UI_optionscreen_binding_CARMMK = "Mostrar Menu Radial de Ações de Vestuário",
+    UI_ModOptions_CARMfilter = "Desativar Filtro de Roupas (Mostra bolsas, relógios, etc.)",
+    UI_ModOptions_CARMdelay = "Mostrar Menu Radial, instantaneamente, ao pressionar a tecla",
+    UI_ModOptions_CARMtoSpiff = "Adicionar "Radial de Ações de Vestuário" ao SpiffUI Radial"
+}
