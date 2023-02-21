@@ -1,0 +1,9 @@
+UI_PTBR = {
+    UI_Init_FancyHandwork = "Bem-vindo ao Fancy Handwork!",
+    UI_optionscreen_binding_FancyHandwork = "Trabalhos Manuais Sofisticados",
+    UI_optionscreen_binding_FHModifier = "Tecla de atalho",
+    UI_optionscreen_binding_FHSwapKey = "Trocar itens (apenas Tecla)",
+    UI_optionscreen_binding_FHSwapKeyMod = "Trocar itens (mod + Tecla)",
+    UI_optionscreen_binding_FHDebugKey = "Tecla de depuração (usada apenas no modo de depuração)",
+    UI_ModOptions_FHfixLHandRotation = "Aplicar animações"
+}
