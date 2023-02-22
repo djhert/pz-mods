@@ -1,0 +1,15 @@
+Sandbox_PTBR = {
+    Sandbox_BrutalHandwork = "Brutal Handwork",
+
+    Sandbox_BrutalHandwork_DualWieldMelee = "Ataques esquerdo e direito alternados automaticamente ao usar duas armas corpo a corpo",
+    Sandbox_BrutalHandwork_DualWieldMelee_tooltip = "Quando um jogador estiver empunhando duas armas corpo a corpo, alterne automaticamente entre os ataques esquerdo e direito. Desative para exigir que a tecla seja pressionada para um ataque improvisado.",
+
+    Sandbox_BrutalHandwork_EnableUnarmed = "Ativar ataques desarmados",
+    Sandbox_BrutalHandwork_EnableUnarmed_tooltip = "Mesmo quando um jogador está desarmado, ele será capaz de atacar. Por padrão, deve estar mirando e segurando o botão de ação.",
+
+    Sandbox_BrutalHandwork_AlwaysUnarmed = "Sempre levante os punhos quando desarmado",
+    Sandbox_BrutalHandwork_AlwaysUnarmed_tooltip = "Quando um jogador está desarmado, sempre levante os punhos ao mirar em ataques desarmados.  Desative para exigir que a tecla seja pressionada ao mirar.",
+
+    Sandbox_BrutalHandwork_BaseAttackOverride = "EXPERIMENTAL: Anulação de Dano do Ataque Principal",
+    Sandbox_BrutalHandwork_BaseAttackOverride_tooltip = "Os ataques principais usam as funções de cálculo de dano de Brutal Handwork em vez de Vanilla. Isso força a consistência entre o dano esperado para ambos os ataques de mão. <LINE> AVISO: Esta opção é atualmente experimental, mas provavelmente se tornará o padrão e será necessária para muitas opções adicionais no futuro. É estável, mas pode causar inconsistências em relação ao vanilla, pois ainda está sendo desenvolvido. POR FAVOR, LEIA a descrição do mod para as limitações atuais!",
+}
