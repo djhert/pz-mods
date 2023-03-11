@@ -1,0 +1,34 @@
+UI_EN = {
+    UI_Init_Bindaid = "Hello: BindAid!",
+    UI_optionscreen_binding_Bindaid = "BindAid",
+    UI_optionscreen_binding_Bindaid_Modkey = "Modifier Key",
+    UI_optionscreen_binding_Bindaid_MouseKey_2 = "Middle Mouse Button",
+    UI_optionscreen_binding_Bindaid_MouseKey_3 = "Mouse Button 3",
+    UI_optionscreen_binding_Bindaid_MouseKey_4 = "Mouse Button 4",
+    UI_optionscreen_binding_Bindaid_MouseKey_5 = "Mouse Button 5",
+    UI_optionscreen_binding_Bindaid_MouseKey_6 = "Mouse Button 6",
+    UI_optionscreen_binding_Bindaid_MouseKey_7 = "Mouse Button 7",
+    UI_optionscreen_binding_Bindaid_MouseKey_8 = "Mouse Button 8",
+    UI_optionscreen_binding_Bindaid_MouseKey_9 = "Mouse Button 9",
+    UI_optionscreen_binding_Bindaid_MouseKey_10 ="Mouse Button 10",
+    UI_optionscreen_binding_Bindaid_MouseKey_11 ="Mouse Button 11",
+    UI_optionscreen_binding_Bindaid_MouseKey_12 ="Mouse Button 12",
+
+    UI_ModOptions_Bindaid_autohideMouse = "AutoHide Mouse",
+    UI_ModOptions_Bindaid_autohideMouse_tooltip = "Hide the mouse after it has not been moved.",
+
+    UI_ModOptions_Bindaid_autohideMouseTime = "AutoHide Mouse Delay",
+    UI_ModOptions_Bindaid_UI_ModOptions_Bindaid_autohideMouseTime_tooltip = "AutoHide the Mouse after this many Seconds",
+
+    UI_ModOptions_Bindaid_mouseButtonSupport = "Enable Additional Mouse Button Support",
+    UI_ModOptions_Bindaid_mouseButtonSupport_tooltip = "NOTE: You MUST restart the game if this is changed.",
+
+    UI_ModOptions_Bindaid_mouseButtonCount = "Additional Mouse Buttons",
+    UI_ModOptions_Bindaid_mouseButtonCount_tooltip = "Number of additional Mouse Buttons to support. <LINE> NOTE: You MUST restart the game if this is changed.",
+
+    UI_ModOptions_Bindaid_emulateAndEvent = "Run Mouse and Emulated Events",
+    UI_ModOptions_Bindaid_emulateAndEvent_tooltip = "When a Mouse Button is pressed, run both the Mouse Event functions and the Emulated Key if set.  If disabled, only the assigned Emulated Key is performed.  If no Emulated Key, then Mouse Events are used.",
+
+    UI_ModOptions_Bindaid_keyinputOptimize = "Enable Keyboard Input Optimization",
+    UI_ModOptions_Bindaid_keyinputOptimize_tooltip = "Enables the Keyboard Input Optimization, please read the Mod's Description for full information on this. <LINE> If you receive any issues with input, please disable this.  <LINE> NOTE: You MUST restart the game if this is changed while in-game.",
+}

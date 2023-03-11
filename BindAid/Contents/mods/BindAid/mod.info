@@ -1,0 +1,11 @@
+name=BindAid
+id=BindAid
+authors=dhert
+
+description=
+description=Optimizes keyboard input, adds native mousebutton emulation, and more!
+
+pzversion=41
+tags=Interface;Framework;Misc
+
+poster=poster.png
