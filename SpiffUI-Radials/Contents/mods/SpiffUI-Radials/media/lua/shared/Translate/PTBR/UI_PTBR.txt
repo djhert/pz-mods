@@ -1,0 +1,174 @@
+UI_PTBR = {
+    -- SpiffUI
+    UI_Hello_SpiffUI = "Olá SpiffUI!",
+    UI_Name_SpiffUI = "SpiffUI",
+    UI_optionscreen_binding_SpiffUI = "SpiffUI",
+
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Definir Teclas de Atalho Recomendadas SpiffUI",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Definir Teclas de Atalho SpiffUI <LINE><LINE><LEFT><SIZE:small> Definir as seguintes Teclas: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  para:  [%2] ",
+
+    UI_ModOptions_SpiffUI_runAllResets = "Redefinir Tudo SpiffUI",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "Funciona Apenas em Jogo!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> Redefinir SpiffUI <LINE><LINE><LEFT><SIZE:small> As seguintes serão redefinidas: <LINE>",
+
+    -- SpiffUI -- Radials
+    UI_Hello_SpiffUI_Radials = "Olá SpiffUI - Radials",
+    
+    UI_Name_SpiffUI_Radials = "SpiffUI - Radials",
+
+    UI_ModOptions_SpiffUI_showTooltips = "Mostrar Dicas",
+    UI_ModOptions_SpiffUI_hideCraftButton = "Esconder Botão de Criação",
+
+    UI_ModOptions_SpiffUI_smokeShowButts = "Mostrar Bitucas de Cigarros (Cigarros)", 
+    UI_ModOptions_SpiffUI_smokeShowGum = "Mostrar Gomas de Mascar (Cigarros)",
+    UI_ModOptions_SpiffUI_smokeShowNow = "Mostrar Radial ao pressionar (Cigarros)", 
+
+    UI_ModOptions_SpiffUI_pillsShowNow = "Mostrar Radial ao pressionar (Medicamentos)",
+
+    UI_ModOptions_SpiffUI_eatAmount = "Quantidade para comer (Comidas)",
+    UI_ModOptions_SpiffUI_eatQuickAmount = "Quantidade de lanches rápidos (Comidas)",
+    UI_ModOptions_SpiffUI_eatShowNow = "Mostrar Radial ao pressionar (Comidas)", 
+
+    UI_ModOptions_SpiffUI_drinkAmount = "Quantidade para beber (Bebidas)",
+    UI_ModOptions_SpiffUI_drinkQuickAmount = "Quantidade de bebidas rápidas (Bebidas)",
+    UI_ModOptions_SpiffUI_drinkShowNow = "Mostrar Radial ao pressionar (Bebidas)",
+
+    UI_ModOptions_SpiffUI_smokeCraftShowDismantle = "Mostrar receitas de desmontagem (Criação Cigarros)",
+    UI_ModOptions_SpiffUI_smokeCraftShowCigPacks = "Mostrar cartela de cigarros (Criação Cigarros)",
+    UI_ModOptions_SpiffUI_smokeCraftAmount = "Quantidade para criar (Criação Cigarros)",
+
+    UI_ModOptions_SpiffUI_craftSwitch = "Mostrar ao pressionar (Criação)",
+    UI_ModOptions_SpiffUI_craftShowEquipped = "Mostrar Receitas de itens equipados (Criação)",
+    UI_ModOptions_SpiffUI_craftShowSmokeables = "Mostrar Receitas de cigarros (Criação)",
+    UI_ModOptions_SpiffUI_craftShowMedical = "Mostrar Recipes Medicamentos (Criação)",
+    UI_ModOptions_SpiffUI_craftAmount = "Quantidade para criar (Criação)",
+    UI_ModOptions_SpiffUI_craftFilterUnique = "Filtro de receitas duplicadas (Criação)",
+
+    UI_ModOptions_SpiffUI_equipShowDrop = "Mostrar ação de soltar (Equipamentos)",
+    UI_ModOptions_SpiffUI_equipShowAllRepairs = "Mostrar opções indisponíveis de reparação (Equipamentos)",
+    UI_ModOptions_SpiffUI_equipShowClothingActions = "Mostrar ação de roupas extras (Equipamentos)",
+    UI_ModOptions_SpiffUI_equipShowRecipes = "Mostrar receitas (Equipamentos)",
+
+    UI_ModOptions_SpiffUI_repairShowEquipped = "Mostrar reparos de itens equipados (Reparos)",
+    UI_ModOptions_SpiffUI_repairShowHotbar = "Mostrar reparos para itens na Hotbar (Reparos)",
+
+    UI_ModOptions_SpiffUI_firstAidCraftAmount = "Quantidade para criar (Criação Medicamentos)",
+
+    UI_ModOptions_SpiffUI_tooltip_showTooltips = "Mostrar dicas nos Menus Radial de itens, receitas, e reparos (Recomendado)",
+    
+    UI_ModOptions_SpiffUI_tooltip_pillsShowNow = "Notas: Desativa a ação dos medicamentos rápidos",
+    
+    UI_ModOptions_SpiffUI_tooltip_drinkShowNow = "Notas: Desativa a ação das bebidas rápidas",
+
+    UI_ModOptions_SpiffUI_tooltip_eatShowNow = "Notas: Desativa a ação dos lanches rápidos",
+    
+    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "Notas: Algumas receitas ainda podem ser filtradas. Considere usar o Menu Criação de Medicamentos, em vez disso!",
+    UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "Notas: Receitas de itens usados podem ser feitas no Menu de Equipamentos.  Os itens em sua mão ainda mostrarão receitas",
+    UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "Considere usar o Menu Criação de Cigarros, em vez disso!"
+
+    UI_ModOptions_SpiffUI_tooltip_smokeShowNow = "Notas: Desativa a opção fumar automaticamente no menu Fumar",
+
+    UI_ModOptions_SpiffUI_tooltip_CraftingWheelSwitch = "Pressione Abrir Menu Radial, Segure na aba de Criação",
+
+    UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "Mostrar opções de reparo, mesmo que os itens necessários não estejam em seu inventário",
+    
+    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "Reparos de equipamentos podem ser feitos no menu de Equipamentos",
+
+    UI_amount_SpiffUI_Ask = "Perguntar",
+    UI_amount_SpiffUI_All = "Tudo",
+    UI_amount_SpiffUI_Full = "Cheio",
+    UI_amount_SpiffUI_One = "Um",
+    UI_amount_SpiffUI_Half = "Metade",
+    UI_amount_SpiffUI_Quarter = "1/4",
+
+    UI_radial_SpiffUI_Accessories = "Acessórios",
+    UI_radial_SpiffUI_Hotbar = "Hotbar",
+    UI_radial_SpiffUI_Transfer = "Transferir para ",
+
+    UI_optionscreen_binding_SpiffUIPillWheel = "Círculo de Pílulas",
+    UI_optionscreen_binding_SpiffUIDrinkWheel = "Círculo de Bebidas",
+    UI_optionscreen_binding_SpiffUIEatWheel = "Círculo de Comidas",
+    UI_optionscreen_binding_SpiffUISmokeWheel = "Círculo de Cigarros",
+    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Círculo de Criação Cigarros",
+    UI_optionscreen_binding_SpiffUICraftWheel = "Círculo de Criação/UI",
+    UI_optionscreen_binding_SpiffUIEquipmentWheel = "Inventário Alternar/Círculo",
+    UI_optionscreen_binding_SpiffUIRepairWheel = "Círculo de Reparos",
+    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "Círculo de Criação de Medicamentos",
+    UI_optionscreen_binding_SpiffUIOneWheel = "Círculo SpiffUI",
+
+    UI_character_SpiffUI_noLighter = "Eu preciso de um isqueiro.",
+    UI_character_SpiffUI_noSmokes = "Não há nada para fumar.",
+
+    UI_character_SpiffUI_noCraft = "Não há nada para criar.",
+
+    UI_character_SpiffUI_noEquip = "Eu estou sem roupas!",
+
+    UI_character_SpiffUI_notHungry = "Eu não estou com fome.",
+    UI_character_SpiffUI_noFood = "Não tenho nada para comer.",
+
+    UI_character_SpiffUI_notThirsty = "Não estou com sede.",
+    UI_character_SpiffUI_noDrinks = "Não tenho nada para beber.",
+
+    UI_character_SpiffUI_noRepair = "Não há nada que precise reparar.",
+    UI_character_SpiffUI_noRepairItems = "Eu não posso reparar isso.",
+
+    UI_character_SpiffUI_noPillsQuick = "Eu não tenho ",
+    UI_character_SpiffUI_noPills = "Não há medicamentos",
+    UI_character_SpiffUI_noPillsNeed = "Eu acho que não preciso disso no momento.",
+
+    -------------------------------------------
+    -- NEW v8:
+    UI_radial_SpiffUI_Previous = "Anterior",
+    UI_radial_SpiffUI_Next = "Próximo",
+
+    UI_alarm_SpiffUI_Silence = "Parar Alarme",
+    UI_alarm_SpiffUI_Enable = "Ativar alarme",
+    UI_alarm_SpiffUI_Reset = "Reiniciar alarme",
+    UI_alarm_SpiffUI_HH = "HH",
+    UI_alarm_SpiffUI_MM = "MM",
+
+    -- These next few include formatting so that the text lines up more or less.
+    ---- EX: Current Alarm
+    ----         HH:MM
+
+    -- Hour:Minutes or HH:MM if no alarm
+    UI_alarm_SpiffUI_CurrentF = "Alarme atual <br> %1:%2", 
+    -- HH:MM
+    UI_alarm_SpiffUI_SetHourF = "DEFINIR HORA <br> %1:%2", 
+    -- Hour:MM
+    UI_alarm_SpiffUI_SetMinuteF = "DEFINIR MINUTO <br> %1:%2",
+
+    UI_equip_SpiffUI_FirearmRadial = "Círculo de arma de fogo",
+
+    UI_SpiffUI_Radial_Equipment = "Equipamentos",
+    UI_SpiffUI_Radial_Crafting = "Criação",
+    UI_SpiffUI_Radial_Drink = "Bebidas",
+    UI_SpiffUI_Radial_Eat = "Comidas",
+    UI_SpiffUI_Radial_FirstAidCraft = "Criação Medicamentos",
+    UI_SpiffUI_Radial_Pills = "Medicamentos",
+    UI_SpiffUI_Radial_Repair = "Reparos",
+    UI_SpiffUI_Radial_Smoke = "Cigarros",
+    UI_SpiffUI_Radial_SmokeCraft = "Criação Cigarros",
+
+    UI_amount_SpiffUI_CraftHowMany = "Criar quantos",
+    UI_amount_SpiffUI_EatHowMuch = "Comer quanto",
+    UI_amount_SpiffUI_DrinkHowMuch = "Beber quanto",
+    UI_amount_SpiffUI_HowManyPills = "Usar quantos medicamentos",
+
+    UI_optionscreen_binding_SpiffUIGSWheel = "Círculo da Velocidade do jogo",
+    UI_SpiffUI_Radial_GameSpeed = "Velocidade do jogo",
+
+    UI_ModOptions_SpiffUI_equipShowRecipes = "Mostrar Receitas (Equipamentos)",
+
+    UI_ModOptions_SpiffUI_hideClock = "Esconder Relógio Vanilla",
+    UI_ModOptions_SpiffUI_hideClockTooltip = "RECOMENDADO: O relógio agora está presente no SpiffUI Radial. Uma reinicialização é necessária se estiver no jogo.",
+
+    UI_ModOptions_SpiffUI_equipShowPlace = "Mostrar ação colocar (Equipamentos)",
+    UI_ModOptions_SpiffUI_equipShowTransfer = "Mostrar ação transferir (Equipamentos)",
+
+    UI_ModOptions_SpiffUI_showSmokeCraftRadial = "Mostrar Círculo de Criação Cigarros (SpiffUI)",
+    UI_ModOptions_SpiffUI_showSmokeRadial = "Mostrar Círculo de Cigarros (SpiffUI)",
+
+    UI_SpiffUI_EmoteWheel = "Emotes"
+}
