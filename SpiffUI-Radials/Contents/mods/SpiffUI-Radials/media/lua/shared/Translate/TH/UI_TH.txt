@@ -13,7 +13,7 @@ UI_EN = {
     UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> รีเซ็ต SpiffUI <LINE><LINE><LEFT><SIZE:small> ข้อมูลต่อไปนี้จะถูกรีเซ็ต: <LINE>",
 
     -- SpiffUI -- Radials
-    UI_Hello_SpiffUI_Radials = "Hello SpiffUI - Radials",
+    UI_Hello_SpiffUI_Radials = "สวัสดี SpiffUI - Radials",
     
     UI_Name_SpiffUI_Radials = "SpiffUI - Radials",
 
@@ -73,58 +73,58 @@ UI_EN = {
 
     UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "แสดงตัวเลือกการซ่อมแซมแม้ว่าจะไม่มีไอเทมที่ต้องซ่อมแซมอยู่ในช่องเก็บของ",
     
-    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "Repairs for Equipment can be done from the Equipment Menu",
+    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "การซ่อมแซมอุปกรณ์สามารถทำได้จากเมนูอุปกรณ์",
 
-    UI_amount_SpiffUI_Ask = "Ask",
-    UI_amount_SpiffUI_All = "All",
-    UI_amount_SpiffUI_Full = "Dieter",
+    UI_amount_SpiffUI_Ask = "ถาม",
+    UI_amount_SpiffUI_All = "ทั้งหมด",
+    UI_amount_SpiffUI_Full = "เต็ม",
     UI_amount_SpiffUI_One = "1",
     UI_amount_SpiffUI_Half = "1/2",
     UI_amount_SpiffUI_Quarter = "1/4",
 
-    UI_radial_SpiffUI_Accessories = "Accessories",
+    UI_radial_SpiffUI_Accessories = "เครื่องประดับ",
     UI_radial_SpiffUI_Hotbar = "Hotbar",
-    UI_radial_SpiffUI_Transfer = "Transfer to ",
+    UI_radial_SpiffUI_Transfer = "โอนถ่ายไปยัง ",
 
-    UI_optionscreen_binding_SpiffUIPillWheel = "Pill Radial",
-    UI_optionscreen_binding_SpiffUIDrinkWheel = "Drink Radial",
-    UI_optionscreen_binding_SpiffUIEatWheel = "Food Radial",
-    UI_optionscreen_binding_SpiffUISmokeWheel = "Smoke Radial",
-    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Smoke Craft Radial",
-    UI_optionscreen_binding_SpiffUICraftWheel = "Crafting UI/Radial",
-    UI_optionscreen_binding_SpiffUIEquipmentWheel = "Inventory Toggle/Radial",
-    UI_optionscreen_binding_SpiffUIRepairWheel = "Repair Radial",
-    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "Medical Craft",
+    UI_optionscreen_binding_SpiffUIPillWheel = "Radial ยา",
+    UI_optionscreen_binding_SpiffUIDrinkWheel = "Radial เครื่องดื่ม",
+    UI_optionscreen_binding_SpiffUIEatWheel = "Radial อาหาร",
+    UI_optionscreen_binding_SpiffUISmokeWheel = "Radial สูบบุหรี่",
+    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Radial การคราฟต์บุหรี่",
+    UI_optionscreen_binding_SpiffUICraftWheel = "UI/Radial การคราฟต์",
+    UI_optionscreen_binding_SpiffUIEquipmentWheel = "Toggle/Radial ช่องเก็บของ",
+    UI_optionscreen_binding_SpiffUIRepairWheel = "Radial การซ่อมแซม",
+    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "คราฟต์การแพทย์",
     UI_optionscreen_binding_SpiffUIOneWheel = "SpiffUI Radial",
 
-    UI_character_SpiffUI_noLighter = "I need a lighter.",
-    UI_character_SpiffUI_noSmokes = "There's nothing to Smoke.",
+    UI_character_SpiffUI_noLighter = "ฉันต้องการไฟแช็ค",
+    UI_character_SpiffUI_noSmokes = "ฉันไม่มีบุหรี่จะสูบ",
 
-    UI_character_SpiffUI_noCraft = "There's nothing to Craft.",
+    UI_character_SpiffUI_noCraft = "ฉันไม่มีอะไรจะคราฟต์",
 
-    UI_character_SpiffUI_noEquip = "I am Naked!",
+    UI_character_SpiffUI_noEquip = "ฉันโป๊!",
 
-    UI_character_SpiffUI_notHungry = "I'm not Hungry.",
-    UI_character_SpiffUI_noFood = "There's no Food to Eat.",
+    UI_character_SpiffUI_notHungry = "ฉันไม่ได้หิว",
+    UI_character_SpiffUI_noFood = "ฉันไม่มีอาหารที่จะกิน",
 
-    UI_character_SpiffUI_notThirsty = "I'm not Thirsty.",
-    UI_character_SpiffUI_noDrinks = "There's nothing to Drink.",
+    UI_character_SpiffUI_notThirsty = "ฉันไม่ได้หิวน้ำ",
+    UI_character_SpiffUI_noDrinks = "ฉันไม่มีอะไรจะดื่ม",
 
-    UI_character_SpiffUI_noRepair = "There's nothing to Repair.",
-    UI_character_SpiffUI_noRepairItems = "I can't Repair that.",
+    UI_character_SpiffUI_noRepair = "ฉันไม่มีอะไรจะซ่อม",
+    UI_character_SpiffUI_noRepairItems = "ฉันไม่สามารถซ่อมสิ่งนี้ได้",
 
-    UI_character_SpiffUI_noPillsQuick = "I have no ",
-    UI_character_SpiffUI_noPills = "There's no pills",
-    UI_character_SpiffUI_noPillsNeed = "I'm not in any Mood.",
+    UI_character_SpiffUI_noPillsQuick = "ฉันไม่มียา",
+    UI_character_SpiffUI_noPills = "ฉันไม่มียา",
+    UI_character_SpiffUI_noPillsNeed = "ฉันไม่มีอารมณ์จะกินยา",
 
     -------------------------------------------
     -- NEW v8:
-    UI_radial_SpiffUI_Previous = "Previous",
-    UI_radial_SpiffUI_Next = "Next",
+    UI_radial_SpiffUI_Previous = "ก่อนหน้า",
+    UI_radial_SpiffUI_Next = "ถัดไป",
 
-    UI_alarm_SpiffUI_Silence = "Silence Alarm",
-    UI_alarm_SpiffUI_Enable = "Enable Alarm",
-    UI_alarm_SpiffUI_Reset = "Reset Alarm",
+    UI_alarm_SpiffUI_Silence = "ปิดการแจ้งเตือน",
+    UI_alarm_SpiffUI_Enable = "เปิดการแจ้งเตือน",
+    UI_alarm_SpiffUI_Reset = "รีเซ็ตการแจ้งเตือน",
     UI_alarm_SpiffUI_HH = "HH",
     UI_alarm_SpiffUI_MM = "MM",
 
@@ -133,42 +133,42 @@ UI_EN = {
     ----         HH:MM
 
     -- Hour:Minutes or HH:MM if no alarm
-    UI_alarm_SpiffUI_CurrentF = "Current Alarm <br> %1:%2", 
+    UI_alarm_SpiffUI_CurrentF = "เวลาที่แจ้งเตือนปัจจุบัน <br> %1:%2", 
     -- HH:MM
-    UI_alarm_SpiffUI_SetHourF = "SET HOUR <br> %1:%2", 
+    UI_alarm_SpiffUI_SetHourF = "ชั่วโมง <br> %1:%2", 
     -- Hour:MM
-    UI_alarm_SpiffUI_SetMinuteF = "SET MINUTE <br> %1:%2",
+    UI_alarm_SpiffUI_SetMinuteF = "นาที <br> %1:%2",
 
-    UI_equip_SpiffUI_FirearmRadial = "Firearm Radial",
+    UI_equip_SpiffUI_FirearmRadial = "Radial อาวุธปืน",
 
-    UI_SpiffUI_Radial_Equipment = "Equipment",
-    UI_SpiffUI_Radial_Crafting = "Crafting",
-    UI_SpiffUI_Radial_Drink = "Drink",
-    UI_SpiffUI_Radial_Eat = "Food",
-    UI_SpiffUI_Radial_FirstAidCraft = "Medical Craft",
-    UI_SpiffUI_Radial_Pills = "Pills",
-    UI_SpiffUI_Radial_Repair = "Repair",
-    UI_SpiffUI_Radial_Smoke = "Smoke",
-    UI_SpiffUI_Radial_SmokeCraft = "Smoke Craft",
+    UI_SpiffUI_Radial_Equipment = "อุปกรณ์",
+    UI_SpiffUI_Radial_Crafting = "คราฟต์",
+    UI_SpiffUI_Radial_Drink = "ดื่ม",
+    UI_SpiffUI_Radial_Eat = "กิน",
+    UI_SpiffUI_Radial_FirstAidCraft = "คราฟต์ของทางการแพทย์",
+    UI_SpiffUI_Radial_Pills = "ยา",
+    UI_SpiffUI_Radial_Repair = "ซ่อมแซม",
+    UI_SpiffUI_Radial_Smoke = "สูบบุหรี่",
+    UI_SpiffUI_Radial_SmokeCraft = "คราฟต์ของเกี่ยวกับบุหรี่",
 
-    UI_amount_SpiffUI_CraftHowMany = "Craft How Many",
-    UI_amount_SpiffUI_EatHowMuch = "Eat How Much",
-    UI_amount_SpiffUI_DrinkHowMuch = "Drink How Much",
-    UI_amount_SpiffUI_HowManyPills = "Take How Many Pills",
+    UI_amount_SpiffUI_CraftHowMany = "คราฟต์ปริมาณเท่าไหร่",
+    UI_amount_SpiffUI_EatHowMuch = "กินปริมาณเท่าไหร่",
+    UI_amount_SpiffUI_DrinkHowMuch = "ดื่มปริมาณเท่าไหร่",
+    UI_amount_SpiffUI_HowManyPills = "กินยากี่เม็ด",
 
-    UI_optionscreen_binding_SpiffUIGSWheel = "Game Speed Radial",
-    UI_SpiffUI_Radial_GameSpeed = "Game Speed",
+    UI_optionscreen_binding_SpiffUIGSWheel = "Radial ความเร็วเวลาของเกม",
+    UI_SpiffUI_Radial_GameSpeed = "ความเร็วเวลาของเกม",
 
-    UI_ModOptions_SpiffUI_equipShowRecipes = "Show Recipes (Equipment)",
+    UI_ModOptions_SpiffUI_equipShowRecipes = "แสดงสูตรคราฟต์ (อุปกรณ์)",
 
-    UI_ModOptions_SpiffUI_hideClock = "Hide Vanilla Clock",
-    UI_ModOptions_SpiffUI_hideClockTooltip = "RECOMMENDED: The clock is now present in the SpiffUI Radial.  A restart is required if in-game.",
+    UI_ModOptions_SpiffUI_hideClock = "ซ่อนนาฬิกาพื้นฐาน",
+    UI_ModOptions_SpiffUI_hideClockTooltip = "คำแนะนำ: นาฬิกาได้อัพเดทไปยัง SpiffUI Radial ของคุณแล้ว แต่หากคุณอยู่ในเกม คุณต้องรีสตารท์เกมก่อนใช้งาน",
 
-    UI_ModOptions_SpiffUI_equipShowPlace = "Show Place Action (Equipment)",
-    UI_ModOptions_SpiffUI_equipShowTransfer = "Show Transfer Action (Equipment)",
+    UI_ModOptions_SpiffUI_equipShowPlace = "แสดงการวาง (อุปกรณ์)",
+    UI_ModOptions_SpiffUI_equipShowTransfer = "แสดงการถ่ายโอน (อุปกรณ์)",
 
-    UI_ModOptions_SpiffUI_showSmokeCraftRadial = "Show Smoke Craft Radial (SpiffUI)",
-    UI_ModOptions_SpiffUI_showSmokeRadial = "Show Smoking Radial (SpiffUI)",
+    UI_ModOptions_SpiffUI_showSmokeCraftRadial = "แสดง Radial การคราฟต์ของเกี่ยวกับบุหรี่ (SpiffUI)",
+    UI_ModOptions_SpiffUI_showSmokeRadial = "แสดง Radial สูบบุหรี่ (SpiffUI)",
 
-    UI_SpiffUI_EmoteWheel = "Emotes"
+    UI_SpiffUI_EmoteWheel = "อีโมติคอน"
 }
