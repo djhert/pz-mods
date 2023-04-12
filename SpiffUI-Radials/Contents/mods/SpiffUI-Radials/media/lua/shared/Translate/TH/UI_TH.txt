@@ -1,4 +1,4 @@
-UI_EN = {
+UI_TH = {
     -- SpiffUI
     UI_Hello_SpiffUI = "สวัสดี SpiffUI!",
     UI_Name_SpiffUI = "SpiffUI",
