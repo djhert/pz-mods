@@ -1,15 +1,15 @@
 Sandbox_TH = {
     Sandbox_BrutalHandwork = "Brutal Handwork",
 
-    Sandbox_BrutalHandwork_DualWieldMelee = "Automatically alternate left and right attacks when dual-wielding melee weapons",
-    Sandbox_BrutalHandwork_DualWieldMelee_tooltip = "When a player is dual-wielding melee weapons, automatically alternate between left and right attacks. Disable to require the Modifier to be pressed for an offhand attack.",
+    Sandbox_BrutalHandwork_DualWieldMelee = "สลับการโจมตีซ้ายขวาโดยอัตโนมัติเมื่อถืออาวุธคู่ระยะประชิด",
+    Sandbox_BrutalHandwork_DualWieldMelee_tooltip = "หากปิดการใช้งานการสลับการโจมตีซ้ายขวาโดยอัตโนมัติเมื่อผู้เล่นถืออาวุธคู่ระยะประชิด จะต้องกดปุ่มที่คุณตั้งค่าไว้เพี่อสลับการโจมตีซ้ายขวาด้วยตัวเอง",
 
-    Sandbox_BrutalHandwork_EnableUnarmed = "Enable Unarmed Attacks",
-    Sandbox_BrutalHandwork_EnableUnarmed_tooltip = "Even when a player is unarmed, they will be able to attack. By default, must be aiming and holding the Modifier key to punch.",
+    Sandbox_BrutalHandwork_EnableUnarmed = "เปิดการใช้งานโจมตีแบบไม่ถืออาวุธ",
+    Sandbox_BrutalHandwork_EnableUnarmed_tooltip = "แม้ผู้เล่นจะไม่ถืออาวุธแต่ผู้เล่นยังสามารถโจมตีได้ โดยค่าเริ่มต้นคือต้องเล็งและกดปุ่มที่ตั้งไว้ค้างเพื่อต่อย",
 
-    Sandbox_BrutalHandwork_AlwaysUnarmed = "Always raise fists when unarmed",
-    Sandbox_BrutalHandwork_AlwaysUnarmed_tooltip = "When a player is unarmed, always raise their fists when aiming for unarmed attacks.  Disable to require the Modifier to be held when aiming.",
+    Sandbox_BrutalHandwork_AlwaysUnarmed = "ตั้งหมัดเสมอเมื่อไม่ถืออาวุธ",
+    Sandbox_BrutalHandwork_AlwaysUnarmed_tooltip = "หากปิดการใช้งานการตั้งหมัดเสมอเมื่อไม่ถืออาวุธ จะต้องกดปุ่มที่คุณตั้งค่าไว้เพื่อตั้งหมดด้วยตัวเอง",
 
-    Sandbox_BrutalHandwork_BaseAttackOverride = "EXPERIMENTAL: Main Attack Damage Override",
-    Sandbox_BrutalHandwork_BaseAttackOverride_tooltip = "Main Attacks use the damage calculation functions from BrutalHandwork instead of Vanilla. This forces consistency between the expected damage for both hand attacks. <LINE> WARNING: This option is currently experimental, but is likely to become the default and will be required for many additional options in the future.  It is stable, but may cause inconsistencies compared to vanilla as it is still being developed. PLEASE READ the mod's description for current limitations!",
+    Sandbox_BrutalHandwork_BaseAttackOverride = "การทดลอง: การแทนที่ความเสียหายจากการโจมตีหลัก",
+    Sandbox_BrutalHandwork_BaseAttackOverride_tooltip = "การโจมตีหลักจะใช้การคำนวณความเสียหายจาก BrutalHandwork แทนแบบพื้นฐาน การคำนวณเช่นนี้จะทำให้ความเสียหายจากการโจมตีด้วยมือทั้งสองสอดคล้องกัน <LINE> คำเตือน: ตัวเลือกนี้อยู่ระหว่างการทดลอง แต่มีแนวโน้มที่จะกลายเป็นค่าเริ่มต้น และจะจำเป็นกับตัวเลือกเพิ่มเติมในอนาคต มันเสถียรแล้วแต่เกิดการไม่ลงรอยกันระหว่างตัวเกมพื้นฐานเพราะยังอยู่ระหว่างการพัฒนา กรุณาอ่านคำอธิบายของม็อดสำหรับข้อจำกัดในตอนนี้!",
 }
