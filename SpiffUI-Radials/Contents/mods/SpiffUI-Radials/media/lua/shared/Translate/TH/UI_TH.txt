@@ -162,7 +162,7 @@ UI_EN = {
     UI_ModOptions_SpiffUI_equipShowRecipes = "แสดงสูตรคราฟต์ (อุปกรณ์)",
 
     UI_ModOptions_SpiffUI_hideClock = "ซ่อนนาฬิกาพื้นฐาน",
-    UI_ModOptions_SpiffUI_hideClockTooltip = "คำแนะนำ: นาฬิกาได้อัพเดทไปยัง SpiffUI Radial ของคุณแล้ว แต่หากคุณอยู่ในเกม คุณต้องรีสตารท์เกมก่อนใช้งาน",
+    UI_ModOptions_SpiffUI_hideClockTooltip = "คำแนะนำ: นาฬิกาได้อัพเดทไปยัง SpiffUI Radial ของคุณแล้ว คุณจำเป็นต้องเริ่มเกมใหม่หากเพิ่งเริ่มเปิดใช้งานนาฬิกาในเกม",
 
     UI_ModOptions_SpiffUI_equipShowPlace = "แสดงการวาง (อุปกรณ์)",
     UI_ModOptions_SpiffUI_equipShowTransfer = "แสดงการถ่ายโอน (อุปกรณ์)",
