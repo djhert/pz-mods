@@ -1,0 +1,174 @@
+UI_TH = {
+    -- SpiffUI
+    UI_Hello_SpiffUI = "สวัสดี SpiffUI!",
+    UI_Name_SpiffUI = "SpiffUI",
+    UI_optionscreen_binding_SpiffUI = "SpiffUI",
+
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "ตั้งค่าปุ่มลัดตามที่ SpiffUI แนะนำ",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> ตั้งค่าปุ่มลัดของ SpiffUI <LINE><LINE><LEFT><SIZE:small> ตั้งค่าปุ่มลัดดังต่อไปนี้: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  to:  [%2] ",
+
+    UI_ModOptions_SpiffUI_runAllResets = "เรียกใช้การรีเซ็ต SpiffUI ทั้งหมด",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "ใช้งานได้เฉพาะในเกมเท่านั้น!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> รีเซ็ต SpiffUI <LINE><LINE><LEFT><SIZE:small> ข้อมูลต่อไปนี้จะถูกรีเซ็ต: <LINE>",
+
+    -- SpiffUI -- Radials
+    UI_Hello_SpiffUI_Radials = "ยินดีต้อนรับเข้าสู่แฉกรัศมี SpiffUI",
+    
+    UI_Name_SpiffUI_Radials = "แฉกรัศมี SpiffUI",
+
+    UI_ModOptions_SpiffUI_showTooltips = "แสดงคำแนะนำเครื่องมือ",
+    UI_ModOptions_SpiffUI_hideCraftButton = "ซ่อนปุ่มคราฟต์ของ",
+
+    UI_ModOptions_SpiffUI_smokeShowButts = "แสดงก้นบุหรี่ (สูบบุหรี่)", 
+    UI_ModOptions_SpiffUI_smokeShowGum = "แสดงหมากฝรั่ง (สูบบุหรี่)",
+    UI_ModOptions_SpiffUI_smokeShowNow = "แสดงแฉกรัศมี เมื่อกด (สูบบุหรี่)", 
+
+    UI_ModOptions_SpiffUI_pillsShowNow = "แสดงแฉกรัศมี เมื่อกด (ยา)",
+
+    UI_ModOptions_SpiffUI_eatAmount = "ปริมาณที่จะกิน (อาหาร)",
+    UI_ModOptions_SpiffUI_eatQuickAmount = "ปริมาณที่จะกินแบบเร็ว (อาหาร)",
+    UI_ModOptions_SpiffUI_eatShowNow = "แสดงแฉกรัศมี เมื่อกด (อาหาร)", 
+
+    UI_ModOptions_SpiffUI_drinkAmount = "ปริมาณที่จะดื่ม (เครื่องดื่ม)",
+    UI_ModOptions_SpiffUI_drinkQuickAmount = "ปริมาณที่จะดื่มแบบเร็ว (เครื่องดื่ม)",
+    UI_ModOptions_SpiffUI_drinkShowNow = "แสดงแฉกรัศมี เมื่อกด (เครื่องดื่ม)",
+
+    UI_ModOptions_SpiffUI_smokeCraftShowDismantle = "แสดงสูตรคราฟต์ในการแกะบุหรี่ (การคราฟต์บุหรี่)",
+    UI_ModOptions_SpiffUI_smokeCraftShowCigPacks = "แสดงซองบุหรี่ (การคราฟต์บุหรี่)",
+    UI_ModOptions_SpiffUI_smokeCraftAmount = "ปริมาณที่จะคราฟต์ (การคราฟต์บุหรี่)",
+
+    UI_ModOptions_SpiffUI_craftSwitch = "แสดงเมื่อกด (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftShowEquipped = "แสดงสูตรคราฟต์เมื่อใช้ไอเทม (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftShowSmokeables = "แสดงสูตรคราฟต์ที่เกี่ยวกับบุหรี่ (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftShowMedical = "แสดงสูตรคราฟต์ทางการแพทย์ (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftAmount = "ปริมาณที่จะคราฟต์ (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftFilterUnique = "กรองสูตรคราฟต์ที่ซ้ำ (การคราฟต์)",
+
+    UI_ModOptions_SpiffUI_equipShowDrop = "แสดงการทิ้งของ (อุปกรณ์)",
+    UI_ModOptions_SpiffUI_equipShowAllRepairs = "แสดงตัวเลือกที่ยังซ่อมไม่ได้ (อุปกรณ์)",
+    UI_ModOptions_SpiffUI_equipShowClothingActions = "แสดงการกระทำเสื้อผ้าเพิ่มเติม (อุปกรณ์)",
+    UI_ModOptions_SpiffUI_equipShowRecipes = "แสดงสูตรคราฟต์ (อุปกรณ์)",
+
+    UI_ModOptions_SpiffUI_repairShowEquipped = "แสดงการซ่อมแซมเมื่อใช้ไอเทม (ซ่อมแซม)",
+    UI_ModOptions_SpiffUI_repairShowHotbar = "แสดงการซ่อมแซมของไอเทมใน Hotbar (ซ่อมแซม)",
+
+    UI_ModOptions_SpiffUI_firstAidCraftAmount = "ปริมาณที่จะคราฟต์ (การคราฟต์ยา)",
+
+    UI_ModOptions_SpiffUI_tooltip_showTooltips = "แสดงคำแนะนำเครื่องมือในเมนูแฉกรัศมี ของไอเทม, สูตรคราฟต์ และการซ่อมแซม (แนะนำ)",
+    
+    UI_ModOptions_SpiffUI_tooltip_pillsShowNow = "หมายเหตุ: ปิดการกินยาแบบเร็ว",
+    
+    UI_ModOptions_SpiffUI_tooltip_drinkShowNow = "หมายเหตุ: ปิดการกินน้ำแบบเร็ว",
+
+    UI_ModOptions_SpiffUI_tooltip_eatShowNow = "หมายเหตุ: ปิดการกินอาหารแบบเร็ว",
+    
+    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "หมายเหตุ: สูตรคราฟต์บางสูตรอาจไม่ถูกกรอง ลองใช้เมนูการคราฟต์ทางการแพทย์แทน!",
+    UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "หมายเหตุ: สูตรคราฟต์ที่ใช้ไอเทมที่อยู่บนมือของคุณสามารถคราฟต์โดยใช้มันได้ เพราะไอเทมที่อยู่บนมือของคุณจะยังแสดงอยู่ในสูตรคราฟต์",
+    UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "ลองใช้เมนูการคราฟต์ที่เกี่ยวกับบุหรี่แทน!"
+
+    UI_ModOptions_SpiffUI_tooltip_smokeShowNow = "หมายเหตุ: ปิดการใช้งานการสูบบุหรี่อัตโนมัติ",
+
+    UI_ModOptions_SpiffUI_tooltip_CraftingWheelSwitch = "กดปุ่มเปิดเมนูแฉกรัศมี, กดค้างไว้ที่หน้าต่างการคราฟต์",
+
+    UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "แสดงตัวเลือกการซ่อมแซมแม้ว่าจะไม่มีไอเทมที่ต้องซ่อมแซมอยู่ในช่องเก็บของ",
+    
+    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "การซ่อมแซมอุปกรณ์สามารถทำได้จากเมนูอุปกรณ์",
+
+    UI_amount_SpiffUI_Ask = "ถาม",
+    UI_amount_SpiffUI_All = "ทั้งหมด",
+    UI_amount_SpiffUI_Full = "เต็ม",
+    UI_amount_SpiffUI_One = "1",
+    UI_amount_SpiffUI_Half = "1/2",
+    UI_amount_SpiffUI_Quarter = "1/4",
+
+    UI_radial_SpiffUI_Accessories = "เครื่องประดับ",
+    UI_radial_SpiffUI_Hotbar = "Hotbar",
+    UI_radial_SpiffUI_Transfer = "โอนถ่ายไปยัง ",
+
+    UI_optionscreen_binding_SpiffUIPillWheel = "แฉกรัศมียา",
+    UI_optionscreen_binding_SpiffUIDrinkWheel = "แฉกรัศมีเครื่องดื่ม",
+    UI_optionscreen_binding_SpiffUIEatWheel = "แฉกรัศมีอาหาร",
+    UI_optionscreen_binding_SpiffUISmokeWheel = "แฉกรัศมีสูบบุหรี่",
+    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "แฉกรัศมีการคราฟต์บุหรี่",
+    UI_optionscreen_binding_SpiffUICraftWheel = "UI/แฉกรัศมี การคราฟต์",
+    UI_optionscreen_binding_SpiffUIEquipmentWheel = "สลับ/แฉกรัศมี ช่องเก็บของ",
+    UI_optionscreen_binding_SpiffUIRepairWheel = "แฉกรัศมี การซ่อมแซม",
+    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "คราฟต์การแพทย์",
+    UI_optionscreen_binding_SpiffUIOneWheel = "แฉกรัศมี SpiffUI",
+
+    UI_character_SpiffUI_noLighter = "ฉันต้องการไฟแช็ค",
+    UI_character_SpiffUI_noSmokes = "ฉันไม่มีบุหรี่จะสูบ",
+
+    UI_character_SpiffUI_noCraft = "ฉันไม่มีอะไรจะคราฟต์",
+
+    UI_character_SpiffUI_noEquip = "ฉันโป๊!",
+
+    UI_character_SpiffUI_notHungry = "ฉันไม่ได้หิว",
+    UI_character_SpiffUI_noFood = "ฉันไม่มีอาหารที่จะกิน",
+
+    UI_character_SpiffUI_notThirsty = "ฉันไม่ได้หิวน้ำ",
+    UI_character_SpiffUI_noDrinks = "ฉันไม่มีอะไรจะดื่ม",
+
+    UI_character_SpiffUI_noRepair = "ฉันไม่มีอะไรจะซ่อม",
+    UI_character_SpiffUI_noRepairItems = "ฉันไม่สามารถซ่อมสิ่งนี้ได้",
+
+    UI_character_SpiffUI_noPillsQuick = "ฉันไม่มียา",
+    UI_character_SpiffUI_noPills = "ฉันไม่มียา",
+    UI_character_SpiffUI_noPillsNeed = "ฉันไม่มีอารมณ์จะกินยา",
+
+    -------------------------------------------
+    -- NEW v8:
+    UI_radial_SpiffUI_Previous = "ก่อนหน้า",
+    UI_radial_SpiffUI_Next = "ถัดไป",
+
+    UI_alarm_SpiffUI_Silence = "ปิดการแจ้งเตือน",
+    UI_alarm_SpiffUI_Enable = "เปิดการแจ้งเตือน",
+    UI_alarm_SpiffUI_Reset = "รีเซ็ตการแจ้งเตือน",
+    UI_alarm_SpiffUI_HH = "HH",
+    UI_alarm_SpiffUI_MM = "MM",
+
+    -- These next few include formatting so that the text lines up more or less.
+    ---- EX: Current Alarm
+    ----         HH:MM
+
+    -- Hour:Minutes or HH:MM if no alarm
+    UI_alarm_SpiffUI_CurrentF = "เวลาที่แจ้งเตือนปัจจุบัน <br> %1:%2", 
+    -- HH:MM
+    UI_alarm_SpiffUI_SetHourF = "ชั่วโมง <br> %1:%2", 
+    -- Hour:MM
+    UI_alarm_SpiffUI_SetMinuteF = "นาที <br> %1:%2",
+
+    UI_equip_SpiffUI_FirearmRadial = "แฉกรัศมีอาวุธปืน",
+
+    UI_SpiffUI_Radial_Equipment = "อุปกรณ์",
+    UI_SpiffUI_Radial_Crafting = "คราฟต์",
+    UI_SpiffUI_Radial_Drink = "ดื่ม",
+    UI_SpiffUI_Radial_Eat = "กิน",
+    UI_SpiffUI_Radial_FirstAidCraft = "คราฟต์ของทางการแพทย์",
+    UI_SpiffUI_Radial_Pills = "ยา",
+    UI_SpiffUI_Radial_Repair = "ซ่อมแซม",
+    UI_SpiffUI_Radial_Smoke = "สูบบุหรี่",
+    UI_SpiffUI_Radial_SmokeCraft = "คราฟต์ของเกี่ยวกับบุหรี่",
+
+    UI_amount_SpiffUI_CraftHowMany = "คราฟต์ปริมาณเท่าไหร่",
+    UI_amount_SpiffUI_EatHowMuch = "กินปริมาณเท่าไหร่",
+    UI_amount_SpiffUI_DrinkHowMuch = "ดื่มปริมาณเท่าไหร่",
+    UI_amount_SpiffUI_HowManyPills = "กินยากี่เม็ด",
+
+    UI_optionscreen_binding_SpiffUIGSWheel = "แฉกรัศมีความเร็วเวลาของเกม",
+    UI_SpiffUI_Radial_GameSpeed = "ความเร็วเวลาของเกม",
+
+    UI_ModOptions_SpiffUI_equipShowRecipes = "แสดงสูตรคราฟต์ (อุปกรณ์)",
+
+    UI_ModOptions_SpiffUI_hideClock = "ซ่อนนาฬิกาพื้นฐาน",
+    UI_ModOptions_SpiffUI_hideClockTooltip = "คำแนะนำ: นาฬิกาได้อัพเดทไปยังแฉกรัศมี SpiffUI ของคุณแล้ว คุณจำเป็นต้องเริ่มเกมใหม่หากเพิ่งเริ่มเปิดใช้งานนาฬิกาในเกม",
+
+    UI_ModOptions_SpiffUI_equipShowPlace = "แสดงการวาง (อุปกรณ์)",
+    UI_ModOptions_SpiffUI_equipShowTransfer = "แสดงการถ่ายโอน (อุปกรณ์)",
+
+    UI_ModOptions_SpiffUI_showSmokeCraftRadial = "แสดงแฉกรัศมีการคราฟต์ของเกี่ยวกับบุหรี่ (SpiffUI)",
+    UI_ModOptions_SpiffUI_showSmokeRadial = "แสดงแฉกรัศมีการสูบบุหรี่ (SpiffUI)",
+
+    UI_SpiffUI_EmoteWheel = "อีโมติคอน"
+}

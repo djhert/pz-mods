@@ -1,0 +1,29 @@
+Sandbox_TH = {
+    Sandbox_FancyHandwork = "Fancy Handwork",
+
+    Sandbox_FancyHandwork_ExperiencedAim = "เปลี่ยนระดับแอนิเมชั่นการเล็งปืน",
+    Sandbox_FancyHandwork_ExperiencedAim_tooltip = "แอนิเมชั่นการเล็งปืนจะเปลี่ยนตามเลเวลการยิงปืนของผู้เล่น <LINE> ตั้งค่า 0 เพื่อเปิดใช้งาน ตั้งค่า 11 เพื่อปิดการใช้งาน",
+           
+    Sandbox_FancyHandwork_DisableTurn = "บังคับการหันไปยังวัตถุที่กำลังใช้งานอยู่",
+    Sandbox_FancyHandwork_DisableTurn_tooltip = "ควบคุมตัวละครของคุณให้หันหน้าไปยังวัตถุที่กำลังใช้งานอยู่",
+
+    Sandbox_FancyHandwork_DT_option1 = "ห้ามบังคับการหันเป็นอันขาด",
+    Sandbox_FancyHandwork_DT_option2 = "ทำการหันหลังจากดีเลย์",
+    Sandbox_FancyHandwork_DT_option3 = "ทำการหันเสมอ",
+
+    Sandbox_FancyHandwork_TurnDelaySec = "ความหน่วงในการหัน",
+    Sandbox_FancyHandwork_TurnDelaySec_tooltip = "เมื่อตัวละครไม่ขยับ มันจะหันหน้าไปยังวัตถุที่ใช้งานก่อนหน้า <LINE> จำเป็นต้องเปิดการใช้งานดีเลย์ในการหัน",
+
+    Sandbox_FancyHandwork_TurnBehavior = "แอนิเมชั่นด้านหลัง",
+    Sandbox_FancyHandwork_TurnBehavior_tooltip = "เลือกความถี่ของแอนิเมชั่นด้านหลังของตัวละครแทนการหัน <LINE> หมายเหตุ: ตัวละครจะยังหันหน้าไปยังวัตถุที่ใช้งานอยู่แต่จะไม่มีแอนิเมชั่นด้านหลัง เว้นแต่ว่าเปิดใช้งานการบังคับหัน <LINE> ต้องเปิดความหน่วง หรือ เลือกปิดการหันเพื่อแสดงแอนิเมชั่นด้านหลัง เมื่อเลือก 'ทำการหันเสมอ' จะป้องกันไม่ให้แสดงแอนิเมชั่นด้านหลัง.",
+
+    Sandbox_FancyHandwork_TB_option1 = "ห้ามแสดงแอนิเมชั่นด้านหลังเป็นอันขาด",
+    Sandbox_FancyHandwork_TB_option2 = "แสดงแอนิเมชั่นด้านหลังจนกว่าจะเปิดดีเลย์",
+    Sandbox_FancyHandwork_TB_option3 = "แสดงแอนิเมชั่นด้านหลังเสมอ",
+
+    Sandbox_FancyHandwork_HideDoorProgressBar = "ซ่อนแถบสถานะประตูยานพาหนะ",
+    Sandbox_FancyHandwork_HideDoorProgressBar_tooltip = "ซ่อนแถบสถานะขณะตัวละครเปิดหรือปิดประตู และขณะที่ออกจากยานพาหนะ",
+
+    Sandbox_FancyHandwork_HideVehicleWalkProgressBar = "ซ่อนแถบสถานะยานพาหนะ 'เดินไปยัง' ",
+    Sandbox_FancyHandwork_HideVehicleWalkProgressBar_tooltip = "ซ่อนแถบสถานะขณะที่ตัวละครกำลังเดินไปยังจุดที่กระทำกับยานพาหนะ",
+}

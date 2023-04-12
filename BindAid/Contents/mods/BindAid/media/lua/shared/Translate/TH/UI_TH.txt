@@ -1,0 +1,34 @@
+UI_TH = {
+    UI_Init_Bindaid = "BindAid ยินดีต้อนรับ!",
+    UI_optionscreen_binding_Bindaid = "BindAid",
+    UI_optionscreen_binding_Bindaid_Modkey = "ปรับแต่งคีย์",
+    UI_optionscreen_binding_Bindaid_MouseKey_2 = "เมาส์กลาง",
+    UI_optionscreen_binding_Bindaid_MouseKey_3 = "เมาส์ 3",
+    UI_optionscreen_binding_Bindaid_MouseKey_4 = "เมาส์ 4",
+    UI_optionscreen_binding_Bindaid_MouseKey_5 = "เมาส์ 5",
+    UI_optionscreen_binding_Bindaid_MouseKey_6 = "เมาส์ 6",
+    UI_optionscreen_binding_Bindaid_MouseKey_7 = "เมาส์ 7",
+    UI_optionscreen_binding_Bindaid_MouseKey_8 = "เมาส์ 8",
+    UI_optionscreen_binding_Bindaid_MouseKey_9 = "เมาส์ 9",
+    UI_optionscreen_binding_Bindaid_MouseKey_10 ="เมาส์ 10",
+    UI_optionscreen_binding_Bindaid_MouseKey_11 ="เมาส์ 11",
+    UI_optionscreen_binding_Bindaid_MouseKey_12 ="เมาส์ 12",
+
+    UI_ModOptions_Bindaid_autohideMouse = "ซ่อนเมาส์อัตโนมัติ",
+    UI_ModOptions_Bindaid_autohideMouse_tooltip = "ซ่อนเมาส์เมื่อไม่มีการขยับ",
+
+    UI_ModOptions_Bindaid_autohideMouseTime = "ซ่อนเมาส์หน่วงอัตโนมัติ",
+    UI_ModOptions_Bindaid_UI_ModOptions_Bindaid_autohideMouseTime_tooltip = "ซ่อนเมาส์อัตโนมัติหลังจากผ่านไปหลายวินาที",
+
+    UI_ModOptions_Bindaid_mouseButtonSupport = "เปิดการใช้งานการสนับสนุนของเมาส์เพิ่มเติม",
+    UI_ModOptions_Bindaid_mouseButtonSupport_tooltip = "หมายเหตุ: คุณต้องเริ่มเกมใหม่หากเปลี่ยนการตั้งค่านี้",
+
+    UI_ModOptions_Bindaid_mouseButtonCount = "ปุ่มเมาส์เพิ่มเติม",
+    UI_ModOptions_Bindaid_mouseButtonCount_tooltip = "จำนวนของปุ่มเมาส์ที่สนับสนุน <LINE> หมายเหตุ: คุณต้องเริ่มเกมใหม่หากเปลี่ยนการตั้งค่านี้",
+
+    UI_ModOptions_Bindaid_emulateAndEvent = "การรันเมาส์ และอีเว้นท์จำลอง",
+    UI_ModOptions_Bindaid_emulateAndEvent_tooltip = "เมื่อกดปุ่มเมาส์ อีเว้นท์ของเมาส์จะรันอีเว้นท์จำลองที่ตั้งไว้พร้อมกันกับอีเว้นท์ปกติของปุ่มเมาส์นั้น ถ้าปิดการใช้งานการตั้งค่านี้ จะรันแค่อีเว้นท์จำลองของปุ่มเมาส์นั้นเท่านั้น แต่ถ้าไม่มีคีย์จำลอง จะรันอีเว้นท์ปกติของเมาส์นั้น",
+
+    UI_ModOptions_Bindaid_keyinputOptimize = "เปิดใช้งานการเพิ่มประสิทธิภาพอินพุตคีย์บอร์ด",
+    UI_ModOptions_Bindaid_keyinputOptimize_tooltip = "โปรดอ่านคำอธิบายม็อดสำหรับข้อมูลเต็มในการเปิดใช้งานการเพิ่มประสิทธิภาพอินพุตของคีย์บอร์ด <LINE> หากคุณเจอปัญหาของอินพุตให้ปิดการตั้งค่านี้  <LINE> หมายเหตุ: จำเป็นต้องเริ่มเกมใหม่หากเพิ่งเริ่มเปิดใช้งานในเกม",
+}

@@ -26,4 +26,31 @@ UI_TH = {
     UI_ModOptions_SpiffUI_Inv_mouseHide = "ซ่อนเมื่อคลิกเมาส์เท่านั้น",
 
     UI_optionscreen_binding_SpiffUI_Inv = "เปิด/ปิดช่องเก็บของ"
+    
+    UI_ModOptions_SpiffUI_Inv_invVisible = "แสดงช่องเก็บของของศพและหน้าต่าง Loot",
+    UI_ModOptions_SpiffUI_Inv_invVisibleTT = "เมื่อคุณย่อหน้าต่างชื่อหน้าต่างจะยังแสดงอยู่",
+
+    UI_ModOptions_SpiffUI_Inv_lootinv = "แสดงไอเทมที่มีอยู่ในกล่อง Loot เป็นแพ็คเดียว",
+    UI_ModOptions_SpiffUI_Inv_lootinv_tt = "ปุ่มที่แสดงอยู่ข้างใต้หน้าต่าง Loot จะแสดงไอเทมทุกไอเทมจากทุกช่องเก็บของข้างบนของมัน สามารถถ่ายโอนไอเทมจากช่องเก็บของข้างบนมายังช่องเก็บของนี้ได้ แต่ไม่สามารถถ่ายโอนไอเทมจากช่องเก็บของนี้ไปยังช่องเก็บของอื่นๆได้",
+    UI_ModOptions_SpiffUI_Inv_sepzeds = "รวมไอคอนศพเป็นไอคอนเดียว",
+    UI_ModOptions_SpiffUI_Inv_sepzeds_tt = "ศพทั้งหมดจะถูกรวมเป็นศพเดียวกันซึ่งมีไอเทมทั้งหมดจากทุกศพโดยจะเป็นไอคอนที่อยู่ด้านล่างสุด Included items here are excluded from the loot container. Items transferred TO this inventory go to the first available corpse.",
+
+    UI_ModOptions_SpiffUI_Inv_selfinv = "แสดงไอเทมทั้งหมดในช่องเก็บของผู้เล่นเป็นแพ็คเดียว",
+    UI_ModOptions_SpiffUI_Inv_selfinv_tt = "ปุ่มที่แสดงอยู่ข้างใต้หน้าต่างช่องเก็บของของผู้เล่น จะแสดงไอเทมทุกอย่างในช่องเก็บของ ยกเว้นของที่ถืออยู่และไอเทมใน hotbar",
+
+    UI_ModOptions_SpiffUI_Inv_buttonShow = "แสดงปุ่มช่องเก็บของ SpiffUI",
+    UI_ModOptions_SpiffUI_Inv_buttonShow_tt = "เมื่อปิด จะซ่อนปุ่มกล่องเก็บของของศพและปุ่มกล่องเก็บของ SpiffUI เมื่อไม่มีไอเทมอยู่เว้นแต่ว่าที่เก็บของจะเปิดอยู่",
+
+    UI_ModOptions_SpiffUI_EquipButton = "เปิดปุ่มอุปกรณ์",
+    UI_ModOptions_SpiffUI_EquipButton_tt = "เพิ่มปุ่มเพื่อจัดการอุปกรณ์ของผู้เล่นในช่องเก็บของ <LINE>หมายเหตุ: จำเป็นต้องเริ่มเกมใหม่หากเพิ่งเริ่มเปิดใช้งานในเกม",
+    UI_ModOptions_SpiffUI_HideEquip = "ซ่อนอุปกรณ์และ Hotbar ของไอเทมในช่องเก็บของทั่วไป",
+    UI_ModOptions_SpiffUI_HideEquip_tt = "ซ่อนอุปกรณ์จากช่องเก็บของ <LINE>หมายเหตุ: คุณต้องเปิดใช้งานปุ่มอุปกรณ์ หรือมีตัวจัดการอุปกรณ์เพื่อจัดการอุปกรณ์",
+    
+    UI_ModOptions_SpiffUI_KeyRing = "เพิ่มกุญแจในพวงกุญแจโดยอัตโนมัติ",
+    UI_ModOptions_SpiffUI_KeyRing_tt = "รวมกุญแจไปที่พวงกุญแจแรกในช่องเก็บของขณะที่ถ่ายโอนของไปยังผู้เล่น",
+    
+    UI_SpiffUI_Inv_bodies = "ศพซอมบี้ทั้งหมด",
+    UI_SpiffUI_Inv_containers = "กล่องเก็บของทั้งหมด",
+    UI_SpffUI_Inv_selfpack = "%1 %2's แพ็คขนาดใหญ่",
+    UI_SpffUI_Inv_equippack = "%1 %2's อุปกรณ์"
 }
