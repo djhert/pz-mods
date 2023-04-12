@@ -1,0 +1,174 @@
+UI_EN = {
+    -- SpiffUI
+    UI_Hello_SpiffUI = "สวัสดี SpiffUI!",
+    UI_Name_SpiffUI = "SpiffUI",
+    UI_optionscreen_binding_SpiffUI = "SpiffUI",
+
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "ตั้งค่าปุ่มลัดตามที่ SpiffUI แนะนำ",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> ตั้งค่าปุ่มลัดของ SpiffUI <LINE><LINE><LEFT><SIZE:small> ตั้งค่าปุ่มลัดดังต่อไปนี้: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  to:  [%2] ",
+
+    UI_ModOptions_SpiffUI_runAllResets = "เรียกใช้การรีเซ็ต SpiffUI ทั้งหมด",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "ใช้งานได้เฉพาะในเกมเท่านั้น!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> รีเซ็ต SpiffUI <LINE><LINE><LEFT><SIZE:small> ข้อมูลต่อไปนี้จะถูกรีเซ็ต: <LINE>",
+
+    -- SpiffUI -- Radials
+    UI_Hello_SpiffUI_Radials = "Hello SpiffUI - Radials",
+    
+    UI_Name_SpiffUI_Radials = "SpiffUI - Radials",
+
+    UI_ModOptions_SpiffUI_showTooltips = "แสดงคำแนะนำเครื่องมือ",
+    UI_ModOptions_SpiffUI_hideCraftButton = "ซ่อนปุ่มคราฟต์ของ",
+
+    UI_ModOptions_SpiffUI_smokeShowButts = "แสดงก้นบุหรี่ (สูบบุหรี่)", 
+    UI_ModOptions_SpiffUI_smokeShowGum = "แสดงหมากฝรั่ง (สูบบุหรี่)",
+    UI_ModOptions_SpiffUI_smokeShowNow = "แสดง Radial เมื่อกด (สูบบุหรี่)", 
+
+    UI_ModOptions_SpiffUI_pillsShowNow = "แสดง Radial เมื่อกด (ยา)",
+
+    UI_ModOptions_SpiffUI_eatAmount = "ปริมาณที่จะกิน (อาหาร)",
+    UI_ModOptions_SpiffUI_eatQuickAmount = "ปริมาณที่จะกินแบบเร็ว (อาหาร)",
+    UI_ModOptions_SpiffUI_eatShowNow = "แสดง Radial เมื่อกด (อาหาร)", 
+
+    UI_ModOptions_SpiffUI_drinkAmount = "ปริมาณที่จะดื่ม (เครื่องดื่ม)",
+    UI_ModOptions_SpiffUI_drinkQuickAmount = "ปริมาณที่จะดื่มแบบเร็ว (เครื่องดื่ม)",
+    UI_ModOptions_SpiffUI_drinkShowNow = "แสดง Radial เมื่อกด (เครื่องดื่ม)",
+
+    UI_ModOptions_SpiffUI_smokeCraftShowDismantle = "แสดงสูตรคราฟต์ในการแกะบุหรี่ (การคราฟต์บุหรี่)",
+    UI_ModOptions_SpiffUI_smokeCraftShowCigPacks = "แสดงซองบุหรี่ (การคราฟต์บุหรี่)",
+    UI_ModOptions_SpiffUI_smokeCraftAmount = "ปริมาณที่จะคราฟต์ (การคราฟต์บุหรี่)",
+
+    UI_ModOptions_SpiffUI_craftSwitch = "แสดงเมื่อกด (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftShowEquipped = "แสดงสูตรคราฟต์เมื่อใช้ไอเทม (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftShowSmokeables = "แสดงสูตรคราฟต์ที่เกี่ยวกับบุหรี่ (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftShowMedical = "แสดงสูตรคราฟต์ทางการแพทย์ (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftAmount = "ปริมาณที่จะคราฟต์ (การคราฟต์)",
+    UI_ModOptions_SpiffUI_craftFilterUnique = "กรองสูตรคราฟต์ที่ซ้ำ (การคราฟต์)",
+
+    UI_ModOptions_SpiffUI_equipShowDrop = "แสดงการทิ้งของ (อุปกรณ์)",
+    UI_ModOptions_SpiffUI_equipShowAllRepairs = "แสดงตัวเลือกที่ยังซ่อมไม่ได้ (อุปกรณ์)",
+    UI_ModOptions_SpiffUI_equipShowClothingActions = "แสดงการกระทำเสื้อผ้าเพิ่มเติม (อุปกรณ์)",
+    UI_ModOptions_SpiffUI_equipShowRecipes = "แสดงสูตรคราฟต์ (อุปกรณ์)",
+
+    UI_ModOptions_SpiffUI_repairShowEquipped = "แสดงการซ่อมแซมเมื่อใช้ไอเทม (ซ่อมแซม)",
+    UI_ModOptions_SpiffUI_repairShowHotbar = "แสดงการซ่อมแซมของไอเทมใน Hotbar (ซ่อมแซม)",
+
+    UI_ModOptions_SpiffUI_firstAidCraftAmount = "ปริมาณที่จะคราฟต์ (การคราฟต์ยา)",
+
+    UI_ModOptions_SpiffUI_tooltip_showTooltips = "แสดงคำแนะนำเครื่องมือในเมนู Radial ของไอเทม, สูตรคราฟต์ และการซ่อมแซม (แนะนำ)",
+    
+    UI_ModOptions_SpiffUI_tooltip_pillsShowNow = "หมายเหตุ: ปิดการกินยาแบบเร็ว",
+    
+    UI_ModOptions_SpiffUI_tooltip_drinkShowNow = "หมายเหตุ: ปิดการกินน้ำแบบเร็ว",
+
+    UI_ModOptions_SpiffUI_tooltip_eatShowNow = "หมายเหตุ: ปิดการกินอาหารแบบเร็ว",
+    
+    UI_ModOptions_SpiffUI_tooltip_craftShowMedical = "หมายเหตุ: สูตรคราฟต์บางสูตรอาจไม่ถูกกรอง ลองใช้เมนูการคราฟต์ทางการแพทย์แทน!",
+    UI_ModOptions_SpiffUI_tooltip_craftShowEquipped = "หมายเหตุ: สูตรคราฟต์ที่ใช้ไอเทมที่อยู่บนมือของคุณสามารถคราฟต์โดยใช้มันได้ เพราะไอเทมที่อยู่บนมือของคุณจะยังแสดงอยู่ในสูตรคราฟต์",
+    UI_ModOptions_SpiffUI_tooltip_craftShowSmokeables = "ลองใช้เมนูการคราฟต์ที่เกี่ยวกับบุหรี่แทน!"
+
+    UI_ModOptions_SpiffUI_tooltip_smokeShowNow = "หมายเหตุ: ปิดการใช้งานการสูบบุหรี่อัตโนมัติ",
+
+    UI_ModOptions_SpiffUI_tooltip_CraftingWheelSwitch = "กดปุ่มเปิดเมนู Radial, กดค้างไว้ที่หน้าต่างการคราฟต์",
+
+    UI_ModOptions_SpiffUI_tooltip_equipShowAllRepairs = "แสดงตัวเลือกการซ่อมแซมแม้ว่าจะไม่มีไอเทมที่ต้องซ่อมแซมอยู่ในช่องเก็บของ",
+    
+    UI_ModOptions_SpiffUI_tooltip_repairShowEquipped = "Repairs for Equipment can be done from the Equipment Menu",
+
+    UI_amount_SpiffUI_Ask = "Ask",
+    UI_amount_SpiffUI_All = "All",
+    UI_amount_SpiffUI_Full = "Dieter",
+    UI_amount_SpiffUI_One = "1",
+    UI_amount_SpiffUI_Half = "1/2",
+    UI_amount_SpiffUI_Quarter = "1/4",
+
+    UI_radial_SpiffUI_Accessories = "Accessories",
+    UI_radial_SpiffUI_Hotbar = "Hotbar",
+    UI_radial_SpiffUI_Transfer = "Transfer to ",
+
+    UI_optionscreen_binding_SpiffUIPillWheel = "Pill Radial",
+    UI_optionscreen_binding_SpiffUIDrinkWheel = "Drink Radial",
+    UI_optionscreen_binding_SpiffUIEatWheel = "Food Radial",
+    UI_optionscreen_binding_SpiffUISmokeWheel = "Smoke Radial",
+    UI_optionscreen_binding_SpiffUISmokeCraftWheel = "Smoke Craft Radial",
+    UI_optionscreen_binding_SpiffUICraftWheel = "Crafting UI/Radial",
+    UI_optionscreen_binding_SpiffUIEquipmentWheel = "Inventory Toggle/Radial",
+    UI_optionscreen_binding_SpiffUIRepairWheel = "Repair Radial",
+    UI_optionscreen_binding_SpiffUIFirstAidCraftWheel = "Medical Craft",
+    UI_optionscreen_binding_SpiffUIOneWheel = "SpiffUI Radial",
+
+    UI_character_SpiffUI_noLighter = "I need a lighter.",
+    UI_character_SpiffUI_noSmokes = "There's nothing to Smoke.",
+
+    UI_character_SpiffUI_noCraft = "There's nothing to Craft.",
+
+    UI_character_SpiffUI_noEquip = "I am Naked!",
+
+    UI_character_SpiffUI_notHungry = "I'm not Hungry.",
+    UI_character_SpiffUI_noFood = "There's no Food to Eat.",
+
+    UI_character_SpiffUI_notThirsty = "I'm not Thirsty.",
+    UI_character_SpiffUI_noDrinks = "There's nothing to Drink.",
+
+    UI_character_SpiffUI_noRepair = "There's nothing to Repair.",
+    UI_character_SpiffUI_noRepairItems = "I can't Repair that.",
+
+    UI_character_SpiffUI_noPillsQuick = "I have no ",
+    UI_character_SpiffUI_noPills = "There's no pills",
+    UI_character_SpiffUI_noPillsNeed = "I'm not in any Mood.",
+
+    -------------------------------------------
+    -- NEW v8:
+    UI_radial_SpiffUI_Previous = "Previous",
+    UI_radial_SpiffUI_Next = "Next",
+
+    UI_alarm_SpiffUI_Silence = "Silence Alarm",
+    UI_alarm_SpiffUI_Enable = "Enable Alarm",
+    UI_alarm_SpiffUI_Reset = "Reset Alarm",
+    UI_alarm_SpiffUI_HH = "HH",
+    UI_alarm_SpiffUI_MM = "MM",
+
+    -- These next few include formatting so that the text lines up more or less.
+    ---- EX: Current Alarm
+    ----         HH:MM
+
+    -- Hour:Minutes or HH:MM if no alarm
+    UI_alarm_SpiffUI_CurrentF = "Current Alarm <br> %1:%2", 
+    -- HH:MM
+    UI_alarm_SpiffUI_SetHourF = "SET HOUR <br> %1:%2", 
+    -- Hour:MM
+    UI_alarm_SpiffUI_SetMinuteF = "SET MINUTE <br> %1:%2",
+
+    UI_equip_SpiffUI_FirearmRadial = "Firearm Radial",
+
+    UI_SpiffUI_Radial_Equipment = "Equipment",
+    UI_SpiffUI_Radial_Crafting = "Crafting",
+    UI_SpiffUI_Radial_Drink = "Drink",
+    UI_SpiffUI_Radial_Eat = "Food",
+    UI_SpiffUI_Radial_FirstAidCraft = "Medical Craft",
+    UI_SpiffUI_Radial_Pills = "Pills",
+    UI_SpiffUI_Radial_Repair = "Repair",
+    UI_SpiffUI_Radial_Smoke = "Smoke",
+    UI_SpiffUI_Radial_SmokeCraft = "Smoke Craft",
+
+    UI_amount_SpiffUI_CraftHowMany = "Craft How Many",
+    UI_amount_SpiffUI_EatHowMuch = "Eat How Much",
+    UI_amount_SpiffUI_DrinkHowMuch = "Drink How Much",
+    UI_amount_SpiffUI_HowManyPills = "Take How Many Pills",
+
+    UI_optionscreen_binding_SpiffUIGSWheel = "Game Speed Radial",
+    UI_SpiffUI_Radial_GameSpeed = "Game Speed",
+
+    UI_ModOptions_SpiffUI_equipShowRecipes = "Show Recipes (Equipment)",
+
+    UI_ModOptions_SpiffUI_hideClock = "Hide Vanilla Clock",
+    UI_ModOptions_SpiffUI_hideClockTooltip = "RECOMMENDED: The clock is now present in the SpiffUI Radial.  A restart is required if in-game.",
+
+    UI_ModOptions_SpiffUI_equipShowPlace = "Show Place Action (Equipment)",
+    UI_ModOptions_SpiffUI_equipShowTransfer = "Show Transfer Action (Equipment)",
+
+    UI_ModOptions_SpiffUI_showSmokeCraftRadial = "Show Smoke Craft Radial (SpiffUI)",
+    UI_ModOptions_SpiffUI_showSmokeRadial = "Show Smoking Radial (SpiffUI)",
+
+    UI_SpiffUI_EmoteWheel = "Emotes"
+}
