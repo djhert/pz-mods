@@ -1,56 +1,57 @@
-UI_EN = {
+UI_PL = {
     -- SpiffUI
-    UI_Hello_SpiffUI = "Hello SpiffUI!",
+    UI_Hello_SpiffUI = "Cześć SpiffUI!",
     UI_Name_SpiffUI = "SpiffUI",
     UI_optionscreen_binding_SpiffUI = "SpiffUI"
 
-    UI_ModOptions_SpiffUI_applyNewKeybinds = "Set SpiffUI Recommended Keybinds",
-    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Set SpiffUI Keybinds <LINE><LINE><LEFT><SIZE:small> Sets the following Keybinds: <LINE>",
-    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  to:  [%2] ",
+    UI_ModOptions_SpiffUI_applyNewKeybinds = "Ustaw rekomendowane przypisanie klawiszy dla SpiffUI",
+    UI_ModOptions_SpiffUI_Modal_applyNewKeybinds = "<CENTRE><SIZE:medium> Ustaw przypisanie klawiszy dla SpiffUI <LINE><LINE><LEFT><SIZE:small> Ustawia następujące skróty klawiszowe: <LINE>",
+    UI_ModOptions_SpiffUI_Modal_aNKChild = " <LINE> %1  do:  [%2] ",
 
-    UI_ModOptions_SpiffUI_runAllResets = "Run All SpiffUI Resets",
-    UI_ModOptions_SpiffUI_tooltip_runResets = "Only works In-Game!",
-    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> SpiffUI Reset <LINE><LINE><LEFT><SIZE:small> The following will be reset: <LINE>",
+    UI_ModOptions_SpiffUI_runAllResets = "Zresetuj SpiffUI",
+    UI_ModOptions_SpiffUI_tooltip_runResets = "Działa tylko w grze!",
+    UI_ModOptions_SpiffUI_Modal_runResets = "<CENTRE><SIZE:medium> SpiffUI Reset <LINE><LINE><LEFT><SIZE:small> Zostanie zresetowane: <LINE>",
 
 
     -- SpiffUI -- Inventory
-    UI_Hello_SpiffUI_Inv = "Hello SpiffUI - Inventory!",
+    UI_Hello_SpiffUI_Inv = "Cześć SpiffUI - Ekwipunek!",
 
-    UI_Name_SpiffUI_Inv = "SpiffUI - Inventory",
+    UI_Name_SpiffUI_Inv = "SpiffUI - Ekwipunek",
 
-    UI_ModOptions_SpiffUI_Inv_enable = "Enable SpiffUI Inventory Rules",
-    UI_ModOptions_SpiffUI_Inv_tooltip_enable = "Locks the inventory in a fixed location and width at the top of the screen, can be resized vertically.<LINE>Enables better automatic hiding for the Loot Panel when using a mouse.  Press the "Inventory" Button to lock open the inventory, and press again to close. <LINE>Note: A Restart is Required if toggled In-Game!",
+    UI_ModOptions_SpiffUI_Inv_enable = "Włącz zasady ekwipunku SpiffUI",
+    UI_ModOptions_SpiffUI_Inv_tooltip_enable = "Blokuje ekwipunek w ustalonej lokalizacji i szerokości u góry ekranu, można zmieniać rozmiar w pionie.<LINE>Umożliwia lepsze automatyczne ukrywanie panelu łupów podczas korzystania z myszy.  Naciśnij przycisk „Ekwipunek”, aby zablokować otwarcie ekwipunku, i naciśnij ponownie, aby zamknąć. <LINE>Uwaga: w przypadku przełączenia w grze wymagane jest ponowne uruchomienie!",
 
-    UI_ModOptions_SpiffUI_Inv_hideInv = "Hide Inventory Button in left side menu",
+    UI_ModOptions_SpiffUI_Inv_hideInv = "Ukryj przycisk ekwipunku w menu po lewej stronie",
 
-    UI_ModOptions_SpiffUI_Inv_mouseHide = "Only hide Inventory on external Mouse Click",
+    UI_ModOptions_SpiffUI_Inv_mouseHide = "Ukryj ekwipunek tylko po kliknięciu poza ekwipunkiem",
 
-    UI_optionscreen_binding_SpiffUI_Inv = "Toggle Inventory",
+    UI_optionscreen_binding_SpiffUI_Inv = "Przełącz ekwipunek",
 
-    UI_ModOptions_SpiffUI_Inv_invVisible = "Display Collapsed Inventory and Loot Panels",
-    UI_ModOptions_SpiffUI_Inv_invVisibleTT = "On collapse of the windows the Headers will continue to be present",
+    UI_ModOptions_SpiffUI_Inv_invVisible = "Wyświetl zwinięte panele ekwipunku i łupów",
+    UI_ModOptions_SpiffUI_Inv_invVisibleTT = "Po zwinięciu okien nagłówki będą dalej obecne",
 
-    UI_ModOptions_SpiffUI_Inv_lootinv = "Display available items in loot containers in one pack",
-    UI_ModOptions_SpiffUI_Inv_lootinv_tt = "Button is shown below the Floor in the Loot Panel, and contains all items from all inventories above it. Items can be transferred from, but not to this inventory.",
-    UI_ModOptions_SpiffUI_Inv_sepzeds = "Merge Corpses into one icon",
-    UI_ModOptions_SpiffUI_Inv_sepzeds_tt = "Available Corpses will be merged into a single container that has all items and placed at the bottom. Included items here are excluded from the loot container. Items transferred TO this inventory go to the first available corpse.",
+    UI_ModOptions_SpiffUI_Inv_lootinv = "Wyświetlaj dostępne przedmioty w pojemnikach z łupami w jednej zakładce",
+    UI_ModOptions_SpiffUI_Inv_lootinv_tt = "Przycisk jest pokazany pod podłogą w panelu łupów i zawiera wszystkie przedmioty ze wszystkich ekwipunków znajdujących się nad nim. Przedmioty można przenosić z tego ekwipunku, ale nie do niego.",
+    UI_ModOptions_SpiffUI_Inv_sepzeds = "Łączy wszystkie zwłoki w jedną kategorie.",
+    UI_ModOptions_SpiffUI_Inv_sepzeds_tt = "Dostępne zwłoki zostaną połączone w jeden pojemnik zawierający wszystkie przedmioty i umieszczone na dole. Zawarte tutaj przedmioty nie są uwzględniane w pojemniku z łupami. 
+Przedmioty przeniesione DO tego ekwipunku trafiają do pierwszego dostępnych zwłok.",
 
-    UI_ModOptions_SpiffUI_Inv_selfinv = "Display all items in player's inventories in one pack",
-    UI_ModOptions_SpiffUI_Inv_selfinv_tt = "Button is shown at the bottom of the player's Inventory Window, and contains all inventory items EXCEPT equipped and items on the hotbar.",
+    UI_ModOptions_SpiffUI_Inv_selfinv = "Wyświetl wszystkie przedmioty z ekwipunku gracza w jednej zakładce",
+    UI_ModOptions_SpiffUI_Inv_selfinv_tt = "Przycisk jest widoczny na dole okna ekwipunku gracza i zawiera wszystkie elementy wyposażenia Z WYJĄTKIEM wyposażonych i przedmiotów na pasku skrótów.",
 
-    UI_ModOptions_SpiffUI_Inv_buttonShow = "Always Show SpiffUI Inventory Buttons",
-    UI_ModOptions_SpiffUI_Inv_buttonShow_tt = "When disabled, the Corpse and SpiffUI Container Buttons hide when no items are available unless the container is already open",
+    UI_ModOptions_SpiffUI_Inv_buttonShow = "Zawsze pokazuj przyciski ekwipunku SpiffUI",
+    UI_ModOptions_SpiffUI_Inv_buttonShow_tt = "Po wyłączeniu przyciski zakładki zwłok i SpiffUI są ukrywane, gdy nie są dostępne żadne przedmioty, chyba że kontener jest już otwarty",
 
-    UI_ModOptions_SpiffUI_EquipButton = "Enable Equipment Button",
-    UI_ModOptions_SpiffUI_EquipButton_tt = "Adds button to manage your player's equipment to the Inventory. <LINE>NOTE: Requires Restart to enable if in game. Recommended to Restart to disable if in game.",
-    UI_ModOptions_SpiffUI_HideEquip = "Hide Equipment and Hotbar Items in General Inventory",
-    UI_ModOptions_SpiffUI_HideEquip_tt = "Hides equipment from the inventory. <LINE>NOTE: You must have the Equipment Button enabled, or another Equipment Manager to manage equipment.",
+    UI_ModOptions_SpiffUI_EquipButton = "Włącz przycisk wyposażenia",
+    UI_ModOptions_SpiffUI_EquipButton_tt = "Dodaje przycisk do zarządzania wyposażeniem gracza w ekwipunku. <LINE>UWAGA: Wymaga ponownego uruchomienia, aby włączyć, jeśli jesteś w grze. Zalecane jest ponowne uruchomienie, aby wyłączyć, jeśli jesteś w grze.",
+    UI_ModOptions_SpiffUI_HideEquip = "Ukryj wyposażenie i elementy paska skrótów w ekwipunku ogólnym",
+    UI_ModOptions_SpiffUI_HideEquip_tt = "Ukrywa wyposażenie w ekwipunku. <LINE>UWAGA: Aby zarządzać sprzętem, musisz mieć włączony przycisk wyposażenia lub innego menedżera sprzętu.",
     
-    UI_ModOptions_SpiffUI_KeyRing = "Auto add Keys to available KeyRing",
-    UI_ModOptions_SpiffUI_KeyRing_tt = "Merges keys to the first available keyring when transferring to the player.",
+    UI_ModOptions_SpiffUI_KeyRing = "Automatycznie dodaj klucze do pęku kluczy",
+    UI_ModOptions_SpiffUI_KeyRing_tt = "Łączy klucze do dostępnego pęku przy transferowaniu do gracza.",
     
-    UI_SpiffUI_Inv_bodies = "All Zombie Corpses",
-    UI_SpiffUI_Inv_containers = "All Containers",
+    UI_SpiffUI_Inv_bodies = "Wszystkie zwłoki",
+    UI_SpiffUI_Inv_containers = "Wszystkie pojemniki",
     UI_SpffUI_Inv_selfpack = "%1 %2's Megapack",
-    UI_SpffUI_Inv_equippack = "%1 %2's Equipment"
+    UI_SpffUI_Inv_equippack = "%1 %2 Wyposażenie"
 }
